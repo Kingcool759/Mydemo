@@ -12,6 +12,8 @@ import android.widget.ListView;
 import com.example.mydemo.R;
 import com.example.mydemo.show.Case10;
 import com.example.mydemo.show.Case11;
+import com.example.mydemo.show.Case12;
+import com.example.mydemo.show.Case13;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -35,8 +37,8 @@ public class MainActivity extends AppCompatActivity{
             "RxJava使用", //8
             "Retrofit使用，Api接口调用实现", //9
             "CollapsingToolbarLayout折叠布局",  //10
-            "dd",
-            "aa",
+            "WebView使用", //11
+            "DrawerLayout滑动菜单",
             "bb",
             "cc",
             "aa",
@@ -108,6 +110,14 @@ public class MainActivity extends AppCompatActivity{
                     case 10:  //折叠布局
                         Intent intent11 = new Intent(MainActivity.this, Case11.class);
                         startActivity(intent11);
+                        break;
+                    case 11:  //WebView
+                        Intent intent12 = new Intent(MainActivity.this, Case12.class);
+                        startActivity(intent12);
+                        break;
+                    case 12:  //滑出菜单
+                        Intent intent13 = new Intent(MainActivity.this, Case13.class);
+                        startActivity(intent13);
                         break;
                 }
             }

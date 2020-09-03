@@ -67,4 +67,9 @@ dependencies {
 
     //matrial design
     implementation "com.google.android.material:material:1.1.0-alpha07"
+
+    //navigation
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:29.1.1'
+
 }

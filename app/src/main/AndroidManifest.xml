@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".show.Case11"></activity>
+        <activity android:name=".show.Case13"></activity>
+        <activity android:name=".show.Case12" />
+        <activity android:name=".show.Case11" />
         <activity android:name=".show.Case10" />
         <activity android:name=".show.Case9" />
         <activity android:name=".show.Case8" /> <!-- 广播接收器 -->

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#EDEC6190</color>
+
+    <!--灰色-->
+    <color name="gray">#D3D3D3</color>
+    <color name="dimgray">#ADADAD</color>
+    <color name="lightgray">#F4F4F4</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="green">#8BC34A</color>
+    <color name="black">#000000</color>
+    <color name="pink">#F3719D</color>
+</resources>

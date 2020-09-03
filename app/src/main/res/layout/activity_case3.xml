@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="stu"
+            type="com.example.mydemo.entity.Student" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff4f4f4"
+        android:orientation="vertical"
+        tools:context=".show.Case3">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="LiveData"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@{stu.stuName}"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@{stu.stuAge}"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <Button
+            android:id="@+id/btn_changeData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="改变数据"
+            app:layout_constraintTop_toBottomOf="@id/tv_age" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -14,6 +14,7 @@ import com.example.mydemo.show.Case10;
 import com.example.mydemo.show.Case11;
 import com.example.mydemo.show.Case12;
 import com.example.mydemo.show.Case13;
+import com.example.mydemo.show.Case15;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -38,9 +39,9 @@ public class MainActivity extends AppCompatActivity{
             "Retrofit使用，Api接口调用实现", //9
             "CollapsingToolbarLayout折叠布局",  //10
             "WebView使用", //11
-            "DrawerLayout滑动菜单",
-            "bb",
-            "cc",
+            "DrawerLayout滑动菜单", //12
+            "cc", //13
+            "TabLayout使用",  //14
             "aa",
             "bb",
             "cc",
@@ -118,6 +119,10 @@ public class MainActivity extends AppCompatActivity{
                     case 12:  //滑出菜单
                         Intent intent13 = new Intent(MainActivity.this, Case13.class);
                         startActivity(intent13);
+                        break;
+                    case 14:  //滑出菜单
+                        Intent intent15 = new Intent(MainActivity.this, Case15.class);
+                        startActivity(intent15);
                         break;
                 }
             }

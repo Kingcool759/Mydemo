@@ -14,6 +14,7 @@ import com.example.mydemo.show.Case10;
 import com.example.mydemo.show.Case11;
 import com.example.mydemo.show.Case12;
 import com.example.mydemo.show.Case13;
+import com.example.mydemo.show.Case14;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -24,7 +25,7 @@ import com.example.mydemo.show.Case7;
 import com.example.mydemo.show.Case8;
 import com.example.mydemo.show.Case9;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
     private String data[] = {
             "任务：我的客服-拨打电话",  //0
             "任务：系统设置-退出登录",  //1
@@ -38,8 +39,8 @@ public class MainActivity extends AppCompatActivity{
             "Retrofit使用，Api接口调用实现", //9
             "CollapsingToolbarLayout折叠布局",  //10
             "WebView使用", //11
-            "DrawerLayout滑动菜单",
-            "bb",
+            "DrawerLayout滑动菜单",  //12
+            "FlowLayout流式布局",  //13
             "cc",
             "aa",
             "bb",
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity{
             "cc",
             "dd",
             "dd"};//假数据
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,6 +120,10 @@ public class MainActivity extends AppCompatActivity{
                     case 12:  //滑出菜单
                         Intent intent13 = new Intent(MainActivity.this, Case13.class);
                         startActivity(intent13);
+                        break;
+                    case 13:  //流式布局
+                        Intent intent14 = new Intent(MainActivity.this, Case14.class);
+                        startActivity(intent14);
                         break;
                 }
             }

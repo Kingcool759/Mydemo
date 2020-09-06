@@ -69,6 +69,7 @@
                 android:id="@+id/navigation_view"
                 android:layout_width="260dp"
                 android:layout_height="match_parent"
+                app:itemIconTint="@color/green"
                 android:layout_gravity="start"
                 app:headerLayout="@layout/drawer_header"
                 app:menu="@menu/menu_drawer_left"/>

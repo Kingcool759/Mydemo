@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mydemo">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.mydemo"
+    tools:ignore="Instantiatable"
+    >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,13 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
         <activity android:name=".show.Case14"></activity>
-=======
-        <activity android:name=".fragment.HotRecommendFragment"></activity>
-        <activity android:name=".fragment.HotCollectionFragment" />
+        <activity android:name=".fragment.HotRecommendFragment"/>
+        <activity android:name=".fragment.HotCollectionFragment"/>
         <activity android:name=".show.Case15" />
->>>>>>> cf42ba0c765166759c2280f0b9eb9676d5c23c19
         <activity android:name=".show.Case13" />
         <activity android:name=".show.Case12" />
         <activity android:name=".show.Case11" />

@@ -15,25 +15,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".show.Case14"></activity>
         <activity android:name=".fragment.HotRecommendFragment"/>
         <activity android:name=".fragment.HotCollectionFragment"/>
-        <activity android:name=".show.Case15" />
+        <activity android:name=".show.Case14" />
         <activity android:name=".show.Case13" />
         <activity android:name=".show.Case12" />
         <activity android:name=".show.Case11" />
         <activity android:name=".show.Case10" />
         <activity android:name=".show.Case9" />
-        <activity android:name=".show.Case8" /> <!-- 广播接收器 -->
-        <receiver
-            android:name=".receiver.MyBroadcastReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.example.mydemo.receiver.My_Broadcast" />
-            </intent-filter>
-        </receiver>
-
+        <activity android:name=".show.Case8" />
         <activity android:name=".show.Case7" />
         <activity android:name=".show.Case6" />
         <activity android:name=".show.Case5" />

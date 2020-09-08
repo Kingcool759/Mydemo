@@ -76,6 +76,6 @@ dependencies {
     //流式布局
     implementation 'com.hyman:flowlayout-lib:1.1.2'
 
-    //吐司
+    //吐司工具 ToastUtils.show("")
     implementation 'com.hjq:toast:8.6'
 }

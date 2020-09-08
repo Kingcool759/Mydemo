@@ -15,6 +15,7 @@ import com.example.mydemo.show.Case11;
 import com.example.mydemo.show.Case12;
 import com.example.mydemo.show.Case13;
 import com.example.mydemo.show.Case14;
+import com.example.mydemo.show.Case15;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -27,29 +28,29 @@ import com.example.mydemo.show.Case9;
 
 public class MainActivity extends AppCompatActivity {
     private String data[] = {
-            "任务：我的客服-拨打电话",  //0
-            "任务：系统设置-退出登录",  //1
-            "ObservableField使用", //2
-            "LiveData使用",  //3
-            "ListView使用",  //4
-            "LifeCycle使用", //5
-            "RecyclerView使用",  //6
-            "ViewPager使用实现轮播图",  //7
-            "RxJava使用", //8
-            "Retrofit使用，Api接口调用实现", //9
-            "CollapsingToolbarLayout折叠布局",  //10
-            "WebView使用", //11
-            "DrawerLayout滑动菜单",  //12
-            "TabLayout使用",  //13
-            "aa",
-            "bb",
-            "cc",
-            "dd",
-            "aa",
-            "bb",
-            "cc",
-            "dd",
-            "dd"};//假数据
+            "1：任务：我的客服-拨打电话",  //0
+            "2：任务：系统设置-退出登录",  //1
+            "3：ObservableField使用", //2
+            "4：LiveData使用",  //3
+            "5：ListView使用",  //4
+            "6：LifeCycle使用", //5
+            "7：RecyclerView使用",  //6
+            "8：ViewPager使用实现轮播图",  //7
+            "9：RxJava使用", //8
+            "10：Retrofit使用，Api接口调用实现", //9
+            "11：CollapsingToolbarLayout折叠布局",  //10
+            "12：WebView使用", //11
+            "13：DrawerLayout滑动菜单",  //12
+            "14：TabLayout使用",  //13
+            "15：FlowLayout流式布局使用",  //14
+            "3：bb",
+            "3：cc",
+            "3：dd",
+            "3：aa",
+            "3：bb",
+            "3：cc",
+            "3：dd",
+            "3：dd"};//假数据
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,6 +124,10 @@ public class MainActivity extends AppCompatActivity {
                     case 13:  //Tablayout
                         Intent intent14 = new Intent(MainActivity.this, Case14.class);
                         startActivity(intent14);
+                        break;
+                    case 14:  //流式布局
+                        Intent intent15 = new Intent(MainActivity.this, Case15.class);
+                        startActivity(intent15);
                         break;
                 }
             }

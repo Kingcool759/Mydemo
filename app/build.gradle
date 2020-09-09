@@ -12,6 +12,12 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //ARouter路由跳转
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName :project.getName() ]
+            }
+        }
 
         packagingOptions {
             exclude 'META-INF/rxjava.properties'
@@ -78,4 +84,8 @@ dependencies {
 
     //吐司工具 ToastUtils.show("")
     implementation 'com.hjq:toast:8.6'
+
+    //ARouter路由跳转
+    implementation 'com.alibaba:arouter-api:1.3.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
 }

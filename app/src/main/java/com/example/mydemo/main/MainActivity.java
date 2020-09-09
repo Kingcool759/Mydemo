@@ -16,6 +16,8 @@ import com.example.mydemo.show.Case12;
 import com.example.mydemo.show.Case13;
 import com.example.mydemo.show.Case14;
 import com.example.mydemo.show.Case15;
+import com.example.mydemo.show.Case16;
+import com.example.mydemo.show.Case17;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -42,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
             "12：WebView使用", //11
             "13：DrawerLayout滑动菜单",  //12
             "14：TabLayout使用",  //13
-            "15：FlowLayout流式布局使用",  //14
-            "3：bb",
-            "3：cc",
+            "15：FlowLayout流式布局使用(不带点击事件)",  //14
+            "16：FlowLayout流式布局使用(hongyang)",  //15
+            "17：ARouter路由跳转",
             "3：dd",
             "3：aa",
             "3：bb",
@@ -128,6 +130,14 @@ public class MainActivity extends AppCompatActivity {
                     case 14:  //流式布局
                         Intent intent15 = new Intent(MainActivity.this, Case15.class);
                         startActivity(intent15);
+                        break;
+                    case 15:  //流式布局(hongyang)
+                        Intent intent16 = new Intent(MainActivity.this, Case16.class);
+                        startActivity(intent16);
+                        break;
+                    case 16:  //ARouter路由跳转
+                        Intent intent17 = new Intent(MainActivity.this, Case17.class);
+                        startActivity(intent17);
                         break;
                 }
             }

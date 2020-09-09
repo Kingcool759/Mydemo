@@ -16,6 +16,7 @@ import com.example.mydemo.show.Case12;
 import com.example.mydemo.show.Case13;
 import com.example.mydemo.show.Case14;
 import com.example.mydemo.show.Case15;
+import com.example.mydemo.show.Case20;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -46,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
             "3：bb",
             "3：cc",
             "3：dd",
-            "3：aa",
-            "3：bb",
+            "z：bb",
+            "20：Lambda表达式示例",
             "3：cc",
             "3：dd",
             "3：dd"};//假数据
@@ -129,6 +130,12 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent15 = new Intent(MainActivity.this, Case15.class);
                         startActivity(intent15);
                         break;
+                    case 19:  //lambda
+                        Intent intent20 = new Intent(MainActivity.this, Case20.class);
+                        startActivity(intent20);
+                        break;
+
+
                 }
             }
         });

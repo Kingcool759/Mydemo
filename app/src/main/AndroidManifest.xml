@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".show.Case15"></activity>
+        <activity android:name=".show.Case20"></activity>
+        <activity android:name=".show.Case15" />
         <activity android:name=".fragment.HotFragment" />
         <activity android:name=".fragment.HotRecommendFragment" />
         <activity android:name=".fragment.HotCollectionFragment" />

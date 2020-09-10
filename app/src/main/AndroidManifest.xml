@@ -14,10 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".show.Case19"></activity>
         <activity android:name=".show.Case18" />
         <activity android:name=".show.Case17" />
         <activity android:name=".show.Case16" />
+=======
+        <activity android:name=".show.Case20"></activity>
+>>>>>>> 92821268853ce10b35beecd985ffc0032aac1206
         <activity android:name=".show.Case15" />
         <activity android:name=".fragment.HotFragment" />
         <activity android:name=".fragment.HotRecommendFragment" />

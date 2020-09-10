@@ -18,6 +18,7 @@ import com.example.mydemo.show.Case14;
 import com.example.mydemo.show.Case15;
 import com.example.mydemo.show.Case16;
 import com.example.mydemo.show.Case17;
+import com.example.mydemo.show.Case19;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -46,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
             "14：TabLayout使用",  //13
             "15：FlowLayout流式布局使用(不带点击事件)",  //14
             "16：FlowLayout流式布局使用(hongyang)",  //15
-            "17：ARouter路由跳转",
-            "3：dd",
-            "3：aa",
+            "17：ARouter路由跳转", //16
+            "18：DataBinding示例",  //17
+            "19：aa",
             "3：bb",
             "3：cc",
             "3：dd",
@@ -138,6 +139,10 @@ public class MainActivity extends AppCompatActivity {
                     case 16:  //ARouter路由跳转
                         Intent intent17 = new Intent(MainActivity.this, Case17.class);
                         startActivity(intent17);
+                        break;
+                    case 17:  //DataBinding示例
+                        Intent intent18 = new Intent(MainActivity.this, Case19.class);
+                        startActivity(intent18);
                         break;
                 }
             }

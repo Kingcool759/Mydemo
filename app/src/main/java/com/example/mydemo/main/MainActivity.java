@@ -16,13 +16,10 @@ import com.example.mydemo.show.Case12;
 import com.example.mydemo.show.Case13;
 import com.example.mydemo.show.Case14;
 import com.example.mydemo.show.Case15;
-<<<<<<< HEAD
 import com.example.mydemo.show.Case16;
 import com.example.mydemo.show.Case17;
 import com.example.mydemo.show.Case19;
-=======
 import com.example.mydemo.show.Case20;
->>>>>>> 92821268853ce10b35beecd985ffc0032aac1206
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -42,28 +39,25 @@ public class MainActivity extends AppCompatActivity {
             "5：ListView使用",  //4
             "6：LifeCycle使用", //5
             "7：RecyclerView使用",  //6
-            "8：ViewPager使用实现轮播图",  //7
+            "8：ViewPager使用实现轮播图",  //case7
             "9：RxJava使用", //8
-            "10：Retrofit使用，Api接口调用实现", //9
+            "10：Retrofit使用，Api接口调用实现", //case9
             "11：CollapsingToolbarLayout折叠布局",  //10
             "12：WebView使用", //11
             "13：DrawerLayout滑动菜单",  //12
             "14：TabLayout使用",  //13
-<<<<<<< HEAD
             "15：FlowLayout流式布局使用(不带点击事件)",  //14
             "16：FlowLayout流式布局使用(hongyang)",  //15
-            "17：ARouter路由跳转", //16
-            "18：DataBinding示例",  //17
-            "19：aa",
-            "3：bb",
-=======
-            "15：FlowLayout流式布局使用",  //14
-            "3：bb",
+            "17：ARouter路由跳转（博客1）", //16
+            "18：DataBinding示例（博客2）",  //17
+            "19：Lambda表达式示例（博客3）", //case18
+            "3：cc",
+            "3：cc",
+            "3：cc",
             "3：cc",
             "3：dd",
             "z：bb",
-            "20：Lambda表达式示例",
->>>>>>> 92821268853ce10b35beecd985ffc0032aac1206
+            "3：aa",
             "3：cc",
             "3：dd",
             "3：dd"};//假数据
@@ -145,7 +139,6 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent15 = new Intent(MainActivity.this, Case15.class);
                         startActivity(intent15);
                         break;
-<<<<<<< HEAD
                     case 15:  //流式布局(hongyang)
                         Intent intent16 = new Intent(MainActivity.this, Case16.class);
                         startActivity(intent16);
@@ -158,14 +151,10 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent18 = new Intent(MainActivity.this, Case19.class);
                         startActivity(intent18);
                         break;
-=======
-                    case 19:  //lambda
+                    case 18:  //lambda
                         Intent intent20 = new Intent(MainActivity.this, Case20.class);
                         startActivity(intent20);
                         break;
-
-
->>>>>>> 92821268853ce10b35beecd985ffc0032aac1206
                 }
             }
         });

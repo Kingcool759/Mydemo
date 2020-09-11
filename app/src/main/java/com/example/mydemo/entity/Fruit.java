@@ -2,8 +2,8 @@ package com.example.mydemo.entity;
 
 /**
  * @data on 2020/8/27 9:47 PM
- * @auther
- * @describe  ListView使用示范
+ * @auther  ArmStrong
+ * @describe
  */
 public class Fruit {
     private String name;

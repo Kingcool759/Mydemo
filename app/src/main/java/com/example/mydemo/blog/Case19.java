@@ -1,4 +1,4 @@
-package com.example.mydemo.show;
+package com.example.mydemo.blog;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;

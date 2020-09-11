@@ -14,11 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".show.Case19" />
-        <activity android:name=".show.Case18" />
-        <activity android:name=".show.Case17" />
+        <activity android:name=".blog.Case21"></activity>
+        <activity android:name=".blog.Case19" />
+        <activity android:name=".blog.Case18" />
+        <activity android:name=".blog.Case17" />
         <activity android:name=".show.Case16" />
-        <activity android:name=".show.Case20" />
+        <activity android:name=".blog.Case20" />
         <activity android:name=".show.Case15" />
         <activity android:name=".fragment.HotRecommendFragment" />
         <activity android:name=".fragment.HotCollectionFragment" />

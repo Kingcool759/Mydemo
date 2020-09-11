@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.mydemo.R;
+import com.example.mydemo.blog.Case21;
 import com.example.mydemo.show.Case10;
 import com.example.mydemo.show.Case11;
 import com.example.mydemo.show.Case12;
@@ -17,9 +18,9 @@ import com.example.mydemo.show.Case13;
 import com.example.mydemo.show.Case14;
 import com.example.mydemo.show.Case15;
 import com.example.mydemo.show.Case16;
-import com.example.mydemo.show.Case17;
-import com.example.mydemo.show.Case19;
-import com.example.mydemo.show.Case20;
+import com.example.mydemo.blog.Case17;
+import com.example.mydemo.blog.Case19;
+import com.example.mydemo.blog.Case20;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -50,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
             "16：FlowLayout流式布局使用(hongyang)",  //15
             "17：ARouter路由跳转（博客1）", //16
             "18：DataBinding示例（博客2）",  //17
-            "19：Lambda表达式示例（博客3）", //case18
-            "3：cc",
+            "19：Lambda表达式示例（博客3）", //18
+            "20：RecyclerView示例（博客4）", //19
             "3：cc",
             "3：cc",
             "3：cc",
@@ -154,6 +155,10 @@ public class MainActivity extends AppCompatActivity {
                     case 18:  //lambda
                         Intent intent20 = new Intent(MainActivity.this, Case20.class);
                         startActivity(intent20);
+                        break;
+                    case 19:  //recyclerview
+                        Intent intent21 = new Intent(MainActivity.this, Case21.class);
+                        startActivity(intent21);
                         break;
                 }
             }

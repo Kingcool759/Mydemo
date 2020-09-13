@@ -8,7 +8,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.mydemo.R;
+import com.example.mydemo.adapter.DividerItemDecoration;
+import com.example.mydemo.adapter.FruitHorRecyclerVIewAdapter;
 import com.example.mydemo.adapter.FruitRecyclerViewAdapter;
+import com.example.mydemo.adapter.TimeLineItemDecoration;
 import com.example.mydemo.entity.Fruit;
 
 import java.util.ArrayList;
@@ -38,6 +41,8 @@ public class Case21 extends AppCompatActivity {
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this)); //item分割线
+//        mRecyclerView.addItemDecoration(new TimeLineItemDecoration(this)); //time时间轴
     }
 }
 

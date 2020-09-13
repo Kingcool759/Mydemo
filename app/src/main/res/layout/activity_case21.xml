@@ -9,7 +9,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="Recyclerview示例"
+        app:title="Recyclerview瀑布流示例"
         app:titleTextColor="@color/white"
         android:background="@color/green"/>
 

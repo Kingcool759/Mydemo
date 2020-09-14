@@ -39,10 +39,13 @@ public class Case22 extends AppCompatActivity {
                     Log.d("test: ", String.valueOf(type)); //测试
                     switch (type){
                         case 0:  //拍照
+                            Toast.makeText(getBaseContext(),"拍照",Toast.LENGTH_SHORT).show();
                             break;
                         case 1:  //相册
+                            Toast.makeText(getBaseContext(),"相册",Toast.LENGTH_SHORT).show();
                             break;
                         case 2:  //取消
+                            Toast.makeText(getBaseContext(),"取消",Toast.LENGTH_SHORT).show();
                             break;
                     }
                 }

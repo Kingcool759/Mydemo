@@ -17,7 +17,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--为调用相机拍照设置内容提供者-->
+        <activity android:name=".show.Case24">
+            <!--调用系统相册-->
+            <intent-filter >
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 为调用相机拍照设置内容提供者 -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.mydemo.fileprovider"
@@ -63,4 +69,5 @@
         <activity android:name=".show.Case1" />
         <activity android:name=".main.MainActivity" />
     </application>
+
 </manifest>

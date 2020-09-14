@@ -23,6 +23,7 @@ import com.example.mydemo.blog.Case19;
 import com.example.mydemo.blog.Case20;
 import com.example.mydemo.show.Case22;
 import com.example.mydemo.show.Case23;
+import com.example.mydemo.show.Case24;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             "20：RecyclerView示例（博客4）", //19
             "21：PopupWindow使用",
             "22：调用摄像头拍照示例",
-            "3：cc",
+            "23：从相册中选择照片示例",
             "3：dd",
             "z：bb",
             "3：aa",
@@ -169,6 +170,10 @@ public class MainActivity extends AppCompatActivity {
                     case 21:  //调用摄像头拍照
                         Intent intent23 = new Intent(MainActivity.this, Case23.class);
                         startActivity(intent23);
+                        break;
+                    case 22:  //调用摄像头拍照
+                        Intent intent24 = new Intent(MainActivity.this, Case24.class);
+                        startActivity(intent24);
                         break;
                 }
             }

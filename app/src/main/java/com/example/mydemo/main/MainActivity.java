@@ -24,6 +24,7 @@ import com.example.mydemo.blog.Case20;
 import com.example.mydemo.show.Case22;
 import com.example.mydemo.show.Case23;
 import com.example.mydemo.show.Case24;
+import com.example.mydemo.show.Case25;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             "21：PopupWindow使用",
             "22：调用摄像头拍照示例",
             "23：从相册中选择照片示例",
-            "3：dd",
+            "24：java中的时间戳转字符串",
             "z：bb",
             "3：aa",
             "3：cc",
@@ -174,6 +175,10 @@ public class MainActivity extends AppCompatActivity {
                     case 22:  //调用摄像头拍照
                         Intent intent24 = new Intent(MainActivity.this, Case24.class);
                         startActivity(intent24);
+                        break;
+                    case 23:  //调用摄像头拍照
+                        Intent intent25 = new Intent(MainActivity.this, Case25.class);
+                        startActivity(intent25);
                         break;
                 }
             }

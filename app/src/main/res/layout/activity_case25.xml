@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".show.Case25"
+    tools:ignore="MissingConstraints">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        app:title="java时间戳转字符串"
+        app:titleTextColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_show_time_chuo"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:text="获取当前时间戳" />
+
+    <Button
+        android:id="@+id/btn_show_time"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_show_time_chuo"
+        android:layout_height="wrap_content"
+        android:text="获取当前时间" />
+
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_show_time"
+        android:layout_height="wrap_content"
+        android:text="时间戳转字符串" />
+
+    <Button
+        android:id="@+id/btn_change2"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_change"
+        android:layout_height="wrap_content"
+        android:text="字符串转时间戳" />
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_marginTop="40dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        tools:text="测试一下"
+        app:layout_constraintTop_toBottomOf="@id/btn_change2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

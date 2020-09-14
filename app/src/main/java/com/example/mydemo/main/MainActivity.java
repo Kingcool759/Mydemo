@@ -21,6 +21,8 @@ import com.example.mydemo.show.Case16;
 import com.example.mydemo.blog.Case17;
 import com.example.mydemo.blog.Case19;
 import com.example.mydemo.blog.Case20;
+import com.example.mydemo.show.Case22;
+import com.example.mydemo.show.Case23;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -53,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
             "18：DataBinding示例（博客2）",  //17
             "19：Lambda表达式示例（博客3）", //18
             "20：RecyclerView示例（博客4）", //19
-            "3：cc",
-            "3：cc",
+            "21：PopupWindow使用",
+            "22：调用摄像头拍照示例",
             "3：cc",
             "3：dd",
             "z：bb",
@@ -159,6 +161,14 @@ public class MainActivity extends AppCompatActivity {
                     case 19:  //recyclerview
                         Intent intent21 = new Intent(MainActivity.this, Case21.class);
                         startActivity(intent21);
+                        break;
+                    case 20:  //popupwindow
+                        Intent intent22 = new Intent(MainActivity.this, Case22.class);
+                        startActivity(intent22);
+                        break;
+                    case 21:  //调用摄像头拍照
+                        Intent intent23 = new Intent(MainActivity.this, Case23.class);
+                        startActivity(intent23);
                         break;
                 }
             }

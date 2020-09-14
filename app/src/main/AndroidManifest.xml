@@ -6,15 +6,32 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".blog.Case21"></activity>
+        <!--为调用相机拍照设置内容提供者-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.mydemo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:ignore="WrongManifestParent">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".show.Case23" />
+        <activity android:name=".show.Case22" />
+        <activity android:name=".blog.Case21" />
         <activity android:name=".blog.Case19" />
         <activity android:name=".blog.Case18" />
         <activity android:name=".blog.Case17" />
@@ -46,5 +63,4 @@
         <activity android:name=".show.Case1" />
         <activity android:name=".main.MainActivity" />
     </application>
-
 </manifest>

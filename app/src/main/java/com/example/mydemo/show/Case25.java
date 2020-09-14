@@ -30,10 +30,11 @@ public class Case25 extends AppCompatActivity {
             tvShow.setText(DateUtil.getCurrentDate());
         });
         changeToTime.setOnClickListener((View)->{
-//            tvShow.setText(DateUtil.getDateToString(DateUtil.getTimeStamp()));
+            tvShow.setText(DateUtil.getDateToString(1600074914));
         });
         changeToChuo.setOnClickListener((View)->{
-//            tvShow.setText(DateUtil.getStringToDate((DateUtil.getCurrentDate())));
+            //String.valueof(Long):long转成String类型
+            tvShow.setText(String.valueOf(DateUtil.getStringToDate("2020-09-18 18:00:00")));
         });
     }
 }

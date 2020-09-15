@@ -27,9 +27,7 @@ public class Case11 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case11);
 
-        Fruit fruit = new Fruit("大苹果",R.drawable.starsky);
-        String fruitName = fruit.getName();
-        int fruitImageId = fruit.getImageId();
+        Fruit fruit = new Fruit("苹果香蕉火龙果！",R.drawable.starsky);
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout)findViewById(R.id.collsping_Toolbar);
@@ -40,9 +38,9 @@ public class Case11 extends AppCompatActivity {
         if(actionBar!=null){
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-        collapsingToolbar.setTitle(fruitName);
-        fruitImageView.setImageResource(fruitImageId);
-        String fruitContent = generatorFruitContent(fruitName);
+        collapsingToolbar.setTitle(fruit.getName());
+        Glide.with(this).load(fruit.getImageId()).into(fruitImageView); //高清图使用glide压缩显示
+        String fruitContent = generatorFruitContent(fruit.getName());
         fruitContentText.setText(fruitContent);
     }
     private String generatorFruitContent(String fruitName){

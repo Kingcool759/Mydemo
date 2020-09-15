@@ -42,7 +42,7 @@ public class Case21 extends AppCompatActivity {
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this)); //item分割线
-//        mRecyclerView.addItemDecoration(new TimeLineItemDecoration(this)); //time时间轴
+        mRecyclerView.addItemDecoration(new TimeLineItemDecoration(this)); //time时间轴
     }
 }
 

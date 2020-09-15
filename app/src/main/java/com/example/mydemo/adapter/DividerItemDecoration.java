@@ -31,7 +31,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
         dividerPaint = new Paint();
         dividerHeight = context.getResources().getDimensionPixelSize(R.dimen.divider_height);
         dividerPaint.setColor(context.getResources().getColor(R.color.black));
-//        mOffsetMagin = (int) context.getResources().getDimension(R.dimen.divider_bottom);
+        mOffsetMagin = (int) context.getResources().getDimension(R.dimen.divider_bottom);
     }
 
     @Override
@@ -47,14 +47,14 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
         int childCount = parent.getChildCount();
         for (int i = 0; i < childCount - 1; i++) {
             View view = parent.getChildAt(i);
-//            float startx = parent.getPaddingLeft()+mOffsetMagin;
-//            float starty = view.getBottom() + mOffsetMagin;
-//            float stopx = startx + view.getWidth();
-//            float stopy = view.getBottom() + mOffsetMagin;
-            float startx = parent.getPaddingLeft();
-            float starty = view.getBottom();
+            float startx = parent.getPaddingLeft()+mOffsetMagin;
+            float starty = view.getBottom() + mOffsetMagin;
             float stopx = startx + view.getWidth();
-            float stopy = view.getBottom();
+            float stopy = view.getBottom() + mOffsetMagin;
+//            float startx = parent.getPaddingLeft();
+//            float starty = view.getBottom();
+//            float stopx = startx + view.getWidth();
+//            float stopy = view.getBottom();
             c.drawLine(startx,starty,stopx,stopy, dividerPaint);
         }
     }

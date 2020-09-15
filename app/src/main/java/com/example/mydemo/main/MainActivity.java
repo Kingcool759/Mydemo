@@ -25,6 +25,7 @@ import com.example.mydemo.show.Case22;
 import com.example.mydemo.show.Case23;
 import com.example.mydemo.show.Case24;
 import com.example.mydemo.show.Case25;
+import com.example.mydemo.show.Case26;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -37,8 +38,8 @@ import com.example.mydemo.show.Case9;
 
 public class MainActivity extends AppCompatActivity {
     private String data[] = {
-            "1：任务：我的客服-拨打电话",  //0
-            "2：任务：系统设置-退出登录",  //1
+            "1：拨号处理-拨打电话",  //0
+            "2：AlertDialog弹出框退出登录",  //1
             "3：ObservableField使用", //2
             "4：LiveData使用",  //3
             "5：ListView使用",  //4
@@ -61,7 +62,19 @@ public class MainActivity extends AppCompatActivity {
             "22：调用摄像头拍照示例",
             "23：从相册中选择照片示例",
             "24：java中的时间戳转字符串",
-            "z：bb",
+            "25：RecyclerView隐藏TooBar效果",
+            "3：aa",
+            "3：cc",
+            "3：dd",
+            "3：aa",
+            "3：cc",
+            "3：dd",
+            "3：aa",
+            "3：cc",
+            "3：dd",
+            "3：aa",
+            "3：cc",
+            "3：dd",
             "3：aa",
             "3：cc",
             "3：dd",
@@ -179,6 +192,10 @@ public class MainActivity extends AppCompatActivity {
                     case 23:  //调用摄像头拍照
                         Intent intent25 = new Intent(MainActivity.this, Case25.class);
                         startActivity(intent25);
+                        break;
+                    case 24:  //RecyclerView隐藏TooBar效果
+                        Intent intent26 = new Intent(MainActivity.this, Case26.class);
+                        startActivity(intent26);
                         break;
                 }
             }

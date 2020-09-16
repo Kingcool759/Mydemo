@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             "10：Retrofit使用，Api接口调用实现", //case9
             "11：CollapsingToolbarLayout折叠布局",  //10
             "12：WebView使用", //11
-            "13：DrawerLayout滑动菜单",  //12
+            "13：DrawerLayout+NavigationView实现侧边滑出菜单",  //12
             "14：TabLayout使用",  //13
             "15：FlowLayout流式布局使用(不带点击事件)",  //14
             "16：FlowLayout流式布局使用(hongyang)",  //15
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             "24：java中的时间戳转字符串",
             "25：RecyclerView隐藏TooBar效果",
             "26：TitleBar标题栏库使用",
-            "27：CricleImageView库使用",
+            "27：CricleImageView圆形图片库使用",
             "3：dd",
             "3：aa",
             "3：cc",

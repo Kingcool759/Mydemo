@@ -162,7 +162,7 @@ public class Case24 extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        //设置再次时显示的图片
+        //设置再次app时显示的图片
         SharedPreferences sp = getSharedPreferences("sp_img", MODE_PRIVATE);
         //取出上次存储的图片路径设置此次的图片展示
         String beforeImagePath = sp.getString("imgPath", null);

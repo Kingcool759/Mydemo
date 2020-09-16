@@ -27,6 +27,7 @@ import com.example.mydemo.show.Case24;
 import com.example.mydemo.show.Case25;
 import com.example.mydemo.show.Case26;
 import com.example.mydemo.show.Case27;
+import com.example.mydemo.show.Case28;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -64,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
             "23：从相册中选择照片示例",
             "24：java中的时间戳转字符串",
             "25：RecyclerView隐藏TooBar效果",
-            "26：TitleBar告别ToolBar标题栏",
-            "3：cc",
+            "26：TitleBar标题栏库使用",
+            "27：CricleImageView库使用",
             "3：dd",
             "3：aa",
             "3：cc",
@@ -198,9 +199,13 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent26 = new Intent(MainActivity.this, Case26.class);
                         startActivity(intent26);
                         break;
-                    case 25:  //RecyclerView隐藏TooBar效果
+                    case 25:  //TitleBar标题栏
                         Intent intent27 = new Intent(MainActivity.this, Case27.class);
                         startActivity(intent27);
+                        break;
+                    case 26:  //图片圆形处理
+                        Intent intent28 = new Intent(MainActivity.this, Case28.class);
+                        startActivity(intent28);
                         break;
                 }
             }

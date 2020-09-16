@@ -26,6 +26,7 @@ import com.example.mydemo.show.Case23;
 import com.example.mydemo.show.Case24;
 import com.example.mydemo.show.Case25;
 import com.example.mydemo.show.Case26;
+import com.example.mydemo.show.Case27;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             "23：从相册中选择照片示例",
             "24：java中的时间戳转字符串",
             "25：RecyclerView隐藏TooBar效果",
-            "3：aa",
+            "26：TitleBar告别ToolBar标题栏",
             "3：cc",
             "3：dd",
             "3：aa",
@@ -196,6 +197,10 @@ public class MainActivity extends AppCompatActivity {
                     case 24:  //RecyclerView隐藏TooBar效果
                         Intent intent26 = new Intent(MainActivity.this, Case26.class);
                         startActivity(intent26);
+                        break;
+                    case 25:  //RecyclerView隐藏TooBar效果
+                        Intent intent27 = new Intent(MainActivity.this, Case27.class);
+                        startActivity(intent27);
                         break;
                 }
             }

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    tools:context=".show.Case27"
+    tools:ignore="MissingConstraints">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <com.hjq.bar.TitleBar
+                android:id="@+id/default_TitleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                app:title="默认的标题栏" />
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:backButton="false"
+                app:title="不带箭头的标题栏" />
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:lineVisible="false"
+                app:title="不带分割线的标题栏" />
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                app:title="自定义高度的标题栏" />
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:leftIcon="@mipmap/ic_launcher"
+                app:rightIcon="@mipmap/ic_launcher"
+                app:title="带图标的标题栏" />
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:backButton="false"
+                app:leftTitle="左边"
+                app:rightTitle="右边"
+                app:title="带文本的标题栏\n12345" />
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:backButton="false"
+                app:leftColor="#FF3300"
+                app:leftSize="18sp"
+                app:leftTitle="左边"
+                app:rightColor="#0033FF"
+                app:rightSize="18sp"
+                app:rightTitle="右边"
+                app:title="文字大小和颜色"
+                app:titleSize="20sp" />
+
+            <com.hjq.bar.TitleBar
+                android:id="@+id/tb_main_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:leftIcon="@mipmap/ic_launcher"
+                app:leftTitle="左边"
+                app:rightIcon="@mipmap/ic_launcher"
+                app:rightTitle="右边"
+                app:title="监听左右两边的点击事件" />
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:title="支持扩展子 View" />
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:barStyle="night"
+                app:leftTitle="返回"
+                app:rightTitle="设置"
+                app:title="夜间模式的标题栏" />
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_gradient"
+                app:barStyle="transparent"
+                app:leftBackground="@null"
+                app:leftTitle="返回"
+                app:rightBackground="@null"
+                app:rightTitle="设置"
+                app:title="仿QQ渐变样式"
+                app:titleColor="@null" />
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:title="自定义TitleBar">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="TitleBar可以当做FrameLayout使用\n也可以在这里也可以添加自定义布局"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+            </com.hjq.bar.TitleBar>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

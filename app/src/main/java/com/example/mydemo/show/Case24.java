@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.ContentUris;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -17,8 +18,10 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,9 +29,12 @@ import android.widget.Toast;
 
 import com.example.mydemo.R;
 
+import java.io.File;
+
 public class Case24 extends AppCompatActivity {
     public static final int CHOOSE_PHOTO = 2;
     ImageView picture;
+    String imagePath = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,9 +98,6 @@ public class Case24 extends AppCompatActivity {
                     if(Build.VERSION.SDK_INT>=19){
                         //4.4及以上系统使用这个方法处理图片
                         handleImageOnKitKat(data);
-                    }else {
-                        //4.4以下系统使用这个方法处理图片
-                        handleImageBeforeKitKat(data);
                     }
                 }
                 break;
@@ -105,7 +108,6 @@ public class Case24 extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void handleImageOnKitKat(Intent data){
-        String imagePath = null;
         Uri uri = data.getData();
         if(DocumentsContract.isDocumentUri(this,uri)){
             //如果是document类型的Uri，则通过document id处理
@@ -128,12 +130,7 @@ public class Case24 extends AppCompatActivity {
         displayImage(imagePath); //根据图片路径显示图片
     }
 
-    private void handleImageBeforeKitKat(Intent data){
-        Uri uri = data.getData();
-        String imagePath = getImagePath(uri,null);
-        displayImage(imagePath);
-    }
-
+    //将选择的图片Uri转换为路径
     private String getImagePath(Uri uri,String selection){
         String path = null;
         //通过Uri和selection来获取真实的图片路径
@@ -147,12 +144,28 @@ public class Case24 extends AppCompatActivity {
         return path;
     }
 
+    //展示图片
     private void displayImage(String imagePath){
-        if(imagePath!=null){
+        if(imagePath!=null && !imagePath.equals("")){
             Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
             picture.setImageBitmap(bitmap);
+            //存储上次选择的图片路径，用以再次打开app设置图片
+            SharedPreferences sp = getSharedPreferences("sp_img",MODE_PRIVATE);  //创建xml文件存储数据，name:创建的xml文件名
+            SharedPreferences.Editor editor = sp.edit(); //获取edit()
+            editor.putString("imgPath",imagePath);
+            editor.apply();
         }else {
             Toast.makeText(this,"获取图片失败",Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //设置再次时显示的图片
+        SharedPreferences sp = getSharedPreferences("sp_img", MODE_PRIVATE);
+        //取出上次存储的图片路径设置此次的图片展示
+        String beforeImagePath = sp.getString("imgPath", null);
+        displayImage(beforeImagePath);
     }
 }

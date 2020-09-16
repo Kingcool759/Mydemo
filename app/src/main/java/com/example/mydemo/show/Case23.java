@@ -31,6 +31,7 @@ public class Case23 extends AppCompatActivity {
     public static final int TAKE_PHOTO = 1;//声明一个请求码，用于识别返回的结果
     private ImageView picture;
     private Uri imageUri;
+    private final String filePath = Environment.getExternalStorageDirectory() + File.separator + "output_image.jpg";
 
 
     @Override
@@ -38,14 +39,17 @@ public class Case23 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case23);
 
+        //点击事件进行拍照
         Button takephoto = findViewById(R.id.take_photo);
         picture = findViewById(R.id.picture);
         takephoto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                requestPermission();
-
+                //动态请求相机权限
+                requestPermission();  //在其中若用户给予权限则请求相机拍照
             }
         });
+        //设置默认图片
+        setDefualtImage();
     }
 
     //动态请求权限
@@ -76,8 +80,6 @@ public class Case23 extends AppCompatActivity {
 
 
     private void requestCamera() {
-        String filePath = Environment.getExternalStorageDirectory() + File.separator + "output_image.jpg";
-
         File outputImage = new File(filePath);
                 /*
                 创建一个File文件对象，用于存放摄像头拍下的图片，我们把这个图片命名为output_image.jpg
@@ -97,17 +99,6 @@ public class Case23 extends AppCompatActivity {
             outputImage.createNewFile();
 
             if (Build.VERSION.SDK_INT >= 24) {
-                //判断安卓的版本是否高于7.0，高于则调用高于的方法，低于则调用低于的方法
-                //把文件转换成Uri对象
-                    /*
-                    之所以这样，是因为android7.0以后直接使用本地真实路径是不安全的，会抛出异常。
-                    FileProvider是一种特殊的内容提供器，可以对数据进行保护
-
-                    /*
-                    第一个参数：context对象
-                    第二个参数：任意唯一的字符串
-                    第三个参数：文件对象
-                     */
                 imageUri = FileProvider.getUriForFile(this,
                         "com.example.mydemo.fileprovider", outputImage);
             } else {
@@ -142,5 +133,14 @@ public class Case23 extends AppCompatActivity {
             default:
                 break;
         }
+    }
+
+    //设置保存拍照图片——>再次关闭app重新打开显示为上次拍照照片
+    private void setDefualtImage() {
+        File outputImage = new File(filePath);
+        if (!outputImage.exists()) {
+            return;
+        }
+        picture.setImageBitmap(BitmapFactory.decodeFile(filePath));
     }
 }

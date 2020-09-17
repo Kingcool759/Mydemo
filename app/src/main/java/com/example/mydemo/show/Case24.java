@@ -28,6 +28,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.mydemo.R;
+import com.permissionx.guolindev.PermissionX;
 
 import java.io.File;
 
@@ -41,6 +42,10 @@ public class Case24 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case24);
 
+        ininView();
+
+    }
+    private void ininView(){
         Button btnChoosePhoto = (Button) findViewById(R.id.choose_photo);
         picture = (ImageView) findViewById(R.id.picture);
         btnChoosePhoto.setOnClickListener(new View.OnClickListener() {
@@ -55,15 +60,26 @@ public class Case24 extends AppCompatActivity {
                 requestPermissino();
             }
         });
+        //设置图片
+        setKeepImage();
     }
 
     private void requestPermissino() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-        }else {
-            openAlbum();
-        }
-
+        //使用了郭霖大神的Permission库实现
+        PermissionX.init(this)
+                .permissions(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .onExplainRequestReason((scope, deniedList) -> {
+                    String message = "需要您同意以下权限才能正常使用";
+                    scope.showRequestReasonDialog(deniedList, message, "确定", "取消");
+                })
+                .request((allGranted, grantedList, deniedList) -> {
+                    if (allGranted) {
+//                        Toast.makeText(this, "所有申请的权限都已通过", Toast.LENGTH_SHORT).show();
+                        openAlbum();
+                    } else {
+                        Toast.makeText(this, "您拒绝了如下权限："+deniedList, Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     private void openAlbum(){
@@ -144,7 +160,10 @@ public class Case24 extends AppCompatActivity {
         return path;
     }
 
-    //展示图片
+    /**
+     *  展示图片
+     * @param imagePath
+     */
     private void displayImage(String imagePath){
         if(imagePath!=null && !imagePath.equals("")){
             Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
@@ -159,13 +178,19 @@ public class Case24 extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
+    /**
+     *  用户头像更新保存
+     */
+
+    private void setKeepImage(){
         //设置再次app时显示的图片
         SharedPreferences sp = getSharedPreferences("sp_img", MODE_PRIVATE);
         //取出上次存储的图片路径设置此次的图片展示
         String beforeImagePath = sp.getString("imgPath", null);
-        displayImage(beforeImagePath);
+        if(beforeImagePath == null){
+            picture.setImageResource(R.drawable.default_img);
+        }else {
+            displayImage(beforeImagePath);
+        }
     }
 }

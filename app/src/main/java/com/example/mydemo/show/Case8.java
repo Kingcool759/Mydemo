@@ -1,40 +1,47 @@
 package com.example.mydemo.show;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.mydemo.R;
-import com.youth.banner.Banner;
+import com.example.mydemo.adapter.BannerViewPagerAdapter;
+import com.example.mydemo.entity.ImageUrl;
+
+import java.util.ArrayList;
+import java.util.List;
 
 //viewpager使用实现轮播图
 public class Case8 extends AppCompatActivity {
-    private Banner banner;
+    private ViewPager viewPager;
+    private BannerViewPagerAdapter bannerAdapter;
+    private ArrayList<View> pageviewList;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case8);
-        banner = findViewById(R.id.banner);
+
+        viewPager = findViewById(R.id.view_pager);
+
+        //查找布局文件用LayoutInflater.inflate
+        LayoutInflater inflater =getLayoutInflater();
+        View view1 = inflater.inflate(R.layout.viewpager_view_item1, null);
+        View view2 = inflater.inflate(R.layout.viewpager_view_item2, null);
+        View view3 = inflater.inflate(R.layout.viewpager_view_item3, null);
+
+
+        //将view装入数组
+        pageviewList = new ArrayList<View>();
+        pageviewList.add(view1);
+        pageviewList.add(view2);
+        pageviewList.add(view3);
+
+        //绑定适配器
+        bannerAdapter = new BannerViewPagerAdapter(pageviewList);
+        viewPager.setAdapter(bannerAdapter);
     }
-//    public void useBanner() {
-//        //--------------------------简单使用-------------------------------
-//        banner.addBannerLifecycleObserver(this)//添加生命周期观察者
-//                .setAdapter(new BannerExampleAdapter(DataBean.getTestData()))
-//                .setIndicator(new CircleIndicator(this));
-//
-//        //—————————————————————————如果你想偷懒，而又只是图片轮播————————————————————————
-//        banner.setAdapter(new BannerImageAdapter<DataBean>(DataBean.getTestData3()) {
-//            @Override
-//            public void onBindView(BannerImageHolder holder, DataBean data, int position, int size) {
-//                //图片加载自己实现
-//                Glide.with(holder.itemView)
-//                        .load(data.imageUrl)
-//                        .apply(RequestOptions.bitmapTransform(new RoundedCorners(30)))
-//                        .into(holder.imageView);
-//            }
-//        })
-//                .addBannerLifecycleObserver(this)//添加生命周期观察者
-//                .setIndicator(new CircleIndicator(this));
-//    }
 }

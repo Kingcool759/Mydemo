@@ -1,11 +1,12 @@
 package com.example.mydemo.adapter;
 
 import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.example.mydemo.entity.BannerImg;
+import com.example.mydemo.entity.ImageUrl;
 
 import java.util.List;
 
@@ -15,19 +16,32 @@ import java.util.List;
  * @describe  banner使用
  */
 public class BannerViewPagerAdapter extends PagerAdapter {
-    List<BannerImg> imgList;
+    List<View> viewPagerList;
 
-    public BannerViewPagerAdapter(List<BannerImg> imgList) {
-        this.imgList = imgList;
+    public BannerViewPagerAdapter(List<View> imgList) {
+        this.viewPagerList = imgList;
     }
 
     @Override
     public int getCount() {
-        return imgList.size();
+        return viewPagerList.size();
     }
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return false;
+        return view == object;
     }
+
+    @NonNull
+    @Override
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+        container.addView(viewPagerList.get(position));
+        return viewPagerList.get(position);
+    }
+
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        container.removeView(viewPagerList.get(position));
+    }
+
 }

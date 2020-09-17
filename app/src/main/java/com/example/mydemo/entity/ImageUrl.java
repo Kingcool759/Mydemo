@@ -5,7 +5,7 @@ package com.example.mydemo.entity;
  * @auther
  * @describe  轮播图使用
  */
-public class BannerImg {
+public class ImageUrl {
     public String imageUrl;
 
     public String getImageUrl() {
@@ -15,4 +15,5 @@ public class BannerImg {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
 }

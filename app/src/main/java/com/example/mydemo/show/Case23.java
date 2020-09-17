@@ -95,13 +95,24 @@ public class Case23 extends AppCompatActivity {
     }
 
     private void requestCamera() {
-
-        //使用隐示的Intent，系统会找到与它对应的活动，即调用摄像头，并把它存储
-        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-        startActivityForResult(intent, TAKE_PHOTO);
-        //调用会返回结果的开启方式，返回成功的话，则把它显示出来
-//        displayImage(filePath);
+        try {
+            if (imageUri == null) {
+                if (!outputImage.getParentFile().exists()) {
+                    outputImage.getParentFile().mkdirs();
+                }
+                outputImage.createNewFile();
+                if (Build.VERSION.SDK_INT >= 24) {
+                    imageUri = FileProvider.getUriForFile(this,
+                            "com.example.mydemo.fileprovider", outputImage);
+                }
+            }
+            //使用隐示的Intent，系统会找到与它对应的活动，即调用摄像头，并把它存储
+            Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+            startActivityForResult(intent, TAKE_PHOTO);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     //处理返回结果的函数，下面是隐示Intent的返回结果的处理方式，具体见以前我所发的intent讲解
@@ -111,17 +122,6 @@ public class Case23 extends AppCompatActivity {
             case TAKE_PHOTO:
                 if (resultCode == RESULT_OK) {
                     try {
-                        if (!outputImage.getParentFile().exists()) {
-                            outputImage.getParentFile().mkdirs();
-                        }
-
-                        outputImage.createNewFile();
-
-                        if (Build.VERSION.SDK_INT >= 24) {
-                            imageUri = FileProvider.getUriForFile(this,
-                                    "com.example.mydemo.fileprovider", outputImage);
-                        }
-
                         Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
                         picture.setImageBitmap(bitmap);
                         //存储上次选择的图片路径，用以再次打开app设置图片
@@ -129,10 +129,7 @@ public class Case23 extends AppCompatActivity {
                         SharedPreferences.Editor editor = sp.edit(); //获取edit()
                         editor.putString("imgPath",filePath);
                         editor.apply();
-
                     } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }

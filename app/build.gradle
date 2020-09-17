@@ -101,4 +101,6 @@ dependencies {
     //图片圆形处理
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    //动态请求应用权限
+    implementation 'com.permissionx.guolindev:permissionx:1.4.0'
 }

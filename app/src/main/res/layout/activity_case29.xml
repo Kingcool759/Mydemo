@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".blog.Case29"
+    tools:ignore="MissingConstraints" >
+
+    <Button
+        android:id="@+id/btn_permission"
+        android:text="点击申请应用权限(基本版)"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_permission_better"
+        app:layout_constraintTop_toBottomOf="@id/btn_permission"
+        android:text="点击申请应用权限(升级版)"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="点击申请应用权限(高级版)"
+        android:id="@+id/btn_permission_best"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_permission_better"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

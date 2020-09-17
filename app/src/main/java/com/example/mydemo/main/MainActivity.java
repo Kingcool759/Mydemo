@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.example.mydemo.R;
 import com.example.mydemo.blog.Case21;
+import com.example.mydemo.blog.Case29;
 import com.example.mydemo.show.Case10;
 import com.example.mydemo.show.Case11;
 import com.example.mydemo.show.Case12;
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             "25：RecyclerView隐藏TooBar效果",
             "26：TitleBar标题栏库使用",
             "27：CricleImageView圆形图片库使用",
-            "3：dd",
+            "28：Permission X 动态请求应用权限",
             "3：aa",
             "3：cc",
             "3：dd",
@@ -206,6 +207,10 @@ public class MainActivity extends AppCompatActivity {
                     case 26:  //图片圆形处理
                         Intent intent28 = new Intent(MainActivity.this, Case28.class);
                         startActivity(intent28);
+                        break;
+                    case 27:  //permission X
+                        Intent intent29 = new Intent(MainActivity.this, Case29.class);
+                        startActivity(intent29);
                         break;
                 }
             }

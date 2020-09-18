@@ -44,13 +44,10 @@ public class ViewPagerAdapterThree extends PagerAdapter {
         // 如果父布局中已经有了需要在添加前做remove操作
         // 否则会报错Android-The specified child already has a parent. You must call removeView() on the child's parent first.
         int currentPosition = (position % images.size());
-
         ImageView iv = images.get(currentPosition);
         if (iv.getParent()!=null){
             ((ViewPager)iv.getParent()).removeView(iv);
         }
-        Log.d("tag", "currentPosition == " + currentPosition);
-
         view.addView(iv);
         return iv;
     }

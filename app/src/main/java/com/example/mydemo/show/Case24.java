@@ -48,24 +48,18 @@ public class Case24 extends AppCompatActivity {
     private void ininView(){
         Button btnChoosePhoto = (Button) findViewById(R.id.choose_photo);
         picture = (ImageView) findViewById(R.id.picture);
-        btnChoosePhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                requestPermissino();
-            }
+        btnChoosePhoto.setOnClickListener((View)->{
+            requestPermission();
         });
-        picture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                requestPermissino();
-            }
+        picture.setOnClickListener((View)->{
+            requestPermission();
         });
         //设置图片
         setKeepImage();
     }
 
-    private void requestPermissino() {
-        //使用了郭霖大神的Permission库实现
+    private void requestPermission() {
+        //使用了郭霖大神的PermissionX库实现
         PermissionX.init(this)
                 .permissions(Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 .onExplainRequestReason((scope, deniedList) -> {
@@ -86,22 +80,6 @@ public class Case24 extends AppCompatActivity {
         Intent intent = new Intent("android.intent.action.GET_CONTENT");
         intent.setType("image/*");
         startActivityForResult(intent,CHOOSE_PHOTO); //打开相册
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode){
-            case 1:
-                if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    openAlbum();
-                }else {
-                    Toast.makeText(this,"你拒绝了该权限",Toast.LENGTH_SHORT).show();
-                }
-                break;
-            default:
-                break;
-        }
     }
 
     @Override
@@ -171,7 +149,7 @@ public class Case24 extends AppCompatActivity {
             //存储上次选择的图片路径，用以再次打开app设置图片
             SharedPreferences sp = getSharedPreferences("sp_img",MODE_PRIVATE);  //创建xml文件存储数据，name:创建的xml文件名
             SharedPreferences.Editor editor = sp.edit(); //获取edit()
-            editor.putString("imgPath",imagePath);
+            editor.putString("imgPath2",imagePath);
             editor.apply();
         }else {
             Toast.makeText(this,"获取图片失败",Toast.LENGTH_SHORT).show();
@@ -186,7 +164,7 @@ public class Case24 extends AppCompatActivity {
         //设置再次app时显示的图片
         SharedPreferences sp = getSharedPreferences("sp_img", MODE_PRIVATE);
         //取出上次存储的图片路径设置此次的图片展示
-        String beforeImagePath = sp.getString("imgPath", null);
+        String beforeImagePath = sp.getString("imgPath2", null);
         if(beforeImagePath == null){
             picture.setImageResource(R.drawable.default_img);
         }else {

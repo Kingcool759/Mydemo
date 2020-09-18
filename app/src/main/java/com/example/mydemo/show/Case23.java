@@ -51,11 +51,11 @@ public class Case23 extends AppCompatActivity {
         //点击事件进行拍照
         Button takephoto = findViewById(R.id.take_photo);
         picture = findViewById(R.id.picture);
-        takephoto.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //动态请求相机权限
-                requestPermission();  //在其中若用户给予权限则请求相机拍照
-            }
+        takephoto.setOnClickListener((View)->{
+            requestPermission();
+        });
+        picture.setOnClickListener((View)->{
+            requestPermission();
         });
         //设置图片保存下次展示
         setKeepImage();
@@ -63,7 +63,7 @@ public class Case23 extends AppCompatActivity {
 
     //动态请求权限
     private void requestPermission() {
-        //使用了郭霖大神的Permission库实现
+        //使用了郭霖大神的PermissionX库实现
         PermissionX.init(this)
                 .permissions(Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.CAMERA,Manifest.permission.ACCESS_NETWORK_STATE)
                 .onExplainRequestReason((scope, deniedList) -> {
@@ -78,20 +78,6 @@ public class Case23 extends AppCompatActivity {
                         Toast.makeText(this, "您拒绝了如下权限："+deniedList, Toast.LENGTH_SHORT).show();
                     }
                 });
-    }
-
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (grantResults != null && grantResults.length != 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            switch (requestCode) {
-                case 1: {
-                    requestCamera();
-                }
-                break;
-            }
-        }
     }
 
     private void requestCamera() {

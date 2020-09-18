@@ -1,38 +1,74 @@
 package com.example.mydemo.show;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.mydemo.R;
-import com.example.mydemo.adapter.BannerViewPagerAdapter;
-import com.example.mydemo.entity.ImageUrl;
+import com.example.mydemo.adapter.ViewPagerAdapterOne;
+import com.example.mydemo.adapter.ViewPagerAdapterThree;
+import com.example.mydemo.adapter.ViewPagerAdapterTwo;
+import com.hjq.toast.ToastUtils;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 //viewpager使用实现轮播图
 public class Case8 extends AppCompatActivity {
-    private ViewPager viewPager;
-    private BannerViewPagerAdapter bannerAdapter;
-    private ArrayList<View> pageviewList;
+    //初始化viewpager1
+    ViewPager viewPager1;
+    ViewPagerAdapterOne bannerAdapter;
+    ArrayList<View> pageviewList;
+    //初始化viewpager2
+    ViewPager viewPager2;
+    ArrayList<ImageView> listviews;
+    ViewPagerAdapterTwo viewPagerAdapterTwo;
+    int[] pics = {R.drawable.lunbo1, R.drawable.lunbo2, R.drawable.lunbo3};
+    @SuppressLint("HandlerLeak")
+    private MyHandler myHandler = new MyHandler();
+    //初始化viewpager3
+    private ViewPager viewPager3;
+    private int imageIds[];
+    private String[] titles;
+    private ArrayList<ImageView> images;
+    private ArrayList<View> dots;
+    private TextView title;
+    private ViewPagerAdapterThree viewPagerAdapterThree;
+    private int oldPosition = 0;//记录上一次点的位置
+    private int currentItem; //当前页面
+    private ScheduledExecutorService scheduledExecutorService;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case8);
+        initViewPager1();  //简单切换图片
+        inintViewPager2();  //图片动态切换
+        initViewPager3();  //切换+动态+小点+标题
 
-        viewPager = findViewById(R.id.view_pager);
+    }
 
+    private void initViewPager1() {
+        viewPager1 = findViewById(R.id.view_pager1);
         //查找布局文件用LayoutInflater.inflate
-        LayoutInflater inflater =getLayoutInflater();
+        LayoutInflater inflater = getLayoutInflater();
         View view1 = inflater.inflate(R.layout.viewpager_view_item1, null);
         View view2 = inflater.inflate(R.layout.viewpager_view_item2, null);
         View view3 = inflater.inflate(R.layout.viewpager_view_item3, null);
-
 
         //将view装入数组
         pageviewList = new ArrayList<View>();
@@ -41,7 +77,182 @@ public class Case8 extends AppCompatActivity {
         pageviewList.add(view3);
 
         //绑定适配器
-        bannerAdapter = new BannerViewPagerAdapter(pageviewList);
-        viewPager.setAdapter(bannerAdapter);
+        bannerAdapter = new ViewPagerAdapterOne(pageviewList);
+        viewPager1.setAdapter(bannerAdapter);
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private void inintViewPager2() {
+        viewPager2 = findViewById(R.id.view_pager2);
+        //处理
+        listviews = new ArrayList<ImageView>();
+        for (int i = 0; i < pics.length; i++) {
+            ImageView imageView = new ImageView(this);
+            ViewGroup.LayoutParams viewPagerImageViewParams = new ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT);
+            imageView.setLayoutParams(viewPagerImageViewParams);
+            imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            imageView.setImageResource(pics[i]);
+            listviews.add(imageView);
+        }
+        viewPagerAdapterTwo = new ViewPagerAdapterTwo(listviews);
+        viewPager2.setAdapter(viewPagerAdapterTwo);
+        viewPager2.setCurrentItem(1);
+        myHandler.sendEmptyMessageDelayed(0, 1500);// 间隔一秒切换一次
+
+        //onTouchEent触摸事件
+//        viewPagerAdapterTwo.setItemTouchListener(new ViewPagerAdapterTwo.ItemTouchListener() {
+//            @Override
+//            public void getItemTouchData(int type) {
+//                switch (type) {
+//                        //触摸
+//                    case 1:
+//                        myHandler.removeMessages(0);
+//                    break;
+//                        //滑动
+//                    case 2:
+//                        viewPager2.setCurrentItem(viewPager2.getCurrentItem() + 1);
+//                        break;
+//                        //松开
+//                    case 3:
+//                        myHandler.sendEmptyMessageDelayed(0, 2000);
+//                        break;
+//                    default:
+//                        break;
+//                }
+//            }
+//        });
+    }
+
+    //viewPager2使用
+    @SuppressLint("HandlerLeak")
+    class MyHandler extends Handler {
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            viewPager2.setCurrentItem(viewPager2.getCurrentItem() + 1);
+            myHandler.sendEmptyMessageDelayed(0, 2000);
+        }
+    }
+
+    private void initViewPager3() {
+
+
+        //图片ID
+        imageIds = new int[]{
+                R.drawable.lunbo1,
+                R.drawable.lunbo2,
+                R.drawable.lunbo3
+        };
+        //图片标题
+        titles = new String[]{
+                "巩俐不低俗，我就不能低俗",
+                "乐视网TV版大派送",
+                "热血屌丝的反杀"
+        };
+        //显示的图片
+        images = new ArrayList<ImageView>();
+        for (int i = 0; i < imageIds.length; i++) {
+            ImageView imageView = new ImageView(this);
+            imageView.setBackgroundResource(imageIds[i]);
+
+            images.add(imageView);
+        }
+        //显示的点
+        dots = new ArrayList<View>();
+        dots.add(findViewById(R.id.dot_0));
+        dots.add(findViewById(R.id.dot_1));
+        dots.add(findViewById(R.id.dot_2));
+
+        title = (TextView) findViewById(R.id.title);
+        title.setText(titles[0]);
+
+        viewPager3 = (ViewPager) findViewById(R.id.view_pager3);
+
+        viewPagerAdapterThree = new ViewPagerAdapterThree(images);
+
+        viewPager3.setAdapter(viewPagerAdapterThree);
+
+        viewPager3.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                int currentPosition = position%(images.size());
+                title.setText(titles[currentPosition]);
+                dots.get(oldPosition).setBackgroundResource(R.drawable.dot_normal);
+                dots.get(currentPosition).setBackgroundResource(R.drawable.dot_focused);
+
+                oldPosition = currentPosition;
+                currentItem = currentPosition;
+                viewPager3.setCurrentItem(currentPosition);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+        handler.sendEmptyMessage(1);
+        initViewPagerTouchEvent();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        //scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
+        //每隔2秒钟切换一张图片
+        //scheduledExecutorService.scheduleWithFixedDelay(new ViewPagerTask(), 2, 2, TimeUnit.SECONDS);
+    }
+
+    //切换图片
+    private class ViewPagerTask implements Runnable {
+        @Override
+        public void run() {
+            currentItem = (currentItem + 1) % imageIds.length;
+            //更新界面
+            handler.obtainMessage().sendToTarget();
+        }
+    }
+
+    @SuppressLint("HandlerLeak")
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            //设置当前页面
+            int currentItem = viewPager3.getCurrentItem();
+            viewPager3.setCurrentItem(currentItem +1);
+            handler.sendEmptyMessageDelayed(1, 2000);
+        }
+    };
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    private void initViewPagerTouchEvent() {
+        viewPager3.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        //按下
+                        handler.removeCallbacksAndMessages(null);
+                    }
+                    break;
+
+                    case MotionEvent.ACTION_UP: {
+                        //抬起
+                        handler.sendEmptyMessageDelayed(1, 2000);
+
+                    }
+                    break;
+                }
+                return false;
+            }
+        });
     }
 }

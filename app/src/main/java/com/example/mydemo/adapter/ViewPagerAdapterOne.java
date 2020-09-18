@@ -15,10 +15,10 @@ import java.util.List;
  * @auther
  * @describe  banner使用
  */
-public class BannerViewPagerAdapter extends PagerAdapter {
+public class ViewPagerAdapterOne extends PagerAdapter {
     List<View> viewPagerList;
 
-    public BannerViewPagerAdapter(List<View> imgList) {
+    public ViewPagerAdapterOne(List<View> imgList) {
         this.viewPagerList = imgList;
     }
 

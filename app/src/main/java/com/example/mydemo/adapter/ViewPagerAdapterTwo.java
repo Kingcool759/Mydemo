@@ -20,7 +20,6 @@ import java.util.List;
  */
 public class ViewPagerAdapterTwo extends PagerAdapter {
     private ArrayList<ImageView> listviews;
-    private ItemTouchListener mItemTouchListener;
 
     public ViewPagerAdapterTwo(ArrayList<ImageView> views) {
         this.listviews = views;
@@ -33,32 +32,6 @@ public class ViewPagerAdapterTwo extends PagerAdapter {
             container.removeView(listviews.get(position % listviews.size()));
         }
         container.addView(listviews.get(position % listviews.size()), 0);
-
-        //触摸事件
-        container.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-
-                    case MotionEvent.ACTION_DOWN:
-                        //按下
-                        if(mItemTouchListener != null){
-                        mItemTouchListener.getItemTouchData(1);}
-                        break;
-                    case MotionEvent.ACTION_MOVE:
-                        //移动
-                        if(mItemTouchListener != null){
-                        mItemTouchListener.getItemTouchData(2);}
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        //松开
-                        if(mItemTouchListener != null){
-                        mItemTouchListener.getItemTouchData(3);}
-                        break;
-                }
-                return true;
-            }
-        });
 
         return listviews.get(position % listviews.size());
     }
@@ -74,11 +47,4 @@ public class ViewPagerAdapterTwo extends PagerAdapter {
     public void destroyItem(ViewGroup container, int position, Object object) {
     }
 
-    //回调事件
-    public interface ItemTouchListener{
-        void getItemTouchData(int type);
-    }
-    public void setItemTouchListener(ItemTouchListener itemTouchListener){
-        mItemTouchListener = itemTouchListener;
-    }
 }

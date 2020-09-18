@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 
@@ -18,7 +19,6 @@ import java.util.ArrayList;
  */
 public class ViewPagerAdapterThree extends PagerAdapter {
     ArrayList<ImageView> images;
-    ItemTouchListener mItemTouchListener;
 
     private int maxValue = Integer.MAX_VALUE;
 
@@ -39,26 +39,24 @@ public class ViewPagerAdapterThree extends PagerAdapter {
     }
 
     @Override
-    public void destroyItem(ViewGroup view, int position, Object object) {
+    public Object instantiateItem(ViewGroup view, int position) {
+        // 在父布局中添加View前先判断父布局中是否已经存在View
+        // 如果父布局中已经有了需要在添加前做remove操作
+        // 否则会报错Android-The specified child already has a parent. You must call removeView() on the child's parent first.
         int currentPosition = (position % images.size());
-        view.removeView(images.get(currentPosition));
 
+        ImageView iv = images.get(currentPosition);
+        if (iv.getParent()!=null){
+            ((ViewPager)iv.getParent()).removeView(iv);
+        }
+        Log.d("tag", "currentPosition == " + currentPosition);
+
+        view.addView(iv);
+        return iv;
     }
 
     @Override
-    public Object instantiateItem(ViewGroup view, int position) {
-        int currentPosition = (position % images.size());
-        Log.d("tag", "currentPosition == " + currentPosition);
-        view.addView(images.get(currentPosition));
-        return images.get(currentPosition);
-    }
+    public void destroyItem(ViewGroup view, int position, Object object) {
 
-    //回调事件
-    public interface ItemTouchListener {
-        void getItemTouchData(int type);
-    }
-
-    public void setItemTouchListener(ItemTouchListener itemTouchListener) {
-        mItemTouchListener = itemTouchListener;
     }
 }

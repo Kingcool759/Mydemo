@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+import java.util.zip.Inflater;
 
 //viewpager使用实现轮播图
 public class Case8 extends AppCompatActivity {
@@ -99,29 +100,6 @@ public class Case8 extends AppCompatActivity {
         viewPager2.setAdapter(viewPagerAdapterTwo);
         viewPager2.setCurrentItem(1);
         myHandler.sendEmptyMessageDelayed(0, 1500);// 间隔一秒切换一次
-
-        //onTouchEent触摸事件
-//        viewPagerAdapterTwo.setItemTouchListener(new ViewPagerAdapterTwo.ItemTouchListener() {
-//            @Override
-//            public void getItemTouchData(int type) {
-//                switch (type) {
-//                        //触摸
-//                    case 1:
-//                        myHandler.removeMessages(0);
-//                    break;
-//                        //滑动
-//                    case 2:
-//                        viewPager2.setCurrentItem(viewPager2.getCurrentItem() + 1);
-//                        break;
-//                        //松开
-//                    case 3:
-//                        myHandler.sendEmptyMessageDelayed(0, 2000);
-//                        break;
-//                    default:
-//                        break;
-//                }
-//            }
-//        });
     }
 
     //viewPager2使用
@@ -180,14 +158,13 @@ public class Case8 extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                int currentPosition = position%(images.size());
+                int currentPosition = position % (images.size());
                 title.setText(titles[currentPosition]);
                 dots.get(oldPosition).setBackgroundResource(R.drawable.dot_normal);
                 dots.get(currentPosition).setBackgroundResource(R.drawable.dot_focused);
 
                 oldPosition = currentPosition;
                 currentItem = currentPosition;
-                viewPager3.setCurrentItem(currentPosition);
             }
 
             @Override
@@ -197,24 +174,7 @@ public class Case8 extends AppCompatActivity {
         });
         handler.sendEmptyMessage(1);
         initViewPagerTouchEvent();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        //scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
-        //每隔2秒钟切换一张图片
-        //scheduledExecutorService.scheduleWithFixedDelay(new ViewPagerTask(), 2, 2, TimeUnit.SECONDS);
-    }
-
-    //切换图片
-    private class ViewPagerTask implements Runnable {
-        @Override
-        public void run() {
-            currentItem = (currentItem + 1) % imageIds.length;
-            //更新界面
-            handler.obtainMessage().sendToTarget();
-        }
+        setFirstLocation();
     }
 
     @SuppressLint("HandlerLeak")
@@ -223,7 +183,7 @@ public class Case8 extends AppCompatActivity {
         public void handleMessage(Message msg) {
             //设置当前页面
             int currentItem = viewPager3.getCurrentItem();
-            viewPager3.setCurrentItem(currentItem +1);
+            viewPager3.setCurrentItem(currentItem + 1);
             handler.sendEmptyMessageDelayed(1, 2000);
         }
     };
@@ -233,6 +193,7 @@ public class Case8 extends AppCompatActivity {
         super.onStop();
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void initViewPagerTouchEvent() {
         viewPager3.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -254,5 +215,13 @@ public class Case8 extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    private void setFirstLocation() {
+        // mTvPagerTitle.setText(mImageTitles[previousPosition]);
+        // 把ViewPager设置为默认选中Integer.MAX_VALUE / 2，从十几亿次开始轮播图片，达到无限循环目的;
+        int m = (Integer.MAX_VALUE / 2) % images.size();
+        int currentPosition = Integer.MAX_VALUE / 2 - m - 1;
+        viewPager3.setCurrentItem(currentPosition);
     }
 }

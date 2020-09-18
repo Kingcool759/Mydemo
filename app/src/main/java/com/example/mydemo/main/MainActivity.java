@@ -12,6 +12,7 @@ import android.widget.ListView;
 import com.example.mydemo.R;
 import com.example.mydemo.blog.Case21;
 import com.example.mydemo.blog.Case29;
+import com.example.mydemo.blog.Case30;
 import com.example.mydemo.show.Case10;
 import com.example.mydemo.show.Case11;
 import com.example.mydemo.show.Case12;
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             "26：TitleBar标题栏库使用",
             "27：CricleImageView圆形图片库使用",
             "28：Permission X 动态请求应用权限",
-            "3：aa",
+            "29：activity横竖屏切换时生命周期的变化（待完成）",
             "3：cc",
             "3：dd",
             "3：aa",
@@ -211,6 +212,10 @@ public class MainActivity extends AppCompatActivity {
                     case 27:  //permission X
                         Intent intent29 = new Intent(MainActivity.this, Case29.class);
                         startActivity(intent29);
+                        break;
+                    case 28:  //permission X
+                        Intent intent30 = new Intent(MainActivity.this, Case30.class);
+                        startActivity(intent30);
                         break;
                 }
             }

@@ -31,13 +31,13 @@ import java.util.zip.Inflater;
 //viewpager使用实现轮播图
 public class Case8 extends AppCompatActivity {
     //初始化viewpager1
-    ViewPager viewPager1;
-    ViewPagerAdapterOne bannerAdapter;
-    ArrayList<View> pageviewList;
+    private ViewPager viewPager1;
+    private ViewPagerAdapterOne bannerAdapter;
+    private ArrayList<View> pageviewList;
     //初始化viewpager2
-    ViewPager viewPager2;
-    ArrayList<ImageView> listviews;
-    ViewPagerAdapterTwo viewPagerAdapterTwo;
+    private ViewPager viewPager2;
+    private ArrayList<ImageView> listviews;
+    private ViewPagerAdapterTwo viewPagerAdapterTwo;
     int[] pics = {R.drawable.lunbo1, R.drawable.lunbo2, R.drawable.lunbo3};
     @SuppressLint("HandlerLeak")
     private MyHandler myHandler = new MyHandler();
@@ -82,7 +82,6 @@ public class Case8 extends AppCompatActivity {
         viewPager1.setAdapter(bannerAdapter);
     }
 
-    @SuppressLint("ClickableViewAccessibility")
     private void inintViewPager2() {
         viewPager2 = findViewById(R.id.view_pager2);
         //处理

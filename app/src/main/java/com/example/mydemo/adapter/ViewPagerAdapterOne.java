@@ -2,9 +2,11 @@ package com.example.mydemo.adapter;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.mydemo.entity.ImageUrl;
 
@@ -34,14 +36,14 @@ public class ViewPagerAdapterOne extends PagerAdapter {
 
     @NonNull
     @Override
-    public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        container.addView(viewPagerList.get(position));
+    public Object instantiateItem(@NonNull ViewGroup view, int position) {
+        view.addView(viewPagerList.get(position));
         return viewPagerList.get(position);
     }
 
     @Override
-    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView(viewPagerList.get(position));
+    public void destroyItem(@NonNull ViewGroup view, int position, @NonNull Object object) {
+        view.removeView(viewPagerList.get(position));
     }
 
 }

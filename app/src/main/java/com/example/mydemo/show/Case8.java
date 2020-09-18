@@ -20,13 +20,7 @@ import com.example.mydemo.R;
 import com.example.mydemo.adapter.ViewPagerAdapterOne;
 import com.example.mydemo.adapter.ViewPagerAdapterThree;
 import com.example.mydemo.adapter.ViewPagerAdapterTwo;
-import com.hjq.toast.ToastUtils;
-
 import java.util.ArrayList;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
-import java.util.zip.Inflater;
 
 //viewpager使用实现轮播图
 public class Case8 extends AppCompatActivity {
@@ -51,7 +45,6 @@ public class Case8 extends AppCompatActivity {
     private ViewPagerAdapterThree viewPagerAdapterThree;
     private int oldPosition = 0;//记录上一次点的位置
     private int currentItem; //当前页面
-    private ScheduledExecutorService scheduledExecutorService;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -181,7 +174,7 @@ public class Case8 extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
             //设置当前页面
-            int currentItem = viewPager3.getCurrentItem();
+            currentItem = viewPager3.getCurrentItem();
             viewPager3.setCurrentItem(currentItem + 1);
             handler.sendEmptyMessageDelayed(1, 2000);
         }

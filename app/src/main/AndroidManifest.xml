@@ -21,10 +21,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".blog.Case32"></activity>
         <activity android:name=".blog.Case31" />
-        <activity android:name=".blog.Case30"
+        <activity
+            android:name=".blog.Case30"
             android:configChanges="orientation|keyboard|layoutDirection|screenSize">
-            <!--activity横竖屏切换-->
+            <!-- activity横竖屏切换 -->
         </activity>
         <activity android:name=".blog.Case29" />
         <activity android:name=".show.Case28" />
@@ -32,6 +34,7 @@
         <activity android:name=".show.Case26" />
         <activity android:name=".show.Case25" />
         <activity android:name=".show.Case24">
+
             <!-- 调用系统相册 -->
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
@@ -74,6 +77,7 @@
         <activity android:name=".show.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

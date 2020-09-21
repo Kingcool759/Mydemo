@@ -5,5 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".blog.Case30">
-
+    <TextView
+        android:text="切换横竖屏时监听生命周期变化"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@color/green"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

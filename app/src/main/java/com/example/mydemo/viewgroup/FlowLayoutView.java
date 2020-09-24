@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @data on 2020/9/8 2:13 PM
- * @auther
+ * @auther ArmStrong
  * @describe  //流式布局 -- 自定义ViewGroup.  from libo
  */
 public class FlowLayoutView extends ViewGroup {

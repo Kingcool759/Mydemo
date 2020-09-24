@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent14 = new Intent(MainActivity.this, Case14.class);
                         startActivity(intent14);
                         break;
-                    case 14:  //流式布局
+                    case 14:  //自定义View实现流式布局
                         Intent intent15 = new Intent(MainActivity.this, Case15.class);
                         startActivity(intent15);
                         break;

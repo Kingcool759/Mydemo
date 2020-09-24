@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 //流式布局
 public class Case15 extends AppCompatActivity {
-    private ActivityCase15Binding binding;
+//    private ActivityCase15Binding binding;
 
     private FlowLayoutView flowLayoutView;  //自定义ViewGroup
     private ArrayList<String> datas = new ArrayList();
@@ -27,17 +27,18 @@ public class Case15 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_case15);
-        binding.setLifecycleOwner(this);
+//        binding = DataBindingUtil.setContentView(this, R.layout.activity_case15);
+//        binding.setLifecycleOwner(this);
+        setContentView(R.layout.activity_case15);
 
         //将数组转成list，因为一般都是从api接口接收的数据都是list
         for (int i = 0; i < tagTextArray.length; i++) {
             datas.add(tagTextArray[i]);
         }
-        init();
+        initView();
     }
 
-    private void init() {
+    private void initView() {
         flowLayoutView = findViewById(R.id.flowlayout);
         for (int i = 0; i < datas.size(); i++) {
             View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.flow_tv_content, null);

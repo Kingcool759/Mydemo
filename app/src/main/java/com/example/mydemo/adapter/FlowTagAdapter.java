@@ -1,6 +1,7 @@
 package com.example.mydemo.adapter;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
@@ -9,29 +10,32 @@ import com.zhy.view.flowlayout.FlowLayout;
 import com.zhy.view.flowlayout.TagAdapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @data on 2020/9/5 10:41 AM
- * @auther
- * @describe
+ * @auther armstrong
+ * @describe   tagflowlayout 采自github泓洋大神的 FlowLayout库
  */
 public class FlowTagAdapter extends TagAdapter {
-    private List<String> datalist;
+    private ArrayList<String> datalist;
     private Context context;
 
-    public FlowTagAdapter(Context mcontext,List datas) {
+    public FlowTagAdapter(Context mcontext,ArrayList datas) {
         super(datas);
-        this.datalist = datas;
         this.context = mcontext;
+        this.datalist = datas;
     }
 
     @Override
     public View getView(FlowLayout parent, int position, Object o) {
-        TextView tv = (TextView) View.inflate(context,R.layout.flowlayout_tv_selected, null);
-        datalist = new ArrayList();
+        TextView tv = (TextView) View.inflate(context,R.layout.tagflow_tv_context, null);
         tv.setText(datalist.get(position));
         return tv;
+    }
+
+    @Override
+    public int getCount() {
+        return datalist.size();
     }
 
     @Override

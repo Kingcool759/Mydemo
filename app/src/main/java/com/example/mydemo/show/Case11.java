@@ -27,7 +27,7 @@ public class Case11 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case11);
 
-        Fruit fruit = new Fruit("苹果香蕉火龙果！",R.drawable.starsky);
+        Fruit fruit = new Fruit("苹果香蕉火龙果！",R.drawable.meizi);
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout)findViewById(R.id.collsping_Toolbar);

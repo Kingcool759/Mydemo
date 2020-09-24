@@ -32,6 +32,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/green"
                 app:title="标题党"
+                app:titleColor="@color/white"
                 style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:popupTheme="@style/Theme.AppCompat.Light"
                 app:layout_scrollFlags="scroll|enterAlways|snap"

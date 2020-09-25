@@ -1,4 +1,4 @@
-package com.example.mydemo.viewgroup;
+package com.example.mydemo.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @data on 2020/9/8 2:13 PM
  * @auther ArmStrong
- * @describe  //流式布局 -- 自定义ViewGroup.  from libo
+ * @describe  //流式布局 -- 自定义View.  from libo
  */
 public class FlowLayoutView extends ViewGroup {
     private List<Row> rows = new ArrayList<>();

@@ -1,7 +1,6 @@
 package com.example.mydemo.show;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,8 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.mydemo.R;
-import com.example.mydemo.databinding.ActivityCase15Binding;
-import com.example.mydemo.viewgroup.FlowLayoutView;
+import com.example.mydemo.view.FlowLayoutView;
 
 import java.util.ArrayList;
 

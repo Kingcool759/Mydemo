@@ -23,7 +23,7 @@
             app:titleTextColor="@color/white" />
 
         <!--自定义view-->
-        <com.example.mydemo.viewgroup.FlowLayoutView
+        <com.example.mydemo.view.FlowLayoutView
             android:id="@+id/flowlayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

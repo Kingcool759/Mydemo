@@ -14,6 +14,7 @@ import com.example.mydemo.blog.Case21;
 import com.example.mydemo.blog.Case29;
 import com.example.mydemo.blog.Case30;
 import com.example.mydemo.blog.Case31;
+import com.example.mydemo.blog.Case33;
 import com.example.mydemo.show.Case10;
 import com.example.mydemo.show.Case11;
 import com.example.mydemo.show.Case12;
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             "28：Permission X 动态请求应用权限",
             "29：activity横竖屏切换时生命周期的变化",
             "30：activity跳转到另一个activity时的生命周期变化",
-            "3：dd",
+            "31：RecyclerView实现多布局效果",
             "3：aa",
             "3：cc",
             "3：dd",
@@ -221,6 +222,10 @@ public class MainActivity extends AppCompatActivity {
                     case 29:  //activity跳转到另一个activity的时候生命周期变化
                         Intent intent31 = new Intent(MainActivity.this, Case31.class);
                         startActivity(intent31);
+                        break;
+                    case 30:  //activity跳转到另一个activity的时候生命周期变化
+                        Intent intent32 = new Intent(MainActivity.this, Case33.class);
+                        startActivity(intent32);
                         break;
                 }
             }

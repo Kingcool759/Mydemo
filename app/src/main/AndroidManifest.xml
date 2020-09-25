@@ -21,11 +21,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".blog.Case32"></activity>
+        <activity android:name=".blog.Case33"></activity>
+        <activity android:name=".blog.Case32" />
         <activity android:name=".blog.Case31" />
         <activity
             android:name=".blog.Case30"
             android:configChanges="orientation|keyboard|layoutDirection|screenSize">
+
             <!-- activity横竖屏切换 -->
         </activity>
         <activity android:name=".blog.Case29" />

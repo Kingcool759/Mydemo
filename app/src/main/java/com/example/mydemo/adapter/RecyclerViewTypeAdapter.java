@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * @data on 2020/9/25 5:28 PM
  * @auther
- * @describe
+ * @describe  Recycler多布局效果
  */
 public class RecyclerViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final int IMAGEVIEW = 0;
@@ -38,7 +38,7 @@ public class RecyclerViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.V
         View view;
         if(viewType == IMAGEVIEW){
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.image_view,parent,false);
-            return new HorViewHolder(view);
+            return new ImageHolder(view);
         }else {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.case7_item_fruit, parent, false);
             return new VerViewHolder(view);
@@ -47,10 +47,9 @@ public class RecyclerViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        if(holder instanceof HorViewHolder){
-            HorViewHolder horViewHolder = (HorViewHolder)holder;
-            horViewHolder.userImage.setImageResource(R.drawable.meizi);
-
+        if(holder instanceof ImageHolder){
+            ImageHolder horViewHolder = (ImageHolder)holder;
+            horViewHolder.userImage.setImageResource(R.drawable.user_img);
         }else if(holder instanceof VerViewHolder){
             VerViewHolder verViewHolder = (VerViewHolder)holder;
             verViewHolder.fruitImage.setImageResource(fruitList.get(position).getImageId());
@@ -58,28 +57,21 @@ public class RecyclerViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.V
         }
     }
 
-    public static class HorViewHolder extends RecyclerView.ViewHolder {
-        View ViewImage;
-        //图片
+    public static class ImageHolder extends RecyclerView.ViewHolder {
         public ImageView userImage;
 
-        public HorViewHolder(@NonNull View itemView) {
+        public ImageHolder(@NonNull View itemView) {
             super(itemView);
-            ViewImage = itemView;
             userImage = itemView.findViewById(R.id.user_image);
         }
     }
 
     public static class VerViewHolder extends RecyclerView.ViewHolder {
-        View fruitView;
-        //图片
         public ImageView fruitImage;
-        //标题
         public TextView fruitName;
 
         public VerViewHolder(@NonNull View itemView) {
             super(itemView);
-            fruitView = itemView;
             fruitImage = itemView.findViewById(R.id.fruit_image);
             fruitName = itemView.findViewById(R.id.fruit_name);
         }

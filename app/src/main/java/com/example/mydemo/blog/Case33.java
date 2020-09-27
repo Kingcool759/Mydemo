@@ -23,7 +23,6 @@ import java.util.List;
 
 public class Case33 extends AppCompatActivity {
     private ActivityCase33Binding binding;
-    private RecyclerViewTypeAdapter adapter;
     private LinearLayoutManager layoutManager;
     private List<Fruit> mList;
 
@@ -34,20 +33,19 @@ public class Case33 extends AppCompatActivity {
         binding.setLifecycleOwner(this);
         initView();
         //RecyclerView瀑布流布局
-        adapter = new RecyclerViewTypeAdapter(mList);
         layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         binding.rvRecyclerView.setLayoutManager(layoutManager);
-        binding.rvRecyclerView.setAdapter(adapter);
+        binding.rvRecyclerView.setAdapter(new RecyclerViewTypeAdapter(mList));
         binding.rvRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        binding.rvRecyclerView.addItemDecoration(new DividerItemDecoration(this)); //item分割线
-        binding.rvRecyclerView.addItemDecoration(new TimeLineItemDecoration(this)); //时间轴效果
+//        binding.rvRecyclerView.addItemDecoration(new DividerItemDecoration(this)); //item分割线
+//        binding.rvRecyclerView.addItemDecoration(new TimeLineItemDecoration(this)); //时间轴效果
     }
 
     private void initView() {
         mList = new ArrayList();
         for (int i = 0; i < 21; i++) {
-            mList.add(new Fruit("banana" + i, R.mipmap.apple)); //纵向
+            mList.add(new Fruit("apple" + i, R.mipmap.apple)); //纵向
         }
     }
 

@@ -8,24 +8,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@color/white"
+        android:background="@color/blue"
         android:orientation="vertical"
         android:padding="10dp"
+        android:gravity="center"
         tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/fruit_hor_image"
+            android:src="@mipmap/banana"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/fruit_hor_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="center"
-            android:textColor="@color/black"
+            android:text="香蕉"
+            android:textSize="20sp"
+            android:textColor="@color/white"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

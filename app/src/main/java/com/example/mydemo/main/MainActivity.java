@@ -16,6 +16,7 @@ import com.example.mydemo.blog.Case30;
 import com.example.mydemo.blog.Case31;
 import com.example.mydemo.blog.Case33;
 import com.example.mydemo.blog.Case34;
+import com.example.mydemo.blog.Case35;
 import com.example.mydemo.show.Case10;
 import com.example.mydemo.show.Case11;
 import com.example.mydemo.show.Case12;
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             "30：activity跳转到另一个activity时的生命周期变化",
             "31：Recycler实现多布局效果（ImageView）",
             "32：Recycler（两个）实现多布局效果",
-            "3：cc",
+            "33：Recycler实现多条目布局（行列）",
             "3：dd",
             "3：aa",
             "3：cc",
@@ -231,6 +232,10 @@ public class MainActivity extends AppCompatActivity {
                     case 31:  //Recycler（两个）实现多布局
                         Intent intent33 = new Intent(MainActivity.this, Case34.class);
                         startActivity(intent33);
+                        break;
+                    case 32:  //Recycler（两个）实现多布局
+                        Intent intent34 = new Intent(MainActivity.this, Case35.class);
+                        startActivity(intent34);
                         break;
                 }
             }

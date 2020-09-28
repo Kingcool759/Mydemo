@@ -21,15 +21,15 @@ import java.util.List;
 
 /**
  * @data on 2020/9/27 11:27 AM
- * @auther
- * @describe
+ * @auther armstrong
+ * @describe Recycler实现多条目布局（行列）
  */
-public class RecyclerGridAdapter extends RecyclerView.Adapter<RecyclerGridAdapter.MyViewHolder>{
-    private List<Integer> imgList;
+public class RecyclerGridAdapter extends RecyclerView.Adapter<RecyclerGridAdapter.MyViewHolder> {
+    private List<String> imgList;
     private List<String> tvList;
     private Context mContext;
 
-    public RecyclerGridAdapter(Context context, List<Integer> imageList,List<String> tvList) {
+    public RecyclerGridAdapter(Context context, List<String> imageList, List<String> tvList) {
         this.mContext = context;
         this.imgList = imageList;
         this.tvList = tvList;
@@ -38,7 +38,7 @@ public class RecyclerGridAdapter extends RecyclerView.Adapter<RecyclerGridAdapte
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.case35_hottype_hor,parent,false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.case35_hottype_hor, parent, false);
         final MyViewHolder holder = new MyViewHolder(itemView);
         return holder;
     }
@@ -46,16 +46,14 @@ public class RecyclerGridAdapter extends RecyclerView.Adapter<RecyclerGridAdapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         //加载图片
-        holder.img.setImageResource(imgList.get(position));
+//        holder.img.setImageResource(imgList.get(position));
+        Glide.with(mContext).load(imgList.get(position)).into(holder.img);
         holder.tv.setText(tvList.get(position));
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
-        //图片
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView img;
-        //分类
         public TextView tv;
-
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -68,5 +66,4 @@ public class RecyclerGridAdapter extends RecyclerView.Adapter<RecyclerGridAdapte
     public int getItemCount() {
         return imgList.size();
     }
-
 }

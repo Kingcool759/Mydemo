@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-    </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".show.Case7"
-        android:background="@color/lightgray">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    tools:context=".show.Case7">
 
         <TextView
             android:id="@+id/title_bar"
@@ -25,19 +19,11 @@
             tools:ignore="MissingConstraints" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewHor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/title_bar"
-            />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="5dp"
             android:id="@+id/rv_recyclerView"
+            app:layout_constraintTop_toBottomOf="@id/title_bar"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recyclerViewHor"
-            />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+            android:layout_marginTop="5dp"
+            tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

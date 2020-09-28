@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".blog.Case35">
 
-    <data>
-
-    </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".blog.Case35">
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/green"
+        android:gravity="center"
+        android:text="Recycler多条目（行列）布局"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:background="@color/green"
-            android:textColor="@color/white"
-            android:layout_height="?android:attr/actionBarSize"
-            android:text="Recycler多条目（行列）布局"
-            android:textSize="20sp"
-            tools:ignore="MissingConstraints" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
-            android:layout_width="match_parent"
-            app:layout_constraintTop_toBottomOf="@id/title"
-            android:layout_height="wrap_content" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

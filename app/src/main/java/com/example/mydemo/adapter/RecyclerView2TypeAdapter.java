@@ -19,8 +19,8 @@ import java.util.List;
 
 /**
  * @data on 2020/9/27 9:21 AM
- * @auther
- * @describe
+ * @auther armstrong
+ * @describe Recycler多布局（2个Recycler）效果
  */
 public class RecyclerView2TypeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final int HOR_RECYCLER = 0;
@@ -31,7 +31,7 @@ public class RecyclerView2TypeAdapter extends RecyclerView.Adapter<RecyclerView.
 
     private Context mContext;
 
-    public RecyclerView2TypeAdapter(Context context,List<Fruit> fruitList1,List<Fruit> fruitList2) {
+    public RecyclerView2TypeAdapter(Context context, List<Fruit> fruitList1, List<Fruit> fruitList2) {
         this.mContext = context;
         this.banannaList = fruitList1;
         this.mangguoList = fruitList2;
@@ -42,10 +42,10 @@ public class RecyclerView2TypeAdapter extends RecyclerView.Adapter<RecyclerView.
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
-        if(viewType == HOR_RECYCLER){
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.case34_hor_recycler,parent,false);
+        if (viewType == HOR_RECYCLER) {
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.case34_hor_recycler, parent, false);
             return new HorViewHolder(view);
-        }else {
+        } else {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.case7_item_fruit, parent, false);
             return new VerViewHolder(view);
         }
@@ -53,16 +53,16 @@ public class RecyclerView2TypeAdapter extends RecyclerView.Adapter<RecyclerView.
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        if(holder instanceof HorViewHolder){
-            HorViewHolder horViewHolder = (HorViewHolder)holder;
+        if (holder instanceof HorViewHolder) {
+            HorViewHolder horViewHolder = (HorViewHolder) holder;
             LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
             layoutManager.setOrientation(RecyclerView.HORIZONTAL);
             horViewHolder.horRecycler.setLayoutManager(layoutManager);
             horViewHolder.horRecycler.setAdapter(new FruitHorRecyclerVIewAdapter(banannaList));
-        }else if(holder instanceof VerViewHolder){
-            VerViewHolder verViewHolder = (VerViewHolder)holder;
-            verViewHolder.fruitImage.setImageResource(mangguoList.get(position-1).getImageId());
-            verViewHolder.fruitName.setText(mangguoList.get(position-1).getName());
+        } else if (holder instanceof VerViewHolder) {
+            VerViewHolder verViewHolder = (VerViewHolder) holder;
+            verViewHolder.fruitImage.setImageResource(mangguoList.get(position - 1).getImageId());
+            verViewHolder.fruitName.setText(mangguoList.get(position - 1).getName());
         }
     }
 
@@ -88,14 +88,14 @@ public class RecyclerView2TypeAdapter extends RecyclerView.Adapter<RecyclerView.
 
     @Override
     public int getItemCount() {
-        return mangguoList.size()+1;
+        return mangguoList.size() + 1;
     }
 
     @Override
     public int getItemViewType(int position) {
-        if(position==0){
+        if (position == 0) {
             return HOR_RECYCLER;
-        }else {
+        } else {
             return VER_RECYCLER;
         }
     }

@@ -34,6 +34,7 @@ import com.example.mydemo.show.Case25;
 import com.example.mydemo.show.Case26;
 import com.example.mydemo.show.Case27;
 import com.example.mydemo.show.Case28;
+import com.example.mydemo.show.Case36;
 import com.example.mydemo.show.Case4;
 import com.example.mydemo.show.Case1;
 import com.example.mydemo.show.Case2;
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             "31：Recycler实现多布局效果（ImageView）",
             "32：Recycler（两个）实现多布局效果",
             "33：Recycler实现多条目布局（行列）",
-            "3：dd",
+            "34：Glide加载图片",
             "3：aa",
             "3：cc",
             "3：dd",
@@ -236,6 +237,10 @@ public class MainActivity extends AppCompatActivity {
                     case 32:  //Recycler（两个）实现多布局
                         Intent intent34 = new Intent(MainActivity.this, Case35.class);
                         startActivity(intent34);
+                        break;
+                    case 33:  //glide加载图片
+                        Intent intent35 = new Intent(MainActivity.this, Case36.class);
+                        startActivity(intent35);
                         break;
                 }
             }

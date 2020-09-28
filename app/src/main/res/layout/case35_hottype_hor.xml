@@ -10,6 +10,7 @@
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:layout_margin="4dp"
+        android:scaleType="centerCrop"
         android:background="@drawable/recycler_iv_bg"
         android:src="@mipmap/guanggao"
         tools:ignore="MissingConstraints" />

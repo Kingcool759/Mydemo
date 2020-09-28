@@ -5,14 +5,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.mydemo.R;
 import com.example.mydemo.entity.Fruit;
-
 import java.util.List;
 
 /**
@@ -30,7 +26,6 @@ public class RecyclerViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.V
     public RecyclerViewTypeAdapter(List<Fruit> fruitList) {
         this.fruitList = fruitList;
     }
-
 
     @NonNull
     @Override

@@ -21,7 +21,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".blog.Case35"></activity>
+        <activity android:name=".show.Case36" />
+        <activity android:name=".blog.Case35" />
         <activity android:name=".blog.Case34" />
         <activity android:name=".blog.Case33" />
         <activity android:name=".blog.Case32" />

@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel;
 
 /**
  * @data on 2020/8/27 4:10 PM
- * @auther
+ * @auther  armstrong
  * @describe   LiveData使用
  */
 public class Case4viewModel extends ViewModel {

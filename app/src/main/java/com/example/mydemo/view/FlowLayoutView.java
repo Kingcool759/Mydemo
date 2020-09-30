@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @data on 2020/9/8 2:13 PM
  * @auther ArmStrong
- * @describe  //流式布局 -- 自定义View.  from libo
+ * @describe  流式布局 -- 自定义ViewGroup.  from libo
  */
 public class FlowLayoutView extends ViewGroup {
     private List<Row> rows = new ArrayList<>();
@@ -118,7 +118,7 @@ public class FlowLayoutView extends ViewGroup {
 
         public void addView(View view) {
             childViews.add(view);
-            height = view.getMeasuredHeight() > height ? view.getMeasuredHeight() : height;  //高度取最高子view的高度
+            height = Math.max(view.getMeasuredHeight(), height);  //高度取最高子view的高度
         }
 
         public int getSize() {

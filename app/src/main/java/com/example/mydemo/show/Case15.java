@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mydemo.R;
 import com.example.mydemo.view.FlowLayoutView;
 
 import java.util.ArrayList;
 
-//自定义View实现流式布局
+//自定义View实现流式布局（带点击事件）
 public class Case15 extends AppCompatActivity {
     private FlowLayoutView flowLayoutView;  //自定义ViewGroup
     private ArrayList<String> datas = new ArrayList();
@@ -39,6 +40,11 @@ public class Case15 extends AppCompatActivity {
             TextView tvContent = view.findViewById(R.id.flow_tv);
             tvContent.setText(datas.get(i));
             flowLayoutView.addView(view);
+
+            //点击事件
+            tvContent.setOnClickListener((View)->{
+                Toast.makeText(this,tvContent.getText()+"",Toast.LENGTH_SHORT).show();
+            });
         }
     }
 }

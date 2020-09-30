@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             "12：WebView使用", //11
             "13：DrawerLayout+NavigationView实现侧边滑出菜单",  //12
             "14：TabLayout使用",  //13
-            "15：自定义FlowLayout实现流式布局(不带点击事件)",  //14
+            "15：自定义FlowLayout实现流式布局(带点击事件)",  //14
             "16：hongyang的TagFlowLayout流式布局使用",  //15
             "17：ARouter路由跳转（博客1）", //16
             "18：DataBinding示例（博客2）",  //17

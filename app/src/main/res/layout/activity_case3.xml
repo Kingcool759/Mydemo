@@ -24,7 +24,7 @@
             android:gravity="center"
             android:textSize="20sp"
             android:textColor="@color/white"
-            android:text="LiveData"
+            android:text="DataBinding示例"
             tools:ignore="MissingConstraints" />
 
         <TextView

@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private String data[] = {
             "1：拨号处理-拨打电话",  //0
             "2：AlertDialog弹出框退出登录",  //1
-            "3：ObservableField使用", //2
+            "3：DataBinding+ObservableField使用", //2
             "4：LiveData使用",  //3
             "5：ListView使用",  //4
             "6：LifeCycle使用", //5

@@ -12,8 +12,8 @@ import com.example.mydemo.entity.Student;
 
 /**
  * @data on 2020/8/27 11:30 AM
- * @auther
- * @describe ObservableField使用 （单向绑定刷新UI）
+ * @auther  armstrong
+ * @describe DataBinding+ObservableField使用 （单向绑定刷新UI）
  */
 public class Case3 extends AppCompatActivity {
     private ActivityCase3Binding binding;

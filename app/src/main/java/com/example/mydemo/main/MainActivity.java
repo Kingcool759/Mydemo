@@ -48,7 +48,7 @@ import com.example.mydemo.show.Case9;
 public class MainActivity extends AppCompatActivity {
     private String data[] = {
             "1：拨号处理-拨打电话",  //0
-            "2：AlertDialog弹出框退出登录",  //1
+            "2：自定义Dialog",  //1
             "3：DataBinding+ObservableField使用", //2
             "4：LiveData使用",  //3
             "5：ListView使用",  //4

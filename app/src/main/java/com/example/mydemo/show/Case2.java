@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.mydemo.R;
+import com.example.mydemo.view.SelfDialog;
+import com.hjq.toast.ToastUtils;
 
 /**
  * @data on 2020/8/25 11:30 AM
@@ -18,38 +20,32 @@ import com.example.mydemo.R;
  * @describe  退出应用程序
  */
 public class Case2 extends AppCompatActivity {
-    private TextView tvEndApp;
+    private SelfDialog selfDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case2);
-        tvEndApp = findViewById(R.id.end_app);
-        tvEndApp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                alert();
-            }
-        });
+        findViewById(R.id.end_app).setOnClickListener(View->{alert();});
     }
     private void alert(){
-        new AlertDialog.Builder(Case2.this).setTitle("是否退出应用程序")
-                .setIcon(android.R.drawable.ic_dialog_info)
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // 点击“确认”后的操作
-                        Case2.this.finish();
-                        Intent intent = new Intent(Case2.this, LoginActivity.class);//这个地方怎么写要看自己具体情况，我这里是退出当前Activity然后返回到登录界面
-                        startActivity(intent);
-                    }
-                })
-                .setNegativeButton("返回", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // 点击“返回”后的操作,这里不设置没有任何操作
-                    }
-                }).show();
-        Looper.loop();
+        selfDialog = new SelfDialog(this);
+        selfDialog.setTitle("退出应用程序");
+        selfDialog.setMessage("确定退出应用?");
+        selfDialog.setYesOnclickListener("确定", new SelfDialog.onYesOnclickListener() {
+            @Override
+            public void onYesClick() {
+                ToastUtils.show("确定"); //消息提示
+                selfDialog.dismiss();
+            }
+        });
+        selfDialog.setNoOnclickListener("取消", new SelfDialog.onNoOnclickListener() {
+            @Override
+            public void onNoClick() {
+                ToastUtils.show("取消"); //消息提示
+                selfDialog.dismiss();
+            }
+        });
+        selfDialog.show();
     }
 }

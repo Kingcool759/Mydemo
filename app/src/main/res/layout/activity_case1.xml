@@ -9,11 +9,11 @@
     <TextView
         android:id="@+id/goto_phone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:background="@color/colorAccent"
         android:gravity="center"
         android:text="点击拨打电话给我!"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

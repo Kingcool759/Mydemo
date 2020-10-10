@@ -1,9 +1,14 @@
 package com.example.mydemo.view;
 
+import android.animation.ValueAnimator;
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -27,9 +32,31 @@ public class SelfDialog extends Dialog {
     private String yesStr, noStr;
     private onNoOnclickListener noOnclickListener;//取消按钮被点击了的监听器
     private onYesOnclickListener yesOnclickListener;//确定按钮被点击了的监听器
+    //上下文环境
+    Context mContext;
+    View contentView;
+
 
     public SelfDialog(@NonNull Context context) {
-        super(context,R.style.MyDialog); //构造方法中设置Dialog的样式
+        super(context, R.style.MyDialog); //构造方法中设置Dialog的样式
+        this.mContext = context;
+        contentView = LayoutInflater.from(mContext).inflate(R.layout.popup_select_layout, null);
+        /**
+         *  显示Dialog时背景变暗，消失时恢复亮度
+         */
+        setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                ValueAnimator animator = ValueAnimator.ofFloat(0.5f, 1f).setDuration(500);
+                animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        setBackgroundAlpha((Float) animation.getAnimatedValue());
+                    }
+                });
+                animator.start();
+            }
+        });
     }
 
 
@@ -70,6 +97,8 @@ public class SelfDialog extends Dialog {
         initData();
         //初始化界面控件的事件
         initEvent();
+        //显示
+        show(contentView);
     }
 
     /**
@@ -153,5 +182,28 @@ public class SelfDialog extends Dialog {
 
     public interface onNoOnclickListener {
         public void onNoClick();
+    }
+
+    /**
+     * 设置透明度
+     */
+    private void setBackgroundAlpha(float bgAlpha) {
+        WindowManager.LayoutParams lp = ((Activity) mContext).getWindow().getAttributes();
+        lp.alpha = bgAlpha;
+        ((Activity) mContext).getWindow().setAttributes(lp);
+    }
+    /**
+     * 显示弹窗，过程中伴随背景逐渐变暗。
+     * 不要改变MaskLayout的背景色，否则会是灰色背景的框框整体向上升起的效果。
+     */
+    public void show(View parent) {
+        ValueAnimator animator = ValueAnimator.ofFloat(1, 0.5f).setDuration(500);
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                setBackgroundAlpha((Float) animation.getAnimatedValue());
+            }
+        });
+        animator.start();
     }
 }

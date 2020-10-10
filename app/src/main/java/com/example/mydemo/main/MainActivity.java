@@ -47,46 +47,46 @@ import com.example.mydemo.show.Case9;
 
 public class MainActivity extends AppCompatActivity {
     private String data[] = {
-            "1：拨号处理-拨打电话",  //0
-            "2：自定义Dialog",  //1
-            "3：DataBinding+ObservableField使用", //2
-            "4：LiveData使用",  //3
-            "5：ListView使用",  //4
-            "6：LifeCycle使用", //5
-            "7：RecyclerView使用",  //6
-            "8：ViewPager使用实现轮播图",  //case7
-            "9：RxJava使用", //8
-            "10：Retrofit使用，Api接口调用实现", //case9
+            "1：拨打电话",  //0
+            "2：自定义Dialog（退出应用程序）",  //1
+            "3：DataBinding+ObservableField使用（数据绑定）", //2
+            "4：LiveData使用（字段监听更新UI视图）",  //3
+            "5：ListView使用（基础）",  //4
+            "6：LifeCycle使用（生命周期）", //5
+            "7：RecyclerView使用（横纵分布）",  //6
+            "8：ViewPager使用实现轮播图（基础版本-进阶版本-最终版本）",  //case7
+            "9：待完成：RxJava使用", //8
+            "10：Retrofit使用，Api接口调用实现（调用玩安卓网站api实战）", //case9
             "11：CollapsingToolbarLayout折叠布局",  //10
-            "12：WebView使用", //11
-            "13：DrawerLayout+NavigationView实现侧边滑出菜单",  //12
-            "14：TabLayout使用",  //13
-            "15：自定义FlowLayout实现流式布局(带点击事件)",  //14
-            "16：hongyang的TagFlowLayout流式布局使用",  //15
-            "17：ARouter路由跳转（博客1）", //16
-            "18：DataBinding示例（博客2）",  //17
-            "19：Lambda表达式示例（博客3）", //18
-            "20：RecyclerView示例（博客4）", //19
-            "21：PopupWindow使用",
-            "22：调用摄像头拍照示例",
-            "23：从相册中选择照片示例",
-            "24：java中的时间戳转字符串",
-            "25：RecyclerView隐藏TooBar效果",
-            "26：TitleBar标题栏库使用",
-            "27：CricleImageView圆形图片库使用",
-            "28：Permission X 动态请求应用权限",
-            "29：activity横竖屏切换时生命周期的变化",
-            "30：activity跳转到另一个activity时的生命周期变化",
-            "31：Recycler实现多布局效果（ImageView）",
+            "12：WebView使用（手机加载网页）", //11
+            "13：DrawerLayout+NavigationView使用（侧边滑出菜单）",  //12
+            "14：TabLayout使用（顶部导航栏）",  //13
+            "15：自定义FlowLayout实现流式布局(+点击事件)",  //14
+            "16：hongyang的TagFlowLayout流式布局使用（+点击事件）",  //15
+            "17：ARouter路由跳转（告别Intent跳转）", //16
+            "18：DataBinding示例（基本用法）",  //17
+            "19：Lambda表达式使用（简化代码量，增强业务逻辑代码可读性）", //18
+            "20：RecyclerView使用ItemDecoration实现酷炫的效果（彩色分割线+时间轴）", //19
+            "21：PopupWindow使用（弹出框+点击回调事件）",
+            "22：调用摄像头拍照示例（动态请求权限+拍照+保存图片）",
+            "23：从相册中选择照片示例（动态请求权限+选图+保存图片）",
+            "24：java中的时间戳与字符串之间的互相转化",
+            "25：RecyclerView隐藏TooBar效果（隐藏标题栏）",
+            "26：TitleBar标题栏库使用（github库，多种样式的标题栏实现）",
+            "27：CricleImageView圆形图片库使用（github库）",
+            "28：Permission X 动态请求应用权限（github库）",
+            "29：activity横竖屏切换时生命周期的变化情况探究",
+            "30：activity跳转到另一个activity时的生命周期变化情况探究",
+            "31：Recycler实现多布局效果（+ImageView）",
             "32：Recycler（两个）实现多布局效果",
             "33：Recycler实现多条目布局（行列）",
-            "34：Glide加载图片",
-            "3：aa",
-            "3：cc",
-            "3：dd",
-            "3：aa",
-            "3：cc",
-            "3：dd",
+            "34：Glide加载图片（解决加载网络http图片的问题）",
+            "35：待完成：app启动页",
+            "36：待完成：fragment的生命周期探究",
+            "37：待完成：JetPack+MVVM模式实现wanAdroid应用app（另附github源码，java语言实现）",
+            "38：aa",
+            "39：cc",
+            "40：dd",
             "3：dd"};//假数据
 
     @Override

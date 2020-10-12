@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             "32：Recycler（两个）实现多布局效果",
             "33：Recycler实现多条目布局（行列）",
             "34：Glide加载图片（解决加载网络http图片的问题）",
-            "35：待完成：app闪屏页",
+            "35：数字滚动控件Ticker",
             "36：Activity中的Fragment从启动到销毁的生命周期变化过程探究",
             "37：JetPack+MVVM模式实现wanAdroid应用app（另附github源码，java语言实现）",
             "38：搜索框（带历史记录）SearchLayout类库使用",
@@ -247,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent35 = new Intent(MainActivity.this, Case36.class);
                         startActivity(intent35);
                         break;
-                    case 34:  //app启动页
+                    case 34:  //数字滚动控件
                         Intent intent36 = new Intent(MainActivity.this, Case37.class);
                         startActivity(intent36);
                         break;

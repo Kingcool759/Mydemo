@@ -109,4 +109,8 @@ dependencies {
 
     //带历史记录的搜索框
     implementation 'com.carson_ho:SearchLayout:1.0.1'
+
+    //数字滚动控件
+    implementation 'com.robinhood.ticker:ticker:2.0.2'
+
 }

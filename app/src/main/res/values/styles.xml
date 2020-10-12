@@ -22,4 +22,12 @@
         <!--是否模糊-->
         <item name="android:backgroundDimEnabled">false</item>
     </style>
+
+    <!--闪屏页-->
+    <style name="entrance_LauncherTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_wechat</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
 </resources>

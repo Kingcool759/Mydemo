@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.mydemo"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -107,4 +107,6 @@ dependencies {
     //手机显示log调试框架
     debugImplementation 'com.hjq:logcat:8.2'
 
+    //带历史记录的搜索框
+    implementation 'com.carson_ho:SearchLayout:1.0.1'
 }

@@ -17,6 +17,11 @@ import com.example.mydemo.blog.Case31;
 import com.example.mydemo.blog.Case33;
 import com.example.mydemo.blog.Case34;
 import com.example.mydemo.blog.Case35;
+import com.example.mydemo.blog.Case37;
+import com.example.mydemo.blog.Case38;
+import com.example.mydemo.blog.Case39;
+import com.example.mydemo.blog.Case40;
+import com.example.mydemo.blog.Case41;
 import com.example.mydemo.show.Case10;
 import com.example.mydemo.show.Case11;
 import com.example.mydemo.show.Case12;
@@ -81,11 +86,11 @@ public class MainActivity extends AppCompatActivity {
             "32：Recycler（两个）实现多布局效果",
             "33：Recycler实现多条目布局（行列）",
             "34：Glide加载图片（解决加载网络http图片的问题）",
-            "35：待完成：app启动页",
-            "36：待完成：fragment的生命周期探究",
-            "37：待完成：JetPack+MVVM模式实现wanAdroid应用app（另附github源码，java语言实现）",
-            "38：aa",
-            "39：cc",
+            "35：待完成：app闪屏页",
+            "36：Activity中的Fragment从启动到销毁的生命周期变化过程探究",
+            "37：JetPack+MVVM模式实现wanAdroid应用app（另附github源码，java语言实现）",
+            "38：搜索框（带历史记录）SearchLayout类库使用",
+            "39：String，StringBuffer,StringBuilder三者区别（实现字符串倒序）",
             "40：dd",
             "3：dd"};//假数据
 
@@ -241,6 +246,26 @@ public class MainActivity extends AppCompatActivity {
                     case 33:  //glide加载图片
                         Intent intent35 = new Intent(MainActivity.this, Case36.class);
                         startActivity(intent35);
+                        break;
+                    case 34:  //app启动页
+                        Intent intent36 = new Intent(MainActivity.this, Case37.class);
+                        startActivity(intent36);
+                        break;
+                    case 35:  //fragment的生命周期探究
+                        Intent intent37 = new Intent(MainActivity.this, Case38.class);
+                        startActivity(intent37);
+                        break;
+                    case 36:  //JetPack+MVVM模式实现wanAdroid应用app（另附github源码，java语言实现）
+                        Intent intent38 = new Intent(MainActivity.this, Case39.class);
+                        startActivity(intent38);
+                        break;
+                    case 37:  //搜索框（带历史记录）github库使用
+                        Intent intent39 = new Intent(MainActivity.this, Case40.class);
+                        startActivity(intent39);
+                        break;
+                    case 38:  //String,StringBuffer
+                        Intent intent40 = new Intent(MainActivity.this, Case41.class);
+                        startActivity(intent40);
                         break;
                 }
             }

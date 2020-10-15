@@ -57,7 +57,7 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:recyclerview-v7:27.1.1'
 
-    //RxJava
+    //RxJava，RxBus（被内包）
     implementation 'io.reactivex:rxjava:1.2.2'
     implementation 'io.reactivex:rxandroid:1.2.1'
 

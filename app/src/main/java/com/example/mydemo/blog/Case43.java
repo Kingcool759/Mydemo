@@ -66,7 +66,7 @@ public class Case43 extends AppCompatActivity {
      * 取消该页面所有订阅
      */
     private void clearSubscription() {
-        for (Subscription subscription : rxBusList) {  //
+        for (Subscription subscription : rxBusList) {  //增强型for循环，遍历rxBusList
             if (subscription != null && subscription.isUnsubscribed()) {
                 subscription.unsubscribe();
             }

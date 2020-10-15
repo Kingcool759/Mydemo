@@ -113,4 +113,7 @@ dependencies {
     //数字滚动控件
     implementation 'com.robinhood.ticker:ticker:2.0.2'
 
+    //EventBus 事件分发-订阅总线
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
 }

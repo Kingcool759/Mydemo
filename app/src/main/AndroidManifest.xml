@@ -23,11 +23,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--闪屏页-->
-        <activity android:name=".splash.SplashActivity"
+        <activity android:name=".blog.ActivityB"></activity>
+        <activity android:name=".blog.Case45" />
+        <activity android:name=".blog.Case44" />
+        <activity android:name=".blog.Case43" />
+        <activity android:name=".blog.Case42" /> <!-- 闪屏页 -->
+        <activity
+            android:name=".splash.SplashActivity"
             android:theme="@style/entrance_LauncherTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -45,6 +51,7 @@
         <activity
             android:name=".blog.Case30"
             android:configChanges="orientation|keyboard|layoutDirection|screenSize">
+
             <!-- activity横竖屏切换 -->
         </activity>
         <activity android:name=".blog.Case29" />
@@ -53,6 +60,7 @@
         <activity android:name=".show.Case26" />
         <activity android:name=".show.Case25" />
         <activity android:name=".show.Case24">
+
             <!-- 调用系统相册 -->
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
@@ -92,7 +100,7 @@
         <activity android:name=".show.Case5" />
         <activity android:name=".show.Case4" />
         <activity android:name=".show.Case3" />
-        <activity android:name=".show.LoginActivity"/>
+        <activity android:name=".show.LoginActivity" />
         <activity android:name=".show.Case2" />
         <activity android:name=".show.Case1" />
         <activity android:name=".main.MainActivity" />

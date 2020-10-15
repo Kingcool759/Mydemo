@@ -22,6 +22,10 @@ import com.example.mydemo.blog.Case38;
 import com.example.mydemo.blog.Case39;
 import com.example.mydemo.blog.Case40;
 import com.example.mydemo.blog.Case41;
+import com.example.mydemo.blog.Case42;
+import com.example.mydemo.blog.Case43;
+import com.example.mydemo.blog.Case44;
+import com.example.mydemo.blog.Case45;
 import com.example.mydemo.show.Case10;
 import com.example.mydemo.show.Case11;
 import com.example.mydemo.show.Case12;
@@ -91,7 +95,10 @@ public class MainActivity extends AppCompatActivity {
             "37：JetPack+MVVM模式实现wanAdroid应用app（另附github源码，java语言实现）",
             "38：搜索框（带历史记录）SearchLayout类库使用",
             "39：String，StringBuffer,StringBuilder三者区别（实现字符串倒序）",
-            "40：dd",
+            "40：EventBus事件发布-订阅总线探究",
+            "41：RxBus，取代了EventBus，是EventBus的进阶版",
+            "42：反射机制探究",
+            "43：MotionLayout的使用",
             "3：dd"};//假数据
 
     @Override
@@ -266,6 +273,22 @@ public class MainActivity extends AppCompatActivity {
                     case 38:  //String,StringBuffer
                         Intent intent40 = new Intent(MainActivity.this, Case41.class);
                         startActivity(intent40);
+                        break;
+                    case 39:  //EventBus事件发布-订阅总线探究
+                        Intent intent41 = new Intent(MainActivity.this, Case42.class);
+                        startActivity(intent41);
+                        break;
+                    case 40:  //RxBus，取代了EventBus，是EventBus的进阶版
+                        Intent intent42 = new Intent(MainActivity.this, Case43.class);
+                        startActivity(intent42);
+                        break;
+                    case 41:  //反射机制探究
+                        Intent intent43 = new Intent(MainActivity.this, Case44.class);
+                        startActivity(intent43);
+                        break;
+                    case 42:  //MotionLayout的使用
+                        Intent intent44 = new Intent(MainActivity.this, Case45.class);
+                        startActivity(intent44);
                         break;
                 }
             }

@@ -5,7 +5,6 @@ import android.util.Log;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.mydemo.api.AppApi;
 import com.example.mydemo.apiservice.AppApiService;
 import com.example.mydemo.bean.HomePageResBean;
 import com.example.mydemo.response.ApiCallback;

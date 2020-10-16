@@ -2,13 +2,10 @@ package com.example.mydemo.blog;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
 import android.view.animation.OvershootInterpolator;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
 
 import com.example.mydemo.R;
 import com.robinhood.ticker.TickerUtils;

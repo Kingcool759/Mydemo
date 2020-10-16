@@ -8,13 +8,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.example.mydemo.R;
 import com.example.mydemo.databinding.ActivityCase22Binding;
 import com.example.mydemo.popupwindow.TestPopupWindow;
-import com.hjq.toast.ToastUtils;
 
 public class Case22 extends AppCompatActivity {
     private ActivityCase22Binding binding;

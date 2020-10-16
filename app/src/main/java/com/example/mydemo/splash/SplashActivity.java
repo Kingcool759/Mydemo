@@ -6,8 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.mydemo.R;
-import com.example.mydemo.main.MainActivity;
+import com.example.mydemo.show.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -17,7 +16,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed (new Runnable () {    //匿名内部类  创建线程
             @Override
             public void run() {
-                startActivity (new Intent(SplashActivity.this, MainActivity.class));      //界面转跳
+                startActivity (new Intent(SplashActivity.this, LoginActivity.class));      //界面转跳
                 finish();
             }
         },500);         //第二个参数是停留的时间

@@ -1,17 +1,12 @@
 package com.example.mydemo.adapter;
 
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.example.mydemo.entity.ImageUrl;
-
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @data on 2020/9/1 5:41 PM

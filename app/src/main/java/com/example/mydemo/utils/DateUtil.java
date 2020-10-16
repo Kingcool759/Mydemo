@@ -1,7 +1,5 @@
 package com.example.mydemo.utils;
 
-import android.text.Editable;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;

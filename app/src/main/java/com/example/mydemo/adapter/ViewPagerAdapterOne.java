@@ -2,13 +2,9 @@ package com.example.mydemo.adapter;
 
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-
-import com.example.mydemo.entity.ImageUrl;
 
 import java.util.List;
 

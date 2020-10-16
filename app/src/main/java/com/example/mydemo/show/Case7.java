@@ -1,7 +1,5 @@
 package com.example.mydemo.show;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -9,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.LinearLayout;
 
 import com.example.mydemo.R;
 import com.example.mydemo.adapter.DividerItemDecoration;
@@ -20,10 +17,7 @@ import com.example.mydemo.databinding.ActivityCase7Binding;
 import com.example.mydemo.entity.Fruit;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 public class Case7 extends AppCompatActivity {
     private ActivityCase7Binding binding;

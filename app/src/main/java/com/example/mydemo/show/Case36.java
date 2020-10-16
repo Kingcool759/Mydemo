@@ -3,9 +3,7 @@ package com.example.mydemo.show;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.bumptech.glide.Glide;
 import com.example.mydemo.R;

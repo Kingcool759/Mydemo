@@ -14,25 +14,25 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
-        android:name=".application.MyApplication"
+        android:name="com.example.mydemo.application.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config_debug"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".wechat.WeChat1"></activity>
-        <activity android:name=".algorithm.algorithm1" />
-        <activity android:name=".blog.ActivityC" />
-        <activity android:name=".blog.ActivityB" />
-        <activity android:name=".blog.Case45" />
-        <activity android:name=".blog.Case44" />
-        <activity android:name=".blog.Case43" />
-        <activity android:name=".blog.Case42" /> <!-- 闪屏页 -->
+        <activity android:name="com.example.mydemo.wechat.WeChat1"></activity>
+        <activity android:name="com.example.mydemo.algorithm.algorithm1" />
+        <activity android:name="com.example.mydemo.blog.ActivityC" />
+        <activity android:name="com.example.mydemo.blog.ActivityB" />
+        <activity android:name="com.example.mydemo.blog.Case45" />
+        <activity android:name="com.example.mydemo.blog.Case44" />
+        <activity android:name="com.example.mydemo.blog.Case43" />
+        <activity android:name="com.example.mydemo.blog.Case42" /> <!-- 闪屏页 -->
         <activity
-            android:name=".splash.SplashActivity"
+            android:name="com.example.mydemo.splash.SplashActivity"
             android:theme="@style/entrance_LauncherTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,29 +40,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".blog.Case41" />
-        <activity android:name=".blog.Case40" />
-        <activity android:name=".blog.Case39" />
-        <activity android:name=".blog.Case38" />
-        <activity android:name=".blog.Case37" />
-        <activity android:name=".show.Case36" />
-        <activity android:name=".blog.Case35" />
-        <activity android:name=".blog.Case34" />
-        <activity android:name=".blog.Case33" />
-        <activity android:name=".blog.Case32" />
-        <activity android:name=".blog.Case31" />
+        <activity android:name="com.example.mydemo.blog.Case41" />
+        <activity android:name="com.example.mydemo.blog.Case40" />
+        <activity android:name="com.example.mydemo.blog.Case39" />
+        <activity android:name="com.example.mydemo.blog.Case38" />
+        <activity android:name="com.example.mydemo.blog.Case37" />
+        <activity android:name="com.example.mydemo.show.Case36" />
+        <activity android:name="com.example.mydemo.blog.Case35" />
+        <activity android:name="com.example.mydemo.blog.Case34" />
+        <activity android:name="com.example.mydemo.blog.Case33" />
+        <activity android:name="com.example.mydemo.blog.Case32" />
+        <activity android:name="com.example.mydemo.blog.Case31" />
         <activity
-            android:name=".blog.Case30"
+            android:name="com.example.mydemo.blog.Case30"
             android:configChanges="orientation|keyboard|layoutDirection|screenSize">
 
             <!-- activity横竖屏切换 -->
         </activity>
-        <activity android:name=".blog.Case29" />
-        <activity android:name=".show.Case28" />
-        <activity android:name=".show.Case27" />
-        <activity android:name=".show.Case26" />
-        <activity android:name=".show.Case25" />
-        <activity android:name=".show.Case24">
+        <activity android:name="com.example.mydemo.blog.Case29" />
+        <activity android:name="com.example.mydemo.show.Case28" />
+        <activity android:name="com.example.mydemo.show.Case27" />
+        <activity android:name="com.example.mydemo.show.Case26" />
+        <activity android:name="com.example.mydemo.show.Case25" />
+        <activity android:name="com.example.mydemo.show.Case24">
 
             <!-- 调用系统相册 -->
             <intent-filter>
@@ -80,33 +80,33 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".show.Case23" />
-        <activity android:name=".show.Case22" />
-        <activity android:name=".blog.Case21" />
-        <activity android:name=".blog.Case19" />
-        <activity android:name=".blog.Case18" />
-        <activity android:name=".blog.Case17" />
-        <activity android:name=".show.Case16" />
-        <activity android:name=".blog.Case20" />
-        <activity android:name=".show.Case15" />
-        <activity android:name=".fragment.HotRecommendFragment" />
-        <activity android:name=".fragment.HotCollectionFragment" />
-        <activity android:name=".show.Case14" />
-        <activity android:name=".show.Case13" />
-        <activity android:name=".show.Case12" />
-        <activity android:name=".show.Case11" />
-        <activity android:name=".show.Case10" />
-        <activity android:name=".show.Case9" />
-        <activity android:name=".show.Case8" />
-        <activity android:name=".show.Case7" />
-        <activity android:name=".show.Case6" />
-        <activity android:name=".show.Case5" />
-        <activity android:name=".show.Case4" />
-        <activity android:name=".show.Case3" />
-        <activity android:name=".show.LoginActivity" />
-        <activity android:name=".show.Case2" />
-        <activity android:name=".show.Case1" />
-        <activity android:name=".main.MainActivity" />
+        <activity android:name="com.example.mydemo.show.Case23" />
+        <activity android:name="com.example.mydemo.show.Case22" />
+        <activity android:name="com.example.mydemo.blog.Case21" />
+        <activity android:name="com.example.mydemo.blog.Case19" />
+        <activity android:name="com.example.mydemo.blog.Case18" />
+        <activity android:name="com.example.mydemo.blog.Case17" />
+        <activity android:name="com.example.mydemo.show.Case16" />
+        <activity android:name="com.example.mydemo.blog.Case20" />
+        <activity android:name="com.example.mydemo.show.Case15" />
+        <activity android:name="com.example.mydemo.fragment.HotRecommendFragment" />
+        <activity android:name="com.example.mydemo.fragment.HotCollectionFragment" />
+        <activity android:name="com.example.mydemo.show.Case14" />
+        <activity android:name="com.example.mydemo.show.Case13" />
+        <activity android:name="com.example.mydemo.show.Case12" />
+        <activity android:name="com.example.mydemo.show.Case11" />
+        <activity android:name="com.example.mydemo.show.Case10" />
+        <activity android:name="com.example.mydemo.show.Case9" />
+        <activity android:name="com.example.mydemo.show.Case8" />
+        <activity android:name="com.example.mydemo.show.Case7" />
+        <activity android:name="com.example.mydemo.show.Case6" />
+        <activity android:name="com.example.mydemo.show.Case5" />
+        <activity android:name="com.example.mydemo.show.Case4" />
+        <activity android:name="com.example.mydemo.show.Case3" />
+        <activity android:name="com.example.mydemo.show.LoginActivity" />
+        <activity android:name="com.example.mydemo.show.Case2" />
+        <activity android:name="com.example.mydemo.show.Case1" />
+        <activity android:name="com.example.mydemo.main.MainActivity" />
     </application>
 
 </manifest>

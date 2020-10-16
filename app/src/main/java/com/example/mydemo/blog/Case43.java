@@ -11,8 +11,6 @@ import com.example.mydemo.R;
 import com.example.mydemo.entity.MessageEvent;
 import com.example.mydemo.entity.RxBus;
 
-import org.greenrobot.eventbus.EventBus;
-
 import java.util.ArrayList;
 
 import rx.Subscription;

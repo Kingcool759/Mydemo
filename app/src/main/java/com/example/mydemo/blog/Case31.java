@@ -6,11 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.mydemo.R;
-import com.example.mydemo.show.Case9;
-import com.hjq.toast.ToastUtils;
 
 public class Case31 extends AppCompatActivity {
 

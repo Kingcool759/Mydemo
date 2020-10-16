@@ -7,7 +7,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.SurfaceControl;
 
 import com.example.mydemo.R;
 

@@ -1,8 +1,5 @@
 package com.example.mydemo.adapter;
 
-import android.annotation.SuppressLint;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;

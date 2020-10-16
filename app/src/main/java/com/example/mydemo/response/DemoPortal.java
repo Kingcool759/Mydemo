@@ -1,7 +1,5 @@
 package com.example.mydemo.response;
 
-import android.text.TextUtils;
-
 import com.example.mydemo.api.AppApi;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

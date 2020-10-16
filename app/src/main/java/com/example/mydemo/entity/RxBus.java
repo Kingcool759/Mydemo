@@ -7,8 +7,8 @@ import rx.subjects.Subject;
 
 /**
  * @data on 2020/10/15 2:35 PM
- * @auther
- * @describe
+ * @auther armstrong
+ * @describe RxBus操作类
  */
 public class RxBus {
     private static volatile RxBus instance;

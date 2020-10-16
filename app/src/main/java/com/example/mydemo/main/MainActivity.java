@@ -27,6 +27,8 @@ import com.example.mydemo.blog.Case42;
 import com.example.mydemo.blog.Case43;
 import com.example.mydemo.blog.Case44;
 import com.example.mydemo.blog.Case45;
+import com.example.mydemo.blog.Case46;
+import com.example.mydemo.blog.Case47;
 import com.example.mydemo.show.Case10;
 import com.example.mydemo.show.Case11;
 import com.example.mydemo.show.Case12;
@@ -103,8 +105,8 @@ public class MainActivity extends AppCompatActivity {
             "43：待完成：动画：MotionLayout的使用",
             "44：算法：求X的平方根",
             "45：待完成：app调起第三方微信登陆",
-            "46：呆坐",
-            "47：呆坐",
+            "46：待完成：PickerView库使用",
+            "47：验证码倒计时功能",
             "48：呆坐",
             "49：呆坐",
             "45：呆坐",
@@ -308,6 +310,14 @@ public class MainActivity extends AppCompatActivity {
                     case 44:  //调起第三方微信登陆
                         Intent intent46 = new Intent(MainActivity.this, WeChat1.class);
                         startActivity(intent46);
+                        break;
+                    case 45:  //PickerView使用
+                        Intent intent47 = new Intent(MainActivity.this, Case46.class);
+                        startActivity(intent47);
+                        break;
+                    case 46:  //验证码倒计时功能实现
+                        Intent intent48 = new Intent(MainActivity.this, Case47.class);
+                        startActivity(intent48);
                         break;
                 }
             }

@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.mydemo.R;
+import com.example.mydemo.algorithm.algorithm1;
 import com.example.mydemo.blog.Case21;
 import com.example.mydemo.blog.Case29;
 import com.example.mydemo.blog.Case30;
@@ -53,6 +54,7 @@ import com.example.mydemo.show.Case6;
 import com.example.mydemo.show.Case7;
 import com.example.mydemo.show.Case8;
 import com.example.mydemo.show.Case9;
+import com.example.mydemo.wechat.WeChat1;
 
 public class MainActivity extends AppCompatActivity {
     private String data[] = {
@@ -97,9 +99,18 @@ public class MainActivity extends AppCompatActivity {
             "39：String，StringBuffer,StringBuilder三者区别（实现字符串倒序）",
             "40：EventBus事件发布-订阅总线探究",
             "41：RxBus，取代了EventBus，是EventBus的进阶版",
-            "42：反射机制探究",
-            "43：MotionLayout的使用",
-            "3：dd"};//假数据
+            "42：待完成：反射机制探究",
+            "43：待完成：动画：MotionLayout的使用",
+            "44：算法：求X的平方根",
+            "45：待完成：app调起第三方微信登陆",
+            "46：呆坐",
+            "47：呆坐",
+            "48：呆坐",
+            "49：呆坐",
+            "45：呆坐",
+            "46：呆坐",
+            "47：呆坐"
+    };//假数据
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -289,6 +300,14 @@ public class MainActivity extends AppCompatActivity {
                     case 42:  //MotionLayout的使用
                         Intent intent44 = new Intent(MainActivity.this, Case45.class);
                         startActivity(intent44);
+                        break;
+                    case 43:  //算法求X的平方根
+                        Intent intent45 = new Intent(MainActivity.this, algorithm1.class);
+                        startActivity(intent45);
+                        break;
+                    case 44:  //调起第三方微信登陆
+                        Intent intent46 = new Intent(MainActivity.this, WeChat1.class);
+                        startActivity(intent46);
                         break;
                 }
             }

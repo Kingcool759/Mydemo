@@ -11,8 +11,8 @@ import com.example.mydemo.R;
 
 /**
  * @data on 2020/10/16 6:26 PM
- * @auther
- * @describe
+ * @auther armstrong
+ * @describe 倒计时工具类
  */
 public class CountDownTimerUtils extends CountDownTimer {
     private TextView mTextView;

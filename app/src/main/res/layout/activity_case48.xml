@@ -12,10 +12,39 @@
         android:background="@color/blue"
         android:gravity="center"
         android:padding="10dp"
-        android:text="调起支付宝"
+        android:text="跳转到支付宝"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/tvSharetoZFB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_marginTop="50dp"
+        android:id="@+id/tvSharetoZFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="调起支付宝登陆"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/tvZFBPay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGotoZFB" />
+    <TextView
+        android:layout_marginTop="50dp"
+        android:id="@+id/tvZFBPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="调起支付宝支付"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tvSharetoZFB"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

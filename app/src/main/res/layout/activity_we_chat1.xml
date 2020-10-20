@@ -8,16 +8,42 @@
     tools:ignore="MissingConstraints">
 
     <TextView
-        android:id="@+id/btnGotoWeChat"
+        android:id="@+id/tvGotoWeChat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/green"
         android:gravity="center"
         android:padding="10dp"
-        android:text="调起微信登陆"
+        android:text="启动微信"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/tvSharetoWeChat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvSharetoWeChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="调起微信第三方登陆"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/tvWeChatPay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGotoWeChat"/>
+    <TextView
+        android:id="@+id/tvWeChatPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="调起微信第三方支付"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tvSharetoWeChat"  />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
             "44：算法：求X的平方根",
             "45：待完成：app调起第三方微信登陆",
             "46：待完成：PickerView库使用",
-            "47：验证码倒计时功能",
+            "47：验证码倒计时功能实现",
             "48：待完成：app调起支付宝",
-            "49：呆坐",
+            "49：滚动控件WheelView库使用",
             "45：呆坐",
             "46：呆坐",
             "47：呆坐"
@@ -278,6 +278,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 47:  //app调起支付宝
                         ARouter.getInstance().build(ARouterManager.Path.blog48).navigation();
+                        break;
+
+                    case 48:  //wheelView
+                        ARouter.getInstance().build(ARouterManager.Path.blog49).navigation();
                         break;
 
                     default:

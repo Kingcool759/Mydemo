@@ -26,7 +26,7 @@ public class WeChat1 extends AppCompatActivity {
         initView();
     }
     private void initView(){
-        tvGotoWeChat = findViewById(R.id.btnGotoWeChat);
+        tvGotoWeChat = findViewById(R.id.tvGotoWeChat);
         tvGotoWeChat.setOnClickListener((View)->{
             startWxLogin();
         });
@@ -41,8 +41,8 @@ public class WeChat1 extends AppCompatActivity {
             ToastUtils.show("您还未安装微信");
         } else {
             SendAuth.Req req = new SendAuth.Req();
-            req.scope = "snsapi_userinfo";
-            req.state = "zhys_wxlogin";
+            req.scope = "snsapi_userinfo"; //表示需要获取个人信息（登陆功能）。
+//            req.state = "zhys_wxlogin"; //非必须，用于保持请求和回调的状态，授权请求后原样带回给第三方。
             api.sendReq(req);
         }
     }

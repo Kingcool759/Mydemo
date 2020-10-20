@@ -33,28 +33,39 @@ public class Case46 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case46);
+        initView();
     }
     private void initView(){
         btnTimePicker = findViewById(R.id.btnTimePicker);
         btnAreaPicker = findViewById(R.id.btnAreaPicker);
         btnTimePicker.setOnClickListener((View)->{
-
-        });
-        btnAreaPicker.setOnClickListener((View)->{
             timePicker();
         });
+        btnAreaPicker.setOnClickListener((View)->{
+            areaPicker();
+        });
     }
+    //时间选择器
     private void timePicker(){
-//        //时间选择器
-//        TimePickerView pvTime = new TimePickerBuilder(this, new OnTimeSelectListener() {
-//            @Override
-//            public void onTimeSelect(Date date, View v) {
-//                ToastUtils.show(getTime(date));
-//            }
-//        }).build();
-//        pvTime.setDate(Calendar.getInstance());//注：根据需求来决定是否使用该方法（一般是精确到秒的情况），此项可以在弹出选择器的时候重新设置当前时间，避免在初始化之后由于时间已经设定，导致选中时间与当前时间不匹配的问题。
-//        pvTime.show();
+        //时间选择器
+        TimePickerView pvTime = new TimePickerBuilder(this, new OnTimeSelectListener() {
+            @Override
+            public void onTimeSelect(Date date, View v) {
+                ToastUtils.show(getTime(date));
+            }
+        }).build();
+        pvTime.setDate(Calendar.getInstance());//注：根据需求来决定是否使用该方法（一般是精确到秒的情况），此项可以在弹出选择器的时候重新设置当前时间，避免在初始化之后由于时间已经设定，导致选中时间与当前时间不匹配的问题。
+        pvTime.show();
     }
+
+    //根据需要自行截取数据显示
+    private String getTime(Date date) {//可根据需要自行截取数据显示
+//        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return format.format(date);
+    }
+
+    //地区三级联动
     private void areaPicker(){
 //        //条件选择器
 //        OptionsPickerView pvOptions = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
@@ -69,10 +80,5 @@ public class Case46 extends AppCompatActivity {
 //        }).build();
 //        pvOptions.setPicker(options1Items, options2Items, options3Items);
 //        pvOptions.show();
-    }
-    private String getTime(Date date) {//可根据需要自行截取数据显示
-//        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        return format.format(date);
     }
 }

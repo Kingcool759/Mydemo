@@ -6,10 +6,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
+import com.example.mydemo.arouter.ARouterManager;
 import com.example.mydemo.utils.CountDownTimerUtils;
 
 //获取验证码倒计时功能
+@Route(path = ARouterManager.Path.blog47)
+
 public class Case47 extends AppCompatActivity {
     private TextView tvGetNum;
 

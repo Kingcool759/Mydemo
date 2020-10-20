@@ -8,16 +8,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
 import com.example.mydemo.adapter.DividerItemDecoration;
 import com.example.mydemo.adapter.FruitRecyclerViewAdapter;
 import com.example.mydemo.adapter.TimeLineItemDecoration;
+import com.example.mydemo.arouter.ARouterManager;
 import com.example.mydemo.entity.Fruit;
 import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
 
 import java.util.ArrayList;
 import java.util.List;
+@Route(path = ARouterManager.Path.case26)
 
 public class Case26 extends AppCompatActivity {
     private FruitRecyclerViewAdapter adapter;

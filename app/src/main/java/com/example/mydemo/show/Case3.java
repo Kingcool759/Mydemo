@@ -6,7 +6,9 @@ import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
+import com.example.mydemo.arouter.ARouterManager;
 import com.example.mydemo.databinding.ActivityCase3Binding;
 import com.example.mydemo.entity.Student;
 
@@ -15,6 +17,8 @@ import com.example.mydemo.entity.Student;
  * @auther  armstrong
  * @describe DataBinding+ObservableField使用 （单向绑定刷新UI）
  */
+
+@Route(path = ARouterManager.Path.case3)
 public class Case3 extends AppCompatActivity {
     private ActivityCase3Binding binding;
     @Override

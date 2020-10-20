@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
+import com.example.mydemo.arouter.ARouterManager;
+
+@Route(path = ARouterManager.Path.blog31)
 
 public class Case31 extends AppCompatActivity {
 

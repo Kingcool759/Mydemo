@@ -6,13 +6,18 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
+import com.example.mydemo.arouter.ARouterManager;
 
 /**
  * @data on 2020/8/22 11:30 AM
  * @auther
  * @describe 拨打电话
  */
+
+@Route(path = ARouterManager.Path.case1)
 public class Case1 extends AppCompatActivity {
     private TextView gotoPhone;
     @Override

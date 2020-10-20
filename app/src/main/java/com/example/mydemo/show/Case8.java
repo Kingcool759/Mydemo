@@ -15,13 +15,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
 import com.example.mydemo.adapter.ViewPagerAdapterOne;
 import com.example.mydemo.adapter.ViewPagerAdapterThree;
 import com.example.mydemo.adapter.ViewPagerAdapterTwo;
+import com.example.mydemo.arouter.ARouterManager;
+
 import java.util.ArrayList;
 
 //viewpager使用实现轮播图
+@Route(path = ARouterManager.Path.case8)
+
 public class Case8 extends AppCompatActivity {
     //初始化viewpager1
     private ViewPager viewPager1;

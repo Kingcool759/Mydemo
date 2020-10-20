@@ -4,13 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
 import com.example.mydemo.adapter.PublicTabAdapter;
+import com.example.mydemo.arouter.ARouterManager;
 import com.example.mydemo.fragment.HotCollectionFragment;
 import com.example.mydemo.fragment.HotRecommendFragment;
 import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 import java.util.List;
+
+@Route(path = ARouterManager.Path.case14)
 
 public class Case14 extends AppCompatActivity {
     private List<Fragment> list_fragment; //定义要装frament的列表

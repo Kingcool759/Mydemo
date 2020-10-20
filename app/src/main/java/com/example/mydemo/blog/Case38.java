@@ -8,7 +8,12 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
+import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.fragment.TestFragment;
+
+@Route(path = ARouterManager.Path.blog38)
 
 public class Case38 extends AppCompatActivity {
     FragmentManager fragmentManager;

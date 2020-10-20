@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
+import com.example.mydemo.activity.ActivityB;
+import com.example.mydemo.arouter.ARouterManager;
 import com.example.mydemo.entity.MessageEvent;
 
 import org.greenrobot.eventbus.EventBus;
@@ -15,6 +18,8 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 //EventBus事件发布-订阅总线探究
+@Route(path = ARouterManager.Path.blog42)
+
 public class Case42 extends AppCompatActivity {
     private Button btnIntent;
     private TextView tvMessage;
@@ -34,7 +39,7 @@ public class Case42 extends AppCompatActivity {
         EventBus.getDefault().register(this);
         //点击事件
         btnIntent.setOnClickListener((View)->{
-            startActivity(new Intent(this,ActivityB.class));
+            startActivity(new Intent(this, ActivityB.class));
         });
     }
     @Subscribe(threadMode = ThreadMode.MAIN)  //事件订阅者

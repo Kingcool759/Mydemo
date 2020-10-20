@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
+import com.example.mydemo.arouter.ARouterManager;
 import com.example.mydemo.databinding.ActivityCase4Binding;
 import com.example.mydemo.viewmodel.Case4viewModel;
 
@@ -17,6 +19,8 @@ import com.example.mydemo.viewmodel.Case4viewModel;
  * @auther ArmStrong
  * @describe MutableLiveData的使用
  */
+
+@Route(path = ARouterManager.Path.case4)
 public class Case4 extends AppCompatActivity {
 
     private Case4viewModel viewModel;

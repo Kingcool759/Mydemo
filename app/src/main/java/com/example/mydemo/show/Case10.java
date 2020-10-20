@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
 import com.example.mydemo.adapter.OfficialAccountsAdapter;
+import com.example.mydemo.arouter.ARouterManager;
 import com.example.mydemo.bean.HomePageResBean;
 import com.example.mydemo.databinding.ActivityCase10Binding;
 import com.example.mydemo.viewmodel.Case10viewModel;
@@ -19,6 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 //retrofit基础用法
+@Route(path = ARouterManager.Path.case10)
+
 public class Case10 extends AppCompatActivity {
     private ActivityCase10Binding binding;
     private Case10viewModel viewModel;

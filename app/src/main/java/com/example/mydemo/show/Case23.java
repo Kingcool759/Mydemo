@@ -18,12 +18,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
+import com.example.mydemo.arouter.ARouterManager;
 import com.permissionx.guolindev.PermissionX;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+@Route(path = ARouterManager.Path.case23)
 
 public class Case23 extends AppCompatActivity {
     public static final int TAKE_PHOTO = 1;//声明一个请求码，用于识别返回的结果

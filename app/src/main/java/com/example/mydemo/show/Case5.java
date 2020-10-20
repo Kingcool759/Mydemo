@@ -8,14 +8,19 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
 import com.example.mydemo.adapter.FruitListViewAdapter;
+import com.example.mydemo.arouter.ARouterManager;
 import com.example.mydemo.entity.Fruit;
 
 import java.util.ArrayList;
 import java.util.List;
 
 //ListView使用
+
+@Route(path = ARouterManager.Path.case5)
+
 public class Case5 extends AppCompatActivity {
 
     @Override

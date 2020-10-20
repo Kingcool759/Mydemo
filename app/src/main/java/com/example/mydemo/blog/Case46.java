@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.builder.TimePickerBuilder;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
@@ -13,6 +14,7 @@ import com.bigkoo.pickerview.listener.OnTimeSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
 import com.bigkoo.pickerview.view.TimePickerView;
 import com.example.mydemo.R;
+import com.example.mydemo.arouter.ARouterManager;
 import com.example.mydemo.main.MainActivity;
 import com.hjq.toast.ToastUtils;
 
@@ -21,6 +23,8 @@ import java.util.Calendar;
 import java.util.Date;
 
 //picker-View
+@Route(path = ARouterManager.Path.blog46)
+
 public class Case46 extends AppCompatActivity {
     private Button btnTimePicker;
     private Button btnAreaPicker;

@@ -5,7 +5,9 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
+import com.example.mydemo.arouter.ARouterManager;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
@@ -18,6 +20,8 @@ import io.reactivex.disposables.Disposable;
  * @auther armstrong
  * @describe RxJava的基本用法
  */
+@Route(path = ARouterManager.Path.case9)
+
 public class Case9 extends AppCompatActivity {
     /* 定义TAG标签，这样可以很好的区分打印出来的log */
     private static final String TAG = "ArmStrong";

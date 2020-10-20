@@ -5,11 +5,16 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
 import com.example.mydemo.adapter.RecyclerViewTypeAdapter;
+import com.example.mydemo.arouter.ARouterManager;
 import com.example.mydemo.entity.Fruit;
 import java.util.ArrayList;
 import java.util.List;
+
+@Route(path = ARouterManager.Path.blog33)
 
 public class Case33 extends AppCompatActivity {
     private LinearLayoutManager layoutManager;

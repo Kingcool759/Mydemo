@@ -23,16 +23,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".blog.Case47"></activity>
-        <activity android:name=".blog.Case46" />
-        <activity android:name=".wechat.WeChat1" />
-        <activity android:name=".algorithm.algorithm1" />
-        <activity android:name=".blog.ActivityC" />
-        <activity android:name=".blog.ActivityB" />
-        <activity android:name=".blog.Case45" />
-        <activity android:name=".blog.Case44" />
-        <activity android:name=".blog.Case43" />
-        <activity android:name=".blog.Case42" /> <!-- 闪屏页 -->
+        <!-- 闪屏页 -->
         <activity
             android:name=".splash.SplashActivity"
             android:theme="@style/entrance_LauncherTheme">
@@ -42,30 +33,43 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 登陆页 -->
+        <activity android:name=".login.LoginActivity" />
+        <!-- 主页面 -->
+        <activity android:name=".main.MainActivity" />
+        <!-- 功能页面 -->
+        <activity android:name=".blog.Case47"/>
+        <activity android:name=".blog.Case46" />
+        <activity android:name=".activity.WeChat1" />
+        <activity android:name=".activity.algorithm1" />
+        <activity android:name=".activity.ActivityC" />
+        <activity android:name=".activity.ActivityB" />
+        <activity android:name=".blog.Case45" />
+        <activity android:name=".blog.Case44" />
+        <activity android:name=".blog.Case43" />
+        <activity android:name=".blog.Case42" />
         <activity android:name=".blog.Case41" />
         <activity android:name=".blog.Case40" />
         <activity android:name=".blog.Case39" />
         <activity android:name=".blog.Case38" />
         <activity android:name=".blog.Case37" />
-        <activity android:name=".show.Case36" />
+        <activity android:name=".blog.Case36" />
         <activity android:name=".blog.Case35" />
         <activity android:name=".blog.Case34" />
         <activity android:name=".blog.Case33" />
         <activity android:name=".blog.Case32" />
         <activity android:name=".blog.Case31" />
         <activity
-            android:name=".blog.Case30"
+            android:name=".show.Case30"
             android:configChanges="orientation|keyboard|layoutDirection|screenSize">
-
             <!-- activity横竖屏切换 -->
         </activity>
-        <activity android:name=".blog.Case29" />
+        <activity android:name=".show.Case29" />
         <activity android:name=".show.Case28" />
         <activity android:name=".show.Case27" />
         <activity android:name=".show.Case26" />
         <activity android:name=".show.Case25" />
         <activity android:name=".show.Case24">
-
             <!-- 调用系统相册 -->
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
@@ -81,15 +85,14 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-
         <activity android:name=".show.Case23" />
         <activity android:name=".show.Case22" />
-        <activity android:name=".blog.Case21" />
-        <activity android:name=".blog.Case19" />
-        <activity android:name=".blog.Case18" />
-        <activity android:name=".blog.Case17" />
+        <activity android:name=".show.Case21" />
+        <activity android:name=".show.Case19" />
+        <activity android:name=".show.Case18" />
+        <activity android:name=".show.Case17" />
         <activity android:name=".show.Case16" />
-        <activity android:name=".blog.Case20" />
+        <activity android:name=".show.Case20" />
         <activity android:name=".show.Case15" />
         <activity android:name=".fragment.HotRecommendFragment" />
         <activity android:name=".fragment.HotCollectionFragment" />
@@ -105,10 +108,8 @@
         <activity android:name=".show.Case5" />
         <activity android:name=".show.Case4" />
         <activity android:name=".show.Case3" />
-        <activity android:name=".show.LoginActivity" />
         <activity android:name=".show.Case2" />
         <activity android:name=".show.Case1" />
-        <activity android:name=".main.MainActivity" />
     </application>
 
 </manifest>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".blog.Case29"
+    tools:context=".show.Case29"
     tools:ignore="MissingConstraints" >
 
     <Button

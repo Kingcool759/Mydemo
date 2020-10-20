@@ -20,8 +20,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
+import com.example.mydemo.arouter.ARouterManager;
 import com.permissionx.guolindev.PermissionX;
+@Route(path = ARouterManager.Path.case24)
 
 public class Case24 extends AppCompatActivity {
     public static final int CHOOSE_PHOTO = 2;

@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".show.Case36">
+        tools:context=".blog.Case36">
 
         <ImageView
             android:id="@+id/glide_iv"

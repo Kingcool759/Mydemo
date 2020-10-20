@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".blog.Case30">
+    tools:context=".show.Case30">
     <TextView
         android:text="切换横竖屏时监听生命周期变化"
         android:textSize="20sp"

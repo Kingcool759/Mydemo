@@ -7,7 +7,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
+import com.example.mydemo.arouter.ARouterManager;
+
+
+@Route(path = ARouterManager.Path.blog41)
 
 public class Case41 extends AppCompatActivity {
     private EditText etStr;

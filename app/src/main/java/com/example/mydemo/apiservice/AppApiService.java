@@ -1,6 +1,7 @@
 package com.example.mydemo.apiservice;
 
 import com.example.mydemo.api.AppApi;
+import com.example.mydemo.bean.AreaThreeLinkBean;
 import com.example.mydemo.bean.HomePageResBean;
 
 import retrofit2.Call;
@@ -17,4 +18,10 @@ public interface AppApiService {
      */
     @GET(AppApi.OFFITIAL_ACCOUNTS)
     Call<HomePageResBean> getOfficialAccounts();
+
+    /**
+     * 获取地区三级联动数据
+     */
+    @GET(AppApi.AREA_LINK_DATA)
+    Call<AreaThreeLinkBean> getAreaData();
 }

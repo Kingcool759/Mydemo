@@ -25,8 +25,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * @data on 2020/8/31 4:18 PM
- * @auther
- * @describe
+ * @auther armStrong
+ * @describe Retrofit+Okhttp打造网络请求框架+Https抓包检测ssl
  */
 public class DemoPortal {
     //网络请求

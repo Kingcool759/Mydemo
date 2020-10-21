@@ -17,19 +17,16 @@ import retrofit2.Response;
 
 /**
  * @data on 2020/8/31 5:11 PM
- * @auther
- * @describe
+ * @auther armStrong
+ * @describe 接口请求
  */
 public class Case10viewModel extends ViewModel {
-    public MutableLiveData<List<HomePageResBean.DataBean>> mOfficialAccountsList = new MutableLiveData<>();
 
-    public MutableLiveData<List<HomePageResBean.DataBean>> getOfficialAccountsCallBack() {
-        return mOfficialAccountsList;
-    }
+    public MutableLiveData<List<HomePageResBean.DataBean>> mOfficialAccountsList = new MutableLiveData<>();
 
     //获取wanandroid中的首页公众号列表信息
     public void getPublicList() {
-       // AppApiService cla =   DemoPortal.getService(AppApiService.class);
+//        String BaseUrl = "https://www.wanandroid.com/";
         DemoPortal.getService(AppApiService.class).getOfficialAccounts().enqueue(new ApiCallback<HomePageResBean>() {
             @Override
             public void onSuccessful(Call<HomePageResBean> call, Response<HomePageResBean> response) {

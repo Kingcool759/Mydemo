@@ -32,7 +32,7 @@ public class Case49 extends AppCompatActivity {
     }
     private void initView1(){
         wheelView1 = findViewById(R.id.wheelview1);
-        wheelView1.setCyclic(false); //设置循环滚动
+        wheelView1.setCyclic(false); //设置不可循环滚动
         setWheelView(wheelView1);
     }
     private void initView2(){

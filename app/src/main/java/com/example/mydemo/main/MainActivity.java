@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             "47：验证码倒计时功能实现",
             "48：待完成：app调起支付宝",
             "49：滚动控件WheelView库使用",
-            "45：呆坐",
+            "50：CardView-MD使用",
             "46：呆坐",
             "47：呆坐"
     };//假数据
@@ -282,6 +282,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 48:  //wheelView
                         ARouter.getInstance().build(ARouterManager.Path.blog49).navigation();
+                        break;
+
+                    case 49:  //CardView
+                        ARouter.getInstance().build(ARouterManager.Path.blog50).navigation();
                         break;
 
                     default:

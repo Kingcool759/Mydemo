@@ -70,6 +70,7 @@ public class ARouterManager {
         public static final String blog47 = "/blog/blog47";
         public static final String blog48 = "/blog/blog48";
         public static final String blog49 = "/blog/blog49";
+        public static final String blog50 = "/blog/blog50";
 
         //第三页面
         public static final String algorithm1 = "/activity/algorithm1";

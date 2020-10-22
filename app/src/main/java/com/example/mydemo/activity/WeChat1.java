@@ -2,20 +2,19 @@ package com.example.mydemo.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.hjq.toast.ToastUtils;
 import com.tencent.mm.opensdk.modelmsg.SendAuth;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 //调用第三方微信登陆
-@Route(path = ARouterManager.Path.weChat1)
+@Route(path = ARouterPath.weChat1)
 public class WeChat1 extends AppCompatActivity {
     private TextView tvGotoWeChat;
 

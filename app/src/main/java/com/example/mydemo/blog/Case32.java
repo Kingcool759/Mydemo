@@ -7,9 +7,9 @@ import android.util.Log;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 
-@Route(path = ARouterManager.Path.blog32)
+@Route(path = ARouterPath.blog32)
 
 public class Case32 extends AppCompatActivity {
 

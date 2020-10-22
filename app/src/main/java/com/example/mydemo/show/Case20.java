@@ -8,10 +8,10 @@ import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 //lambda表达式
 
-@Route(path = ARouterManager.Path.case20)
+@Route(path = ARouterPath.case20)
 
 public class Case20 extends AppCompatActivity {
 

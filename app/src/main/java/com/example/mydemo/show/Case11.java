@@ -15,11 +15,11 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bumptech.glide.Glide;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.entity.Fruit;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
-@Route(path = ARouterManager.Path.case11)
+@Route(path = ARouterPath.case11)
 public class Case11 extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

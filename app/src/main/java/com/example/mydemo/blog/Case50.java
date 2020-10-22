@@ -6,10 +6,10 @@ import android.os.Bundle;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 
 //CardView
-@Route(path = ARouterManager.Path.blog50)
+@Route(path = ARouterPath.blog50)
 public class Case50 extends AppCompatActivity {
 
     @Override

@@ -2,7 +2,6 @@ package com.example.mydemo.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,14 +11,9 @@ import android.widget.ListView;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.mydemo.R;
-import com.example.mydemo.activity.algorithm1;
-import com.example.mydemo.arouter.ARouterManager;
-import com.example.mydemo.blog.Case46;
-import com.example.mydemo.blog.Case47;
-import com.example.mydemo.blog.Case48;
-import com.example.mydemo.activity.WeChat1;
+import com.example.mydemo.arouter.ARouterPath;
 
-@Route(path = ARouterManager.Path.main)
+@Route(path = ARouterPath.main)
 public class MainActivity extends AppCompatActivity {
     private String data[] = {
             "1：拨打电话",  //0
@@ -72,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             "48：待完成：app调起支付宝",
             "49：滚动控件WheelView库使用",
             "50：CardView-MD使用",
-            "46：呆坐",
+            "46：悬浮按钮-FloatingActionBtn使用",
             "47：呆坐"
     };//假数据
 
@@ -89,203 +83,207 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i) {
                     case 0:
-                        ARouter.getInstance().build(ARouterManager.Path.case1).navigation();
+                        ARouter.getInstance().build(ARouterPath.case1).navigation();
                         break;
 
                     case 1:
-                        ARouter.getInstance().build(ARouterManager.Path.case2).navigation();
+                        ARouter.getInstance().build(ARouterPath.case2).navigation();
                         break;
 
                     case 2:
-                        ARouter.getInstance().build(ARouterManager.Path.case3).navigation();
+                        ARouter.getInstance().build(ARouterPath.case3).navigation();
                         break;
 
                     case 3:
-                        ARouter.getInstance().build(ARouterManager.Path.case14).navigation();
+                        ARouter.getInstance().build(ARouterPath.case4).navigation();
                         break;
 
                     case 4:
-                        ARouter.getInstance().build(ARouterManager.Path.case5).navigation();
+                        ARouter.getInstance().build(ARouterPath.case5).navigation();
                         break;
 
                     case 5:
-                        ARouter.getInstance().build(ARouterManager.Path.case6).navigation();
+                        ARouter.getInstance().build(ARouterPath.case6).navigation();
                         break;
 
                     case 6:  //recyclerview
-                        ARouter.getInstance().build(ARouterManager.Path.case7).navigation();
+                        ARouter.getInstance().build(ARouterPath.case7).navigation();
                         break;
 
                     case 7:  //ViewPager
-                        ARouter.getInstance().build(ARouterManager.Path.case8).navigation();
+                        ARouter.getInstance().build(ARouterPath.case8).navigation();
                         break;
 
                     case 8:  //RxJava
-                        ARouter.getInstance().build(ARouterManager.Path.case9).navigation();
+                        ARouter.getInstance().build(ARouterPath.case9).navigation();
                         break;
 
                     case 9:  //Retrofit
-                        ARouter.getInstance().build(ARouterManager.Path.case10).navigation();
+                        ARouter.getInstance().build(ARouterPath.case10).navigation();
                         break;
 
                     case 10:  //折叠布局
-                        ARouter.getInstance().build(ARouterManager.Path.case11).navigation();
+                        ARouter.getInstance().build(ARouterPath.case11).navigation();
                         break;
 
                     case 11:  //WebView
-                        ARouter.getInstance().build(ARouterManager.Path.case12).navigation();
+                        ARouter.getInstance().build(ARouterPath.case12).navigation();
                         break;
 
                     case 12:  //滑出菜单
-                        ARouter.getInstance().build(ARouterManager.Path.case13).navigation();
+                        ARouter.getInstance().build(ARouterPath.case13).navigation();
                         break;
 
                     case 13:  //Tablayout
-                        ARouter.getInstance().build(ARouterManager.Path.case14).navigation();
+                        ARouter.getInstance().build(ARouterPath.case14).navigation();
                         break;
 
                     case 14:  //自定义View实现流式布局
-                        ARouter.getInstance().build(ARouterManager.Path.case15).navigation();
+                        ARouter.getInstance().build(ARouterPath.case15).navigation();
                         break;
 
                     case 15:  //流式布局(hongyang)
-                        ARouter.getInstance().build(ARouterManager.Path.case16).navigation();
+                        ARouter.getInstance().build(ARouterPath.case16).navigation();
                         break;
 
                     case 16:  //ARouter路由跳转
-                        ARouter.getInstance().build(ARouterManager.Path.case17).navigation();
+                        ARouter.getInstance().build(ARouterPath.case17).navigation();
                         break;
 
                     case 17:  //DataBinding示例
-                        ARouter.getInstance().build(ARouterManager.Path.case18).navigation();
+                        ARouter.getInstance().build(ARouterPath.case18).navigation();
                         break;
 
                     case 18:  //lambda
-                        ARouter.getInstance().build(ARouterManager.Path.case20).navigation();
+                        ARouter.getInstance().build(ARouterPath.case20).navigation();
                         break;
 
                     case 19:  //recyclerview
-                        ARouter.getInstance().build(ARouterManager.Path.case21).navigation();
+                        ARouter.getInstance().build(ARouterPath.case21).navigation();
                         break;
 
                     case 20:  //popupwindow
-                        ARouter.getInstance().build(ARouterManager.Path.case22).navigation();
+                        ARouter.getInstance().build(ARouterPath.case22).navigation();
                         break;
 
                     case 21:  //调用摄像头拍照
-                        ARouter.getInstance().build(ARouterManager.Path.case23).navigation();
+                        ARouter.getInstance().build(ARouterPath.case23).navigation();
                         break;
 
                     case 22:  //
-                        ARouter.getInstance().build(ARouterManager.Path.case24).navigation();
+                        ARouter.getInstance().build(ARouterPath.case24).navigation();
                         break;
 
                     case 23:  //
-                        ARouter.getInstance().build(ARouterManager.Path.case25).navigation();
+                        ARouter.getInstance().build(ARouterPath.case25).navigation();
                         break;
 
                     case 24:  //RecyclerView隐藏TooBar效果
-                        ARouter.getInstance().build(ARouterManager.Path.case26).navigation();
+                        ARouter.getInstance().build(ARouterPath.case26).navigation();
                         break;
 
                     case 25:  //TitleBar标题栏
-                        ARouter.getInstance().build(ARouterManager.Path.case27).navigation();
+                        ARouter.getInstance().build(ARouterPath.case27).navigation();
                         break;
 
                     case 26:  //图片圆形处理
-                        ARouter.getInstance().build(ARouterManager.Path.case28).navigation();
+                        ARouter.getInstance().build(ARouterPath.case28).navigation();
                         break;
 
                     case 27:  //permission X
-                        ARouter.getInstance().build(ARouterManager.Path.case29).navigation();
+                        ARouter.getInstance().build(ARouterPath.case29).navigation();
                         break;
 
                     case 28:  //activity切换横竖屏时候的生命周期变化
-                        ARouter.getInstance().build(ARouterManager.Path.case30).navigation();
+                        ARouter.getInstance().build(ARouterPath.case30).navigation();
                         break;
 
                     case 29:  //activity跳转到另一个activity的时候生命周期变化
-                        ARouter.getInstance().build(ARouterManager.Path.blog31).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog31).navigation();
                         break;
 
                     case 30:  //Recycler（ImageView）实现多布局
-                        ARouter.getInstance().build(ARouterManager.Path.blog33).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog33).navigation();
                         break;
 
                     case 31:  //Recycler（两个）实现多布局
-                        ARouter.getInstance().build(ARouterManager.Path.blog34).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog34).navigation();
                         break;
 
                     case 32:  //Recycler（两个）实现多布局
-                        ARouter.getInstance().build(ARouterManager.Path.blog35).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog35).navigation();
                         break;
 
                     case 33:  //glide加载图片
-                        ARouter.getInstance().build(ARouterManager.Path.blog36).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog36).navigation();
                         break;
 
                     case 34:  //数字滚动控件
-                        ARouter.getInstance().build(ARouterManager.Path.blog37).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog37).navigation();
                         break;
 
                     case 35:  //fragment的生命周期探究
-                        ARouter.getInstance().build(ARouterManager.Path.blog38).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog38).navigation();
                         break;
 
                     case 36:  //JetPack+MVVM模式实现wanAdroid应用app（另附github源码，java语言实现）
-                        ARouter.getInstance().build(ARouterManager.Path.blog39).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog39).navigation();
                         break;
 
                     case 37:  //搜索框（带历史记录）github库使用
-                        ARouter.getInstance().build(ARouterManager.Path.blog40).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog40).navigation();
                         break;
 
                     case 38:  //String,StringBuffer
-                        ARouter.getInstance().build(ARouterManager.Path.blog41).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog41).navigation();
                         break;
 
                     case 39:  //EventBus事件发布-订阅总线探究
-                        ARouter.getInstance().build(ARouterManager.Path.blog42).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog42).navigation();
                         break;
 
                     case 40:  //RxBus，取代了EventBus，是EventBus的进阶版
-                        ARouter.getInstance().build(ARouterManager.Path.blog43).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog43).navigation();
                         break;
 
                     case 41:  //反射机制探究
-                        ARouter.getInstance().build(ARouterManager.Path.blog44).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog44).navigation();
                         break;
 
                     case 42:  //MotionLayout的使用
-                        ARouter.getInstance().build(ARouterManager.Path.blog45).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog45).navigation();
                         break;
 
                     case 43:  //算法求X的平方根
-                        ARouter.getInstance().build(ARouterManager.Path.algorithm1).navigation();
+                        ARouter.getInstance().build(ARouterPath.algorithm1).navigation();
                         break;
 
                     case 44:  //调起第三方微信登陆
-                        ARouter.getInstance().build(ARouterManager.Path.weChat1).navigation();
+                        ARouter.getInstance().build(ARouterPath.weChat1).navigation();
                         break;
 
                     case 45:  //PickerView使用
-                        ARouter.getInstance().build(ARouterManager.Path.blog46).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog46).navigation();
                         break;
 
                     case 46:  //验证码倒计时功能实现
-                        ARouter.getInstance().build(ARouterManager.Path.blog47).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog47).navigation();
                         break;
 
                     case 47:  //app调起支付宝
-                        ARouter.getInstance().build(ARouterManager.Path.blog48).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog48).navigation();
                         break;
 
                     case 48:  //wheelView
-                        ARouter.getInstance().build(ARouterManager.Path.blog49).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog49).navigation();
                         break;
 
                     case 49:  //CardView
-                        ARouter.getInstance().build(ARouterManager.Path.blog50).navigation();
+                        ARouter.getInstance().build(ARouterPath.blog50).navigation();
+                        break;
+
+                    case 50:  //FloatingActionBtn
+                        ARouter.getInstance().build(ARouterPath.blog51).navigation();
                         break;
 
                     default:

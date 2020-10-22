@@ -8,11 +8,11 @@ import android.util.Log;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
 import com.example.mydemo.adapter.FlowTagAdapter;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.zhy.view.flowlayout.TagFlowLayout;
 import java.util.ArrayList;
 
-@Route(path = ARouterManager.Path.case16)
+@Route(path = ARouterPath.case16)
 
 public class Case16 extends AppCompatActivity {
     private ArrayList<String> datas;

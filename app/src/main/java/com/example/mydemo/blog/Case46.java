@@ -16,19 +16,13 @@ import com.bigkoo.pickerview.listener.OnTimeSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
 import com.bigkoo.pickerview.view.TimePickerView;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
-import com.example.mydemo.bean.AreaLinkBean;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.bean.AreaThreeLinkBean;
 import com.example.mydemo.databinding.ActivityCase46Binding;
-import com.example.mydemo.main.MainActivity;
-import com.example.mydemo.utils.AssetsUtils;
 import com.example.mydemo.viewmodel.Case46viewModel;
-import com.google.gson.Gson;
 import com.hjq.toast.ToastUtils;
 
-import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -38,7 +32,7 @@ import java.util.List;
 
 //picker-View选择器
 //自己封装的api接口还不能用，被github官网给阻止访问了，还在解决中……
-@Route(path = ARouterManager.Path.blog46)
+@Route(path = ARouterPath.blog46)
 
 public class Case46 extends AppCompatActivity {
     private ActivityCase46Binding binding;

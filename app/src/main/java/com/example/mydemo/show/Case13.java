@@ -13,10 +13,10 @@ import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.databinding.ActivityCase13Binding;
 
-@Route(path = ARouterManager.Path.case13)
+@Route(path = ARouterPath.case13)
 
 public class Case13 extends AppCompatActivity {
     private ActivityCase13Binding binding;

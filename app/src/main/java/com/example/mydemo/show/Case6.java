@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.observe.MyLifeCycleObserver;
 
 //lifecycle使用
-@Route(path = ARouterManager.Path.case6)
+@Route(path = ARouterPath.case6)
 public class Case6 extends AppCompatActivity {
 
     @Override

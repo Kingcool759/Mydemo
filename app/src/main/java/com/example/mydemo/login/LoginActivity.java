@@ -10,12 +10,12 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.databinding.ActivityLoginBinding;
 import com.example.mydemo.main.MainActivity;
 import com.example.mydemo.viewmodel.LoginViewModel;
 
-@Route(path = ARouterManager.Path.login)
+@Route(path = ARouterPath.login)
 public class LoginActivity extends AppCompatActivity{
 
     private ActivityLoginBinding binding;

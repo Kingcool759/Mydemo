@@ -10,14 +10,13 @@ import com.bigkoo.pickerview.adapter.ArrayWheelAdapter;
 import com.contrarywind.listener.OnItemSelectedListener;
 import com.contrarywind.view.WheelView;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
-import com.example.mydemo.main.MainActivity;
+import com.example.mydemo.arouter.ARouterPath;
 
 import java.util.ArrayList;
 import java.util.List;
 
 //wheelView
-@Route(path = ARouterManager.Path.blog49)
+@Route(path = ARouterPath.blog49)
 public class Case49 extends AppCompatActivity {
     private WheelView wheelView1;
     private WheelView wheelView2;

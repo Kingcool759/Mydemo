@@ -10,12 +10,12 @@ import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.view.FlowLayoutView;
 
 import java.util.ArrayList;
 
-@Route(path = ARouterManager.Path.case15)
+@Route(path = ARouterPath.case15)
 
 //自定义View实现流式布局（带点击事件）
 public class Case15 extends AppCompatActivity {

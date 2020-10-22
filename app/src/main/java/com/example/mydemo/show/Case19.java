@@ -7,10 +7,10 @@ import android.os.Bundle;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.databinding.ActivityCase19Binding;
 
-@Route(path = ARouterManager.Path.case19)
+@Route(path = ARouterPath.case19)
 
 public class Case19 extends AppCompatActivity {
     private ActivityCase19Binding binding;

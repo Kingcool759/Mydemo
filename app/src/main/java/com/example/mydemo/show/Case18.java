@@ -9,9 +9,9 @@ import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 
-@Route(path = ARouterManager.Path.case18)
+@Route(path = ARouterPath.case18)
 public class Case18 extends AppCompatActivity {
     @Autowired(name = "zhangsan")   //获取ARouter传过来值需要使用的注解
     String key1;

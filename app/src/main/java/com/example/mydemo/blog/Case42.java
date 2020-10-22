@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
 import com.example.mydemo.activity.ActivityB;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.entity.MessageEvent;
 
 import org.greenrobot.eventbus.EventBus;
@@ -18,7 +18,7 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 //EventBus事件发布-订阅总线探究
-@Route(path = ARouterManager.Path.blog42)
+@Route(path = ARouterPath.blog42)
 
 public class Case42 extends AppCompatActivity {
     private Button btnIntent;

@@ -20,12 +20,12 @@ import com.example.mydemo.R;
 import com.example.mydemo.adapter.ViewPagerAdapterOne;
 import com.example.mydemo.adapter.ViewPagerAdapterThree;
 import com.example.mydemo.adapter.ViewPagerAdapterTwo;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 
 import java.util.ArrayList;
 
 //viewpager使用实现轮播图
-@Route(path = ARouterManager.Path.case8)
+@Route(path = ARouterPath.case8)
 
 public class Case8 extends AppCompatActivity {
     //初始化viewpager1

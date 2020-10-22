@@ -7,14 +7,14 @@ import android.util.Log;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 
 import scut.carson_ho.searchview.ICallBack;
 import scut.carson_ho.searchview.SearchView;
 import scut.carson_ho.searchview.bCallBack;
 
 // 搜索框（带历史记录）
-@Route(path = ARouterManager.Path.blog40)
+@Route(path = ARouterPath.blog40)
 
 public class Case40 extends AppCompatActivity {
     private SearchView searchView;

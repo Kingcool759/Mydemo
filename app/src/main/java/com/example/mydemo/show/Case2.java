@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.view.SelfDialog;
 import com.hjq.toast.ToastUtils;
 
@@ -16,7 +16,7 @@ import com.hjq.toast.ToastUtils;
  * @describe  退出应用程序
  */
 
-@Route(path = ARouterManager.Path.case2)
+@Route(path = ARouterPath.case2)
 public class Case2 extends AppCompatActivity {
     private SelfDialog selfDialog;
 

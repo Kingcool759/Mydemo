@@ -12,10 +12,10 @@ import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.databinding.ActivityCase22Binding;
 import com.example.mydemo.popupwindow.TestPopupWindow;
-@Route(path = ARouterManager.Path.case22)
+@Route(path = ARouterPath.case22)
 
 public class Case22 extends AppCompatActivity {
     private ActivityCase22Binding binding;

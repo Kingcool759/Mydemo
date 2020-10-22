@@ -9,13 +9,13 @@ import android.view.animation.OvershootInterpolator;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.robinhood.ticker.TickerUtils;
 import com.robinhood.ticker.TickerView;
 
 import java.util.Random;
 
-@Route(path = ARouterManager.Path.blog37)
+@Route(path = ARouterPath.blog37)
 
 public class Case37 extends AppCompatActivity {
     protected static final Random RANDOM = new Random(System.currentTimeMillis());//当前毫秒数范围类的随机数

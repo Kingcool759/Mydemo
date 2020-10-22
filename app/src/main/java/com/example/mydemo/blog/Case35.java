@@ -9,12 +9,12 @@ import android.os.Bundle;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
 import com.example.mydemo.adapter.RecyclerGridAdapter;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Route(path = ARouterManager.Path.blog35)
+@Route(path = ARouterPath.blog35)
 
 public class Case35 extends AppCompatActivity {
     private GridLayoutManager layoutManager;

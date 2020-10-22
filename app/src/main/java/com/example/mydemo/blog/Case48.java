@@ -7,9 +7,9 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 
-@Route(path = ARouterManager.Path.blog48)
+@Route(path = ARouterPath.blog48)
 //接入支付宝
 public class Case48 extends AppCompatActivity {
     private TextView tvGotoZFB;

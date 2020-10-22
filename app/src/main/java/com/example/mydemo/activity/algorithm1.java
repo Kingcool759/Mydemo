@@ -9,10 +9,10 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 
 //求X的平方根
-@Route(path = ARouterManager.Path.algorithm1)
+@Route(path = ARouterPath.algorithm1)
 public class algorithm1 extends AppCompatActivity {
     private EditText etX;
     private Button btnAqrt;

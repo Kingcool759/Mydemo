@@ -12,13 +12,13 @@ import com.example.mydemo.R;
 import com.example.mydemo.adapter.DividerItemDecoration;
 import com.example.mydemo.adapter.FruitRecyclerViewAdapter;
 import com.example.mydemo.adapter.TimeLineItemDecoration;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.entity.Fruit;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Route(path = ARouterManager.Path.case21)
+@Route(path = ARouterPath.case21)
 
 
 public class Case21 extends AppCompatActivity {

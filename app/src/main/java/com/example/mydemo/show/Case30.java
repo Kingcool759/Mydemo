@@ -10,10 +10,10 @@ import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 
 //activity横竖屏切换时的生命周期变化
-@Route(path = ARouterManager.Path.case30)
+@Route(path = ARouterPath.case30)
 
 public class Case30 extends AppCompatActivity {
 

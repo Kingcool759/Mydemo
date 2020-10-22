@@ -7,7 +7,7 @@ import android.os.Handler;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 
 @Route(path = "/splash/splash")
 public class SplashActivity extends AppCompatActivity {
@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 //                startActivity (new Intent(SplashActivity.this, LoginActivity.class));      //界面转跳
-                ARouter.getInstance().build(ARouterManager.Path.login).navigation();
+                ARouter.getInstance().build(ARouterPath.login).navigation();
                 finish();
             }
         },500);         //第二个参数是停留的时间

@@ -6,9 +6,9 @@ import android.os.Bundle;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 
-@Route(path = ARouterManager.Path.blog44)
+@Route(path = ARouterPath.blog44)
 
 public class Case44 extends AppCompatActivity {
 

@@ -8,10 +8,10 @@ import android.os.Bundle;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bumptech.glide.Glide;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.databinding.ActivityCase36Binding;
 
-@Route(path = ARouterManager.Path.blog36)
+@Route(path = ARouterPath.blog36)
 
 public class Case36 extends AppCompatActivity {
     private ActivityCase36Binding binding;

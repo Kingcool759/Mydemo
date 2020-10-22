@@ -8,9 +8,9 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
-import com.example.mydemo.arouter.ARouterManager;
+import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.utils.DateUtil;
-@Route(path = ARouterManager.Path.case25)
+@Route(path = ARouterPath.case25)
 
 public class Case25 extends AppCompatActivity {
 

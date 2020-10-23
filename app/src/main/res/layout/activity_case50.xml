@@ -6,74 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".blog.Case50"
     tools:ignore="MissingConstraints">
+
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:text="CardView卡片式布局（圆角+阴影效果）"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="@color/white"
         android:background="@color/green"
-        />
+        android:gravity="center"
+        android:text="CardView卡片式布局（圆角+阴影效果）"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView1"
         android:layout_width="300dp"
         android:layout_height="150dp"
-        android:background="@color/white"
+        app:cardBackgroundColor="@color/blue"
         app:layout_constraintBottom_toTopOf="@id/cardView2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title">
+
         <TextView
             android:id="@+id/title1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="CardView示例1：默认效果（圆角+阴影）"
-            android:textSize="20sp"
             android:gravity="center"
-            android:textColor="@color/blue"
-            />
+            android:text="CardView示例1：默认效果（圆角+阴影）"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="300dp"
         android:layout_height="150dp"
-        android:background="@color/white"
+        app:cardBackgroundColor="@color/blue"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardView1">
+
         <TextView
             android:id="@+id/title2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="CardView示例2：指定圆角效果"
-            android:textSize="20sp"
             android:gravity="center"
-            android:textColor="@color/blue"
-            />
+            android:text="CardView示例2：指定圆角效果"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
         android:layout_width="300dp"
         android:layout_height="150dp"
-        android:background="@color/white"
         app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/blue"
         app:cardElevation="10dp"
+        app:cardMaxElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardView2">
+
         <TextView
             android:id="@+id/title3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="CardView示例3：指定圆角+指定阴影高度"
-            android:textSize="20sp"
             android:gravity="center"
-            android:textColor="@color/blue"
-            />
+            android:text="CardView示例3：指定圆角+指定阴影高度"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

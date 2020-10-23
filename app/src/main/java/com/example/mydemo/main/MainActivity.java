@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
             "48：待完成：app调起支付宝",
             "49：滚动控件WheelView库使用",
             "50：CardView-MD使用",
-            "46：悬浮按钮-FloatingActionBtn使用",
-            "47：呆坐"
+            "46：悬浮按钮+可交互提示（FloatingActionButton+SnakerBar-MD使用）",
+            "47：待完成：探究Handler异步消息机制"
     };//假数据
 
     @Override
@@ -282,8 +282,12 @@ public class MainActivity extends AppCompatActivity {
                         ARouter.getInstance().build(ARouterPath.blog50).navigation();
                         break;
 
-                    case 50:  //FloatingActionBtn
+                    case 50:  //FloatingActionBtn+可交互提示
                         ARouter.getInstance().build(ARouterPath.blog51).navigation();
+                        break;
+
+                    case 51:  //FloatingActionBtn+可交互提示
+                        ARouter.getInstance().build(ARouterPath.blog52).navigation();
                         break;
 
                     default:

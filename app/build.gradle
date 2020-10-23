@@ -130,7 +130,11 @@ dependencies {
     // 支付宝 SDK AAR 包所需的配置
     implementation(name: 'alipaySdk-15.7.9-20200727142846', ext: 'aar')
 
-    //wheelView
+    //wheelView滚动控件
     implementation 'com.contrarywind:wheelview:4.1.0'
+
+    //MotionLayout运动布局
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+
 
 }

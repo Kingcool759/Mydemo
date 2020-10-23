@@ -23,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".blog.Case51"></activity>
+        <activity android:name=".blog.Case52"></activity>
+        <activity android:name=".blog.Case51" />
         <activity android:name=".blog.Case50" />
         <activity android:name=".blog.Case49" /> <!-- 闪屏页 -->
         <activity

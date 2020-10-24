@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.mydemo"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -136,5 +136,9 @@ dependencies {
     //MotionLayout运动布局
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
 
+    //沉浸式状态栏
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
 
+    //圆角图片
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 }

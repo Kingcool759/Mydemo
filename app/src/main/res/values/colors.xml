@@ -23,4 +23,5 @@
     <color name="logcat_level_warn_color">#FFFFBB33</color>
     <color name="logcat_level_error_color">#FFFF4444</color>
     <color name="logcat_level_other_color">#FFFFFFFF</color>
+    <color name="half_black">#7000</color>
 </resources>

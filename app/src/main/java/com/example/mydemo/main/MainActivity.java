@@ -2,8 +2,13 @@ package com.example.mydemo.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -12,6 +17,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.mydemo.R;
 import com.example.mydemo.arouter.ARouterPath;
+import com.gyf.immersionbar.ImmersionBar;
 
 @Route(path = ARouterPath.main)
 public class MainActivity extends AppCompatActivity {
@@ -67,13 +73,18 @@ public class MainActivity extends AppCompatActivity {
             "49：滚动控件WheelView库使用",
             "50：CardView-MD使用",
             "46：悬浮按钮+可交互提示（FloatingActionButton+SnakerBar-MD使用）",
-            "47：待完成：探究Handler异步消息机制"
+            "47：待完成：探究Handler异步消息机制",
+            "48：图片+圆角图片+圆形图片"
     };//假数据
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //沉浸式状态栏设置
+//        setHideNavigationBar(this);
+
+        //业务逻辑
         ListView listView = (ListView) findViewById(R.id.listview);//在视图中找到ListView
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);//新建并配置ArrayAapeter
         listView.setAdapter(adapter);
@@ -290,9 +301,40 @@ public class MainActivity extends AppCompatActivity {
                         ARouter.getInstance().build(ARouterPath.blog52).navigation();
                         break;
 
+                    case 52:  //FloatingActionBtn+可交互提示
+                        ARouter.getInstance().build(ARouterPath.blog53).navigation();
+                        break;
+
                     default:
                 }
             }
         });
     }
+
+    //    //设置状态栏颜色
+//    private void setStatusBarColor(int color) {
+//        Window window = this.getWindow();
+//        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+//        int ui = window.getDecorView().getSystemUiVisibility();
+//        window.getDecorView().setSystemUiVisibility(ui);
+//        window.setNavigationBarColor(color);
+//    }
+//
+//    //隐藏导航栏
+//    public static void setHideNavigationBar(Activity activity) {
+//        View decorView = activity.getWindow().getDecorView();
+//        int ui = decorView.getSystemUiVisibility();
+//        ui |=View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+//        decorView.setSystemUiVisibility(ui);
+//    }
+    private void setStatusBarColor(int color) {
+        Window window = this.getWindow();
+        //取消设置透明状态栏,使 ContentView 内容不再覆盖状态栏
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //需要设置这个 flag 才能调用 setStatusBarColor 来设置状态栏颜色
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        //设置状态栏颜色
+        window.setStatusBarColor(color);
+    }
+
 }

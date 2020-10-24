@@ -12,6 +12,8 @@ import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.fragment.HotCollectionFragment;
 import com.example.mydemo.fragment.HotRecommendFragment;
 import com.google.android.material.tabs.TabLayout;
+import com.gyf.immersionbar.ImmersionBar;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +29,9 @@ public class Case14 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case14);
+        ImmersionBar.with(this).statusBarColor(R.color.half_black)
+                .fitsSystemWindows(true).init();
+
         initView();
         //设置Tablayout的模式
         tabLayout.setTabMode(TabLayout.MODE_FIXED);

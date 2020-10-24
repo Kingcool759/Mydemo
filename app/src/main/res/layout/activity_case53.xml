@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".blog.Case53"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/pink"
+        android:gravity="center"
+        android:text="默认ImageView样式"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/defaultImage"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/pic1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/defaultImage1"
+        app:layout_constraintTop_toBottomOf="@id/title1" />
+
+    <ImageView
+        android:id="@+id/defaultImage1"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/pic2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/defaultImage"
+        app:layout_constraintTop_toBottomOf="@id/title1" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/pink"
+        android:gravity="center"
+        android:text="RoundedImageView样式"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/defaultImage" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/roundedImage1"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        app:riv_corner_radius="8dp"
+        android:src="@drawable/pic1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/roundedImage2"
+        app:layout_constraintTop_toBottomOf="@id/title2" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/roundedImage2"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        app:riv_corner_radius="8dp"
+        android:src="@drawable/pic2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/roundedImage1"
+        app:layout_constraintTop_toBottomOf="@id/title2" />
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/pink"
+        android:gravity="center"
+        android:text="CircleImageView样式"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/roundedImage1" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView1"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/pic1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/circleImageView2"
+        app:layout_constraintTop_toBottomOf="@id/title3" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView2"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/pic2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circleImageView1"
+        app:layout_constraintTop_toBottomOf="@id/title3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

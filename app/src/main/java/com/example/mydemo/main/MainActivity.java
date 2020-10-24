@@ -74,7 +74,12 @@ public class MainActivity extends AppCompatActivity {
             "50：CardView-MD使用",
             "46：悬浮按钮+可交互提示（FloatingActionButton+SnakerBar-MD使用）",
             "47：待完成：探究Handler异步消息机制",
-            "48：图片+圆角图片+圆形图片"
+            "48：图片（圆形+圆角）库使用",
+            "49：SmartRefreshLayout下拉刷新、下拉加载控件使用",
+            "00：~~~~~~~~~~~~~~~",
+            "00：~~~~~~~~~~~~~~~",
+            "00：~~~~~~~~~~~~~~~",
+            "00：~~~~~~~~~~~~~~~"
     };//假数据
 
     @Override
@@ -297,12 +302,16 @@ public class MainActivity extends AppCompatActivity {
                         ARouter.getInstance().build(ARouterPath.blog51).navigation();
                         break;
 
-                    case 51:  //FloatingActionBtn+可交互提示
+                    case 51:  //探究Handler异步消息机制
                         ARouter.getInstance().build(ARouterPath.blog52).navigation();
                         break;
 
-                    case 52:  //FloatingActionBtn+可交互提示
+                    case 52:  //图片（圆角+圆形）
                         ARouter.getInstance().build(ARouterPath.blog53).navigation();
+                        break;
+
+                    case 53:  //SmartRefreshLayout
+                        ARouter.getInstance().build(ARouterPath.blog54).navigation();
                         break;
 
                     default:

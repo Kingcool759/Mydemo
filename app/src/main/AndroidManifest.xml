@@ -23,7 +23,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".blog.Case54"></activity>
+        <activity android:name=".blog.Case56"></activity>
+        <activity android:name=".blog.Case55" />
+        <activity android:name=".blog.Case54" />
         <activity android:name=".blog.Case53" />
         <activity android:name=".blog.Case52" />
         <activity android:name=".blog.Case51" />

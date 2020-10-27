@@ -1,19 +1,16 @@
 package com.example.mydemo.blog;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.ViewModelProviders;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.ViewModelProviders;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.builder.TimePickerBuilder;
-import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.listener.OnTimeSelectListener;
-import com.bigkoo.pickerview.view.OptionsPickerView;
 import com.bigkoo.pickerview.view.TimePickerView;
 import com.example.mydemo.R;
 import com.example.mydemo.arouter.ARouterPath;
@@ -21,8 +18,6 @@ import com.example.mydemo.bean.AreaThreeLinkBean;
 import com.example.mydemo.databinding.ActivityCase46Binding;
 import com.example.mydemo.viewmodel.Case46viewModel;
 import com.hjq.toast.ToastUtils;
-
-import org.json.JSONException;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -51,16 +46,16 @@ public class Case46 extends AppCompatActivity {
 //        setContentView(R.layout.activity_case46);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_case46);
         viewModel = ViewModelProviders.of(this).get(Case46viewModel.class);
-        binding.setViewModel(viewModel);
+//        binding.setViewModel(viewModel);
         binding.setLifecycleOwner(this);
         //初始化
         initView();
         getView1();
-        getView2();
+//        getView2();
     }
     private void initView(){
         btnTimePicker = findViewById(R.id.btnTimePicker);
-        btnAreaPicker = findViewById(R.id.btnAreaPicker);
+//        btnAreaPicker = findViewById(R.id.btnAreaPicker);
     }
     private void getView1(){
         btnTimePicker.setOnClickListener((View)->{
@@ -68,17 +63,17 @@ public class Case46 extends AppCompatActivity {
         });
     }
 
-    private void getView2(){
-        btnAreaPicker.setOnClickListener((View)->{
-            viewModel.getAreaDataList(); //调用api接口请求数据
-            getCallback();
-            try {
-                areaPicker();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        });
-    }
+//    private void getView2(){
+//        btnAreaPicker.setOnClickListener((View)->{
+//            viewModel.getAreaDataList(); //调用api接口请求数据
+//            getCallback();
+//            try {
+//                areaPicker();
+//            } catch (JSONException e) {
+//                e.printStackTrace();
+//            }
+//        });
+//    }
 
     //时间选择器
     private void timePicker(){
@@ -100,68 +95,68 @@ public class Case46 extends AppCompatActivity {
         return format.format(date);
     }
 
-    //地区三级联动
-    private void areaPicker() throws JSONException {
-        //条件选择器
-        if (areaProList == null) {
-            viewModel.getAreaDataList();
-            getCallback();
-        }else {
-            OptionsPickerView pvOptions = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
-                @Override
-                public void onOptionsSelect(int option1, int option2, int option3, View v) {
-                    //返回的分别是三个级别的选中位置
-                    //确定按钮的点击事件
-//                    String tx = areaProList.get(options1).getName()
-//                            + areaCityList.get(option2).getName()
-//                            + areaCoutList.get(option3).getName();
-
-                    String tx = "啥也没有";
-                    ToastUtils.show(tx);
-                }
-            }).build();
-//            pvOptions.setPicker(areaProList, areaCityList, areaCoutList);
-
-            //测试：填充假数据
-            List <String> list1  = new ArrayList<>();
-            List <List <String>> list2  = new ArrayList<>();
-            List <List <List <String>>> list3  = new ArrayList<>();
-            //
-
-//            AreaLinkBean areaLinkBean = new Gson().fromJson(str, AreaLinkBean.class);
-//            list1.add(areaLinkBean.getName());
-
-
-//            String s = "areaData";
-//            JSONObject jsonObject = new JSONObject(new AssetsUtils().readAssertResource(this,s));
-//            try {
-//                JSONArray provinceArray = jsonObject.getJSONArray(new AreaThreeLinkBean.DataBean().getName());
-//                JSONArray cityArray = jsonObject.getJSONArray(new AreaThreeLinkBean.DataBean().getChildren().get(option1).getName());
-//                JSONArray districtArray = jsonObject.getJSONArray(new AreaThreeLinkBean.DataBean().getChildren().get());
-//            } catch (JSONException e) {
-//                e.printStackTrace();
-//            }
-
-
-            list1.add("北京");
-            list1.add("上海");
-            list1.add("广州");
-            list2.add(list1);
-            list2.add(list1);
-            list2.add(list1);
-            list3.add(list2);
-            list3.add(list2);
-            list3.add(list2);
-            pvOptions.setNPicker(list1,list2,list3);
-
-            pvOptions.show();
-        }
-    }
-
-    //请求接口返回数据
-    private void getCallback(){
-        viewModel.areaDataList.observe(this,it->{
-            areaProList.addAll(it);
-        });
-    }
+//    //地区三级联动
+//    private void areaPicker() throws JSONException {
+//        //条件选择器
+//        if (areaProList == null) {
+//            viewModel.getAreaDataList();
+//            getCallback();
+//        }else {
+//            OptionsPickerView pvOptions = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
+//                @Override
+//                public void onOptionsSelect(int option1, int option2, int option3, View v) {
+//                    //返回的分别是三个级别的选中位置
+//                    //确定按钮的点击事件
+////                    String tx = areaProList.get(options1).getName()
+////                            + areaCityList.get(option2).getName()
+////                            + areaCoutList.get(option3).getName();
+//
+//                    String tx = "啥也没有";
+//                    ToastUtils.show(tx);
+//                }
+//            }).build();
+////            pvOptions.setPicker(areaProList, areaCityList, areaCoutList);
+//
+//            //测试：填充假数据
+//            List <String> list1  = new ArrayList<>();
+//            List <List <String>> list2  = new ArrayList<>();
+//            List <List <List <String>>> list3  = new ArrayList<>();
+//            //
+//
+////            AreaLinkBean areaLinkBean = new Gson().fromJson(str, AreaLinkBean.class);
+////            list1.add(areaLinkBean.getName());
+//
+//
+////            String s = "areaData";
+////            JSONObject jsonObject = new JSONObject(new AssetsUtils().readAssertResource(this,s));
+////            try {
+////                JSONArray provinceArray = jsonObject.getJSONArray(new AreaThreeLinkBean.DataBean().getName());
+////                JSONArray cityArray = jsonObject.getJSONArray(new AreaThreeLinkBean.DataBean().getChildren().get(option1).getName());
+////                JSONArray districtArray = jsonObject.getJSONArray(new AreaThreeLinkBean.DataBean().getChildren().get());
+////            } catch (JSONException e) {
+////                e.printStackTrace();
+////            }
+//
+//
+//            list1.add("北京");
+//            list1.add("上海");
+//            list1.add("广州");
+//            list2.add(list1);
+//            list2.add(list1);
+//            list2.add(list1);
+//            list3.add(list2);
+//            list3.add(list2);
+//            list3.add(list2);
+//            pvOptions.setNPicker(list1,list2,list3);
+//
+//            pvOptions.show();
+//        }
+//    }
+//
+//    //请求接口返回数据
+//    private void getCallback(){
+//        viewModel.areaDataList.observe(this,it->{
+//            areaProList.addAll(it);
+//        });
+//    }
 }

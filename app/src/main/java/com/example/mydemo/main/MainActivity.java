@@ -1,10 +1,5 @@
 package com.example.mydemo.main;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -13,11 +8,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.mydemo.R;
 import com.example.mydemo.arouter.ARouterPath;
-import com.gyf.immersionbar.ImmersionBar;
 
 @Route(path = ARouterPath.main)
 public class MainActivity extends AppCompatActivity {
@@ -76,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
             "47：待完成：探究Handler异步消息机制",
             "48：图片（圆形+圆角）库使用",
             "49：SmartRefreshLayout下拉刷新、下拉加载控件使用",
+            "50：发布时间按规则转换'几分钟前/刚刚/具体时间'",
+            "51：StaggeredGridLayoutManager瀑布流用法",
+            "00：~~~~~~~~~~~~~~~",
+            "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
@@ -313,6 +313,16 @@ public class MainActivity extends AppCompatActivity {
                     case 53:  //SmartRefreshLayout
                         ARouter.getInstance().build(ARouterPath.blog54).navigation();
                         break;
+
+                    case 54:  //时间按规则转换"刚刚"
+                        ARouter.getInstance().build(ARouterPath.blog55).navigation();
+                        break;
+
+                    case 55:  //时间按规则转换"刚刚"
+                        ARouter.getInstance().build(ARouterPath.blog56).navigation();
+                        break;
+
+
 
                     default:
                 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
@@ -29,6 +30,17 @@ public class Case16 extends AppCompatActivity {
         Log.d("onCreate:case16 ", "" + datas);
         flowTagAdapter = new FlowTagAdapter(this, datas);
         tagFlowLayout.setAdapter(flowTagAdapter);
+
+        //
+        TextView tvTest = findViewById(R.id.tvTest);
+        tvTest.setOnClickListener((View)->{
+            tvTest.setSelected(!tvTest.isSelected()); // 状态取反
+            if (tvTest.getText() == "已关注"){
+                tvTest.setText("加关注");
+            }else {
+                tvTest.setText("已关注");
+            }
+        });
     }
 
     private void initData() {

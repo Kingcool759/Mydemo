@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item  android:color="@color/white" android:state_checked="true" />
-    <item  android:color="@color/dimgray" android:state_checked="false" />
+    <!--TagFlowLayout封装好的状态改变回调-->
+    <item android:color="@color/white" android:state_checked="true" />
+    <!--普通点击状态改变-->
+    <item android:color="@color/white" android:state_selected="true" />
+    <item android:color="@color/dimgray" />
 </selector>

@@ -20,6 +20,8 @@ allprojects {
         }
         google()
         jcenter()
+        //  Shadow阴影效果
+        maven { url 'https://jitpack.io' }
     }
 }
 

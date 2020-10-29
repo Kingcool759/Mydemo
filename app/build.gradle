@@ -153,4 +153,7 @@ dependencies {
     implementation  'com.scwang.smart:refresh-header-material:2.0.1'    //谷歌刷新头
     implementation  'com.scwang.smart:refresh-header-two-level:2.0.1'   //二级刷新头
 
+    //阴影效果
+    implementation 'com.github.lihangleo2:ShadowLayout:3.1.1'
+
 }

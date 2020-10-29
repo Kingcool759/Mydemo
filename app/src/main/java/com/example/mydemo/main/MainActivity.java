@@ -69,13 +69,13 @@ public class MainActivity extends AppCompatActivity {
             "49：滚动控件WheelView库使用",
             "50：CardView-MD使用",
             "46：悬浮按钮+可交互提示（FloatingActionButton+SnakerBar-MD使用）",
-            "47：待完成：探究Handler异步消息机制",
+            "47：待完成：探究Handler消息机制",
             "48：图片（圆形+圆角）库使用",
             "49：SmartRefreshLayout下拉刷新、下拉加载控件使用",
             "50：发布时间按规则转换'几分钟前/刚刚/具体时间'",
             "51：StaggeredGridLayoutManager瀑布流用法",
-            "00：~~~~~~~~~~~~~~~",
-            "00：~~~~~~~~~~~~~~~",
+            "52：QQ",
+            "53：ShadowLayout库给任意控件添加阴影效果",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
@@ -322,6 +322,13 @@ public class MainActivity extends AppCompatActivity {
                         ARouter.getInstance().build(ARouterPath.blog56).navigation();
                         break;
 
+                    case 56:  //QQ
+                        ARouter.getInstance().build(ARouterPath.blog57).navigation();
+                        break;
+
+                    case 57:  //ShadowLayout阴影效果
+                        ARouter.getInstance().build(ARouterPath.blog58).navigation();
+                        break;
 
 
                     default:
@@ -329,31 +336,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    //    //设置状态栏颜色
-//    private void setStatusBarColor(int color) {
-//        Window window = this.getWindow();
-//        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-//        int ui = window.getDecorView().getSystemUiVisibility();
-//        window.getDecorView().setSystemUiVisibility(ui);
-//        window.setNavigationBarColor(color);
-//    }
-//
-//    //隐藏导航栏
-//    public static void setHideNavigationBar(Activity activity) {
-//        View decorView = activity.getWindow().getDecorView();
-//        int ui = decorView.getSystemUiVisibility();
-//        ui |=View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
-//        decorView.setSystemUiVisibility(ui);
-//    }
-    private void setStatusBarColor(int color) {
-        Window window = this.getWindow();
-        //取消设置透明状态栏,使 ContentView 内容不再覆盖状态栏
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        //需要设置这个 flag 才能调用 setStatusBarColor 来设置状态栏颜色
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        //设置状态栏颜色
-        window.setStatusBarColor(color);
-    }
-
 }

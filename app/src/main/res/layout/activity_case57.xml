@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".blog.Case57"
+    tools:ignore="MissingConstraints">
+
+    <Button
+        android:id="@+id/btnGotoQQ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进入QQ"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnGOtoQQ2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGOtoQQ2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:text="个人介绍界面"
+        app:layout_constraintBottom_toTopOf="@id/btnGOtoQQ3"
+        app:layout_constraintTop_toBottomOf="@id/btnGotoQQ1" />
+
+    <Button
+        android:id="@+id/btnGOtoQQ3"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        android:text="QQ公众号"
+        app:layout_constraintBottom_toTopOf="@id/btnGOtoQQ4"
+        app:layout_constraintTop_toBottomOf="@id/btnGOtoQQ2" />
+
+    <Button
+        android:id="@+id/btnGOtoQQ4"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="QQ群介绍界面"
+        app:layout_constraintTop_toBottomOf="@id/btnGOtoQQ3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

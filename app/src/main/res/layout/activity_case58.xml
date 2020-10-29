@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".blog.Case58"
+    tools:ignore="MissingConstraints">
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/tvShadow"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:hl_cornerRadius="10dp"
+        app:hl_shadowColor="#6a000000"
+        app:hl_shadowLimit="5dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="TextView阴影效果"
+            android:textSize="18sp" />
+    </com.lihang.ShadowLayout>
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/tvShadowStroke"
+        android:layout_width="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvShadow"
+        app:layout_constraintBottom_toTopOf="@id/ivShadow"
+        android:layout_gravity="center_horizontal"
+        app:hl_cornerRadius="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:hl_strokeColor="#000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="圆角边框"
+            android:textColor="#000" />
+    </com.lihang.ShadowLayout>
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/ivShadow"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="8dp"
+        app:hl_cornerRadius="10dp"
+        app:hl_shadowColor="#6a000000"
+        app:hl_shadowLimit="5dp"
+        app:layout_constraintBottom_toTopOf="@id/ivSelector"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvShadowStroke">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/kepu" />
+    </com.lihang.ShadowLayout>
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/ivSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
+        app:hl_cornerRadius="18dp"
+        app:hl_cornerRadius_rightTop="0dp"
+        app:hl_layoutBackground="@mipmap/kepu"
+        app:hl_layoutBackground_true="@mipmap/guanggao"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvJianbian"
+        app:layout_constraintTop_toBottomOf="@id/ivShadow">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="图片selector"
+            android:textColor="#fff" />
+
+    </com.lihang.ShadowLayout>
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/tvJianbian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:hl_cornerRadius="18dp"
+        app:hl_endColor="#0000ff"
+        app:hl_startColor="#ff0000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvShadowWater"
+        app:layout_constraintTop_toBottomOf="@id/ivSelector">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="渐变色"
+            android:textColor="#fff" />
+
+    </com.lihang.ShadowLayout>
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/tvShadowWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="18dp"
+        app:hl_layoutBackground="#fff"
+        app:hl_layoutBackground_true="#ff0000"
+        app:hl_shadowColor="#6a000000"
+        app:hl_shadowLimit="7dp"
+        app:hl_shapeMode="ripple"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvJianbian">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="水波纹" />
+    </com.lihang.ShadowLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

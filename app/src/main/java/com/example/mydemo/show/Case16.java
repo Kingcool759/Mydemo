@@ -31,7 +31,7 @@ public class Case16 extends AppCompatActivity {
         flowTagAdapter = new FlowTagAdapter(this, datas);
         tagFlowLayout.setAdapter(flowTagAdapter);
 
-        //
+        // 普通TextView搭配android:state_checked="true" (选择器中)
         TextView tvTest = findViewById(R.id.tvTest);
         tvTest.setOnClickListener((View)->{
             tvTest.setSelected(!tvTest.isSelected()); // 状态取反

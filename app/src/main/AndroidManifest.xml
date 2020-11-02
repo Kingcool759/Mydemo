@@ -23,7 +23,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".blog.Case58"></activity>
+        <activity android:name=".blog.Case60"></activity>
+        <activity android:name=".blog.Case59" />
+        <activity android:name=".blog.Case58" />
         <activity android:name=".blog.Case57" />
         <activity android:name=".blog.Case56" />
         <activity android:name=".blog.Case55" />
@@ -42,8 +44,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- 登陆页 -->
-        <activity android:name=".login.LoginActivity" /> <!-- 主页面 -->
-        <activity android:name=".main.MainActivity" /> <!-- 功能页面 -->
+        <activity android:name=".activity.LoginActivity" /> <!-- 主页面 -->
+        <activity android:name=".activity.MainActivity" /> <!-- 功能页面 -->
         <activity android:name=".blog.Case47" />
         <activity android:name=".blog.Case46" />
         <activity android:name=".activity.WeChat1" />

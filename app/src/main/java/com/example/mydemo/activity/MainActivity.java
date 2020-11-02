@@ -1,4 +1,4 @@
-package com.example.mydemo.main;
+package com.example.mydemo.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -76,8 +76,8 @@ public class MainActivity extends AppCompatActivity {
             "51：StaggeredGridLayoutManager瀑布流用法",
             "52：QQ",
             "53：ShadowLayout库给任意控件添加阴影效果",
-            "00：~~~~~~~~~~~~~~~",
-            "00：~~~~~~~~~~~~~~~",
+            "54：Builder建造者模式模拟",
+            "55：Proxy代理模式模拟",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~"
     };//假数据
@@ -330,6 +330,13 @@ public class MainActivity extends AppCompatActivity {
                         ARouter.getInstance().build(ARouterPath.blog58).navigation();
                         break;
 
+                    case 58:  //建造者模式
+                        ARouter.getInstance().build(ARouterPath.blog59).navigation();
+                        break;
+
+                    case 59:  //代理模式
+                        ARouter.getInstance().build(ARouterPath.blog60).navigation();
+                        break;
 
                     default:
                 }

@@ -1,4 +1,4 @@
-package com.example.mydemo.login;
+package com.example.mydemo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mydemo.R;
 import com.example.mydemo.arouter.ARouterPath;
 import com.example.mydemo.databinding.ActivityLoginBinding;
-import com.example.mydemo.main.MainActivity;
+import com.example.mydemo.activity.MainActivity;
 import com.example.mydemo.viewmodel.LoginViewModel;
 
 @Route(path = ARouterPath.login)

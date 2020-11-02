@@ -2,14 +2,10 @@ package com.example.mydemo.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.mydemo.R;
@@ -18,15 +14,15 @@ import com.example.mydemo.arouter.ARouterPath;
 @Route(path = ARouterPath.main)
 public class MainActivity extends AppCompatActivity {
     private String data[] = {
-            "1：拨打电话",  //0
-            "2：自定义Dialog（退出应用程序）",  //1
-            "3：DataBinding+ObservableField使用（数据绑定）", //2
-            "4：LiveData使用（字段监听更新UI视图）",  //3
-            "5：ListView使用（基础）",  //4
-            "6：LifeCycle使用（生命周期）", //5
-            "7：RecyclerView使用（横纵分布）",  //6
-            "8：ViewPager使用实现轮播图（基础版本-进阶版本-最终版本）",  //case7
-            "9：待完成：RxJava使用", //8
+            "01：拨打电话",  //0
+            "02：自定义Dialog（退出应用程序）",  //1
+            "03：DataBinding+ObservableField使用（数据绑定）", //2
+            "04：LiveData使用（字段监听更新UI视图）",  //3
+            "05：ListView使用（基础）",  //4
+            "06：LifeCycle使用（生命周期）", //5
+            "07：RecyclerView使用（横纵分布）",  //6
+            "08：ViewPager使用实现轮播图（基础版本-进阶版本-最终版本）",  //case7
+            "09：待完成：RxJava使用", //8
             "10：Retrofit使用，Api接口调用实现（调用玩安卓网站api实战）", //case9
             "11：CollapsingToolbarLayout折叠布局",  //10
             "12：WebView使用（手机加载网页）", //11
@@ -59,26 +55,28 @@ public class MainActivity extends AppCompatActivity {
             "39：String，StringBuffer,StringBuilder三者区别（实现字符串倒序）",
             "40：EventBus事件发布-订阅总线探究",
             "41：RxBus，取代了EventBus，是EventBus的进阶版",
-            "42：待完成：反射机制探究",
+            "42：全面解析：java中的反射机制",
             "43：待完成：动画：MotionLayout的使用",
             "44：算法：求X的平方根",
             "45：待完成：app调起第三方微信登陆",
-            "46：待完成：PickerView库使用",
+            "46：待完成：PickerView库使用（日期联动+地区联动）",
             "47：验证码倒计时功能实现",
             "48：待完成：app调起支付宝",
             "49：滚动控件WheelView库使用",
-            "50：CardView-MD使用",
+            "50：卡片式布局CardView-MD风格使用",
             "46：悬浮按钮+可交互提示（FloatingActionButton+SnakerBar-MD使用）",
             "47：待完成：探究Handler消息机制",
             "48：图片（圆形+圆角）库使用",
-            "49：SmartRefreshLayout下拉刷新、下拉加载控件使用",
+            "49：下拉刷新、下拉加载控件SmartRefreshLayout使用",
             "50：发布时间按规则转换'几分钟前/刚刚/具体时间'",
             "51：StaggeredGridLayoutManager瀑布流用法",
-            "52：QQ",
+            "52：QQ跳转",
             "53：ShadowLayout库给任意控件添加阴影效果",
-            "54：Builder建造者模式模拟",
-            "55：Proxy代理模式模拟",
+            "54：设计模式-Builder建造者模式模拟",
+            "55：设计模式-Proxy代理模式模拟",
             "56：探究java中的反射机制",
+            "00：~~~~~~~~~~~~~~~",
+            "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~"

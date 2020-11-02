@@ -12,7 +12,7 @@
         android:id="@+id/rect"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@color/green"
+        android:background="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

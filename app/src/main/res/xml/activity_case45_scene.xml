@@ -26,13 +26,12 @@
     </ConstraintSet>
 
     <Transition
-        app:constraintSetEnd="@id/end"
         app:constraintSetStart="@+id/start"
+        app:constraintSetEnd="@id/end"
         app:duration="1000">
         <OnClick
             app:clickAction="toggle"
             app:targetId="@+id/rect" />
-
         <KeyFrameSet></KeyFrameSet>
     </Transition>
 

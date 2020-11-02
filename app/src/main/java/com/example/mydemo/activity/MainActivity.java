@@ -78,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
             "53：ShadowLayout库给任意控件添加阴影效果",
             "54：Builder建造者模式模拟",
             "55：Proxy代理模式模拟",
+            "56：探究java中的反射机制",
+            "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~"
     };//假数据
@@ -336,6 +338,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 59:  //代理模式
                         ARouter.getInstance().build(ARouterPath.blog60).navigation();
+                        break;
+
+                    case 60:  //java中的反射机制
+                        ARouter.getInstance().build(ARouterPath.blog61).navigation();
                         break;
 
                     default:

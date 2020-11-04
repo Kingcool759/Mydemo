@@ -1,22 +1,27 @@
 package com.example.mydemo.blog;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.builder.TimePickerBuilder;
+import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.listener.OnTimeSelectListener;
+import com.bigkoo.pickerview.view.OptionsPickerView;
 import com.bigkoo.pickerview.view.TimePickerView;
 import com.example.mydemo.R;
 import com.example.mydemo.arouter.ARouterPath;
-import com.example.mydemo.bean.AreaThreeLinkBean;
-import com.example.mydemo.databinding.ActivityCase46Binding;
-import com.example.mydemo.viewmodel.Case46viewModel;
+import com.example.mydemo.bean.ProviceBean;
+import com.example.mydemo.utils.GetJsonDataUtil;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.hjq.toast.ToastUtils;
 
 import java.text.SimpleDateFormat;
@@ -30,53 +35,54 @@ import java.util.List;
 @Route(path = ARouterPath.blog46)
 
 public class Case46 extends AppCompatActivity {
-    private ActivityCase46Binding binding;
-    private Case46viewModel viewModel;
     private Button btnTimePicker;
     private Button btnAreaPicker;
-    //
-    private List<AreaThreeLinkBean.DataBean> areaProList = new ArrayList<>();
-    private List<AreaThreeLinkBean.DataBean.ChildrenBeanX> areaCityList = new ArrayList<>();
-    private List<AreaThreeLinkBean.DataBean.ChildrenBeanX.ChildrenBean> areaCoutList = new ArrayList<>();
+    //省、市、区-列表
+    private List<ProviceBean> options1Items = new ArrayList<>();
+    private List<List<ProviceBean.CityBean>> options2Items = new ArrayList<>();
+    private List<List<List<String>>> options3Items = new ArrayList<>();
+
+    private List<String> options4Items = new ArrayList<>();
+    private List<List<String>> options5Items = new ArrayList<>();
+    private List<List<List<String>>> options6Items = new ArrayList<>();
+    //模拟数据
+//    private ArrayList<String> options1Items = new ArrayList<>();// 省集合
+//    private ArrayList<ArrayList<String>> options2Items = new ArrayList<>();// 市集合
+//    private ArrayList<ArrayList<ArrayList<String>>> options3Items = new ArrayList<>();// 区集合
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_case46);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_case46);
-        viewModel = ViewModelProviders.of(this).get(Case46viewModel.class);
-//        binding.setViewModel(viewModel);
-        binding.setLifecycleOwner(this);
+        setContentView(R.layout.activity_case46);
         //初始化
         initView();
+        //弹出选择器
         getView1();
-//        getView2();
+        getView2();
+        //填充数据
+        initJsonData();
     }
-    private void initView(){
+
+    private void initView() {
         btnTimePicker = findViewById(R.id.btnTimePicker);
-//        btnAreaPicker = findViewById(R.id.btnAreaPicker);
+        btnAreaPicker = findViewById(R.id.btnAreaPicker);
     }
-    private void getView1(){
-        btnTimePicker.setOnClickListener((View)->{
+
+    private void getView1() {
+        btnTimePicker.setOnClickListener((View) -> {
             timePicker();
         });
     }
 
-//    private void getView2(){
-//        btnAreaPicker.setOnClickListener((View)->{
-//            viewModel.getAreaDataList(); //调用api接口请求数据
-//            getCallback();
-//            try {
-//                areaPicker();
-//            } catch (JSONException e) {
-//                e.printStackTrace();
-//            }
-//        });
-//    }
+    private void getView2() {
+        btnAreaPicker.setOnClickListener((View) -> {
+            areaPicker();
+        });
+    }
 
     //时间选择器
-    private void timePicker(){
+    private void timePicker() {
         //时间选择器
         TimePickerView pvTime = new TimePickerBuilder(this, new OnTimeSelectListener() {
             @Override
@@ -91,72 +97,55 @@ public class Case46 extends AppCompatActivity {
     //根据需要自行截取数据显示
     private String getTime(Date date) {//可根据需要自行截取数据显示
 //        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        @SuppressLint("SimpleDateFormat")
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         return format.format(date);
     }
 
-//    //地区三级联动
-//    private void areaPicker() throws JSONException {
-//        //条件选择器
-//        if (areaProList == null) {
-//            viewModel.getAreaDataList();
-//            getCallback();
-//        }else {
-//            OptionsPickerView pvOptions = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
-//                @Override
-//                public void onOptionsSelect(int option1, int option2, int option3, View v) {
-//                    //返回的分别是三个级别的选中位置
-//                    //确定按钮的点击事件
-////                    String tx = areaProList.get(options1).getName()
-////                            + areaCityList.get(option2).getName()
-////                            + areaCoutList.get(option3).getName();
-//
-//                    String tx = "啥也没有";
-//                    ToastUtils.show(tx);
-//                }
-//            }).build();
-////            pvOptions.setPicker(areaProList, areaCityList, areaCoutList);
-//
-//            //测试：填充假数据
-//            List <String> list1  = new ArrayList<>();
-//            List <List <String>> list2  = new ArrayList<>();
-//            List <List <List <String>>> list3  = new ArrayList<>();
-//            //
-//
-////            AreaLinkBean areaLinkBean = new Gson().fromJson(str, AreaLinkBean.class);
-////            list1.add(areaLinkBean.getName());
-//
-//
-////            String s = "areaData";
-////            JSONObject jsonObject = new JSONObject(new AssetsUtils().readAssertResource(this,s));
-////            try {
-////                JSONArray provinceArray = jsonObject.getJSONArray(new AreaThreeLinkBean.DataBean().getName());
-////                JSONArray cityArray = jsonObject.getJSONArray(new AreaThreeLinkBean.DataBean().getChildren().get(option1).getName());
-////                JSONArray districtArray = jsonObject.getJSONArray(new AreaThreeLinkBean.DataBean().getChildren().get());
-////            } catch (JSONException e) {
-////                e.printStackTrace();
-////            }
-//
-//
-//            list1.add("北京");
-//            list1.add("上海");
-//            list1.add("广州");
-//            list2.add(list1);
-//            list2.add(list1);
-//            list2.add(list1);
-//            list3.add(list2);
-//            list3.add(list2);
-//            list3.add(list2);
-//            pvOptions.setNPicker(list1,list2,list3);
-//
-//            pvOptions.show();
-//        }
-//    }
-//
-//    //请求接口返回数据
-//    private void getCallback(){
-//        viewModel.areaDataList.observe(this,it->{
-//            areaProList.addAll(it);
-//        });
-//    }
+    //地区三级联动
+    private void areaPicker() {
+        OptionsPickerView pvOptions = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
+            @Override
+            public void onOptionsSelect(int options1, int options2, int options3, View v) {
+//                String str = options1Items.get(options1) +
+//                        options2Items.get(options1).get(options2) +
+//                        options3Items.get(options1).get(options2).get(options3);
+//                ToastUtils.show(str);
+            }
+        })
+                .setTitleText("城市选择")
+                .setDividerColor(Color.BLACK)
+                .setTextColorCenter(Color.BLACK)
+                .setContentTextSize(20)
+                .setOutSideCancelable(false)
+                .build();
+        pvOptions.setPicker(options4Items, options2Items, options3Items);
+        pvOptions.show();
+    }
+
+    private void initJsonData() {
+        String str = new GetJsonDataUtil().getJson(this, "province.json");
+        List<ProviceBean> list = new Gson().fromJson(str, new TypeToken<List<ProviceBean>>() {
+        }.getType());
+        options1Items.addAll(list);
+        for (ProviceBean bean : options1Items) {
+            List<ProviceBean.CityBean> cityList = new ArrayList<>();
+            cityList.addAll(bean.getCity());
+            options4Items.add(bean.getName());
+            options2Items.add(cityList);
+        }
+        for (int i=0;i<options2Items.size();i++) {
+//            List<String> data3 = new ArrayList<>();
+//            data3.add(options2Items.get(i).get(i).getName());
+//            Log.d("initJsonData: ",""+data3);
+//            options5Items.add(data3);
+            List<List<String>> list2 = new ArrayList<>();
+            for (ProviceBean.CityBean data : options2Items.get(i)) {
+                List<String> list1 = new ArrayList();
+                list1.addAll(data.getArea());
+                list2.add(list1);
+            }
+            options3Items.add(list2);
+        }
+    }
 }

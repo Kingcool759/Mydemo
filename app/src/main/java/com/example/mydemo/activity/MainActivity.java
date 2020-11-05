@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             "59：设计模式-Builder建造者模式模拟",
             "60：设计模式-Proxy代理模式模拟",
             "61：探究java中的反射机制",
-            "00：~~~~~~~~~~~~~~~",
+            "62：推特点赞控件：LikeButton使用",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
@@ -340,6 +340,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 60:  //java中的反射机制
                         ARouter.getInstance().build(ARouterPath.blog61).navigation();
+                        break;
+
+                    case 61:  //推特-点赞
+                        ARouter.getInstance().build(ARouterPath.blog62).navigation();
                         break;
 
                     default:

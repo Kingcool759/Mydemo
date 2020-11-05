@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".blog2.Case62"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/likeBtnTitle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="LikeButton使用"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.like.LikeButton
+        android:id="@+id/likeBtnBase"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:icon_size="15dp"
+        app:icon_type="heart"
+        app:layout_constraintBottom_toTopOf="@id/shineBtn"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/likeBtnBase"
+        app:layout_constraintTop_toBottomOf="@id/likeBtnTitle" />
+
+    <com.like.LikeButton
+        android:id="@+id/likeBtnType1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:icon_size="15dp"
+        app:icon_type="star"
+        app:layout_constraintBottom_toTopOf="@id/shineBtn"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@+id/likeBtnBase"
+        app:layout_constraintRight_toLeftOf="@id/likeBtnType2"
+        app:layout_constraintTop_toBottomOf="@id/likeBtnTitle" />
+
+    <com.like.LikeButton
+        android:id="@+id/likeBtnType2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:anim_scale_factor="2"
+        app:circle_end_color="@color/colorAccent"
+        app:circle_start_color="@color/colorPrimary"
+        app:dots_primary_color="@color/colorAccent"
+        app:dots_secondary_color="@color/colorPrimary"
+        app:icon_size="15dp"
+        app:icon_type="Star"
+        app:layout_constraintBottom_toTopOf="@id/shineBtn"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@+id/likeBtnType1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/likeBtnTitle"
+        app:like_drawable="@drawable/thumb_on"
+        app:unlike_drawable="@drawable/thumb_off" />
+
+    <TextView
+        android:id="@+id/shineBtn"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="ShineButton使用"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.sackcentury.shinebuttonlib.ShineButton
+        android:id="@+id/po_image1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:src="@android:color/darker_gray"
+        app:allow_random_color="false"
+        app:big_shine_color="#FF6666"
+        app:btn_color="@android:color/darker_gray"
+        app:btn_fill_color="#FF6666"
+        app:click_animation_duration="200"
+        app:enable_flashing="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shineBtn"
+        app:shine_animation_duration="1500"
+        app:shine_count="8"
+        app:shine_turn_angle="10"
+        app:siShape="@raw/like"
+        app:small_shine_color="#CC9999"
+        app:small_shine_offset_angle="20" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

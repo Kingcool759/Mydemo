@@ -23,6 +23,8 @@ import com.example.mydemo.utils.GetJsonDataUtil;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.hjq.toast.ToastUtils;
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -128,6 +130,8 @@ public class Case46 extends AppCompatActivity {
         List<ProviceBean> list = new Gson().fromJson(str, new TypeToken<List<ProviceBean>>() {
         }.getType());
         options1Items.addAll(list);
+//        Logger.d(options1Items);
+        Logger.d(options1Items);
         for (ProviceBean bean : options1Items) {
             List<ProviceBean.CityBean> cityList = new ArrayList<>();
             cityList.addAll(bean.getCity());

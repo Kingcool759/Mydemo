@@ -156,4 +156,11 @@ dependencies {
     //阴影效果
     implementation 'com.github.lihangleo2:ShadowLayout:3.1.1'
 
+    //炫酷Logger
+    implementation 'com.orhanobut:logger:2.2.0'
+
+    //推特-点赞
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    //点赞
+    implementation 'com.sackcentury:shinebutton:1.0.0'
 }

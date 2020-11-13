@@ -17,4 +17,11 @@ public class AppApi {
 //    public static String BaseUrl="https://github.com/Kingcool759/-Api-/blob/main/data.txt"; //在ViewModel中指定
     public static final String AREA_LINK_DATA = "data.txt";
 
+    /**
+     *  测试Http类型网络请求
+     */
+    public static String BaseURL2 = "http://baobab.kaiyanapp.com/";
+    public static final String home_faxian_List = "api/v7/index/tab/discovery?udid=e3baaab6f0484b5188ccc05cbec33ba51b92f208&vc=6030101&vn=6.3.10&size=1080X2400&deviceModel=TEL-AN00a&first_channel=huawei&last_channel=huawei&system_version_code=29";
+
+
 }

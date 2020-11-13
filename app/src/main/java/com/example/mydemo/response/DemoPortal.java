@@ -1,6 +1,7 @@
 package com.example.mydemo.response;
 
 import com.example.mydemo.api.AppApi;
+import com.example.mydemo.utils.HttpLogger;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -19,6 +20,7 @@ import javax.net.ssl.X509TrustManager;
 
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -49,6 +51,7 @@ public class DemoPortal {
         mGson = new GsonBuilder()
                 .create();
         OkHttpClient.Builder builder = getDefaultBuilder();
+        builder.addInterceptor(new HttpLoggingInterceptor(new HttpLogger()).setLevel(HttpLoggingInterceptor.Level.BODY));
         builder.retryOnConnectionFailure(false);
         retrofit = new Retrofit.Builder()
                 .baseUrl(AppApi.BaseUrl)
@@ -107,6 +110,8 @@ public class DemoPortal {
         T service = null;
         if (baseUrl.isEmpty()) {
             service = DemoPortal.getInstance().buildRetrofit(AppApi.BaseUrl).create(clazz);
+        }else {
+            service = DemoPortal.getInstance().buildRetrofit(baseUrl).create(clazz);
         }
 
         return service;

@@ -76,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
             "60：设计模式-Proxy代理模式模拟",
             "61：探究java中的反射机制",
             "62：推特点赞控件：LikeButton使用",
+            "63：Android开发中shape文件图形大全集",
+            "64：RecyclerView的ItemTouchHelper：拖拽和删除",
+            "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
@@ -344,6 +347,14 @@ public class MainActivity extends AppCompatActivity {
 
                     case 61:  //推特-点赞
                         ARouter.getInstance().build(ARouterPath.blog62).navigation();
+                        break;
+
+                    case 62:  //shape大全解
+                        ARouter.getInstance().build(ARouterPath.blog63).navigation();
+                        break;
+
+                    case 63:  //ItemTouchHelper
+                        ARouter.getInstance().build(ARouterPath.blog64).navigation();
                         break;
 
                     default:

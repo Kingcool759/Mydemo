@@ -5,7 +5,9 @@ import android.util.Log;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.mydemo.api.AppApi;
 import com.example.mydemo.apiservice.AppApiService;
+import com.example.mydemo.bean.HomeDateBean;
 import com.example.mydemo.bean.HomePageResBean;
 import com.example.mydemo.response.ApiCallback;
 import com.example.mydemo.response.DemoPortal;
@@ -22,7 +24,11 @@ import retrofit2.Response;
  */
 public class Case10viewModel extends ViewModel {
 
+    //Https类型，利用HttpLogger无法打印出日志拦截内容
     public MutableLiveData<List<HomePageResBean.DataBean>> mOfficialAccountsList = new MutableLiveData<>();
+
+    //测试：Http类型是否可以？
+    public MutableLiveData<List<HomeDateBean.ItemListBeanX>> mHomeDataList = new MutableLiveData<>();
 
     //获取wanandroid中的首页公众号列表信息
     public void getPublicList() {
@@ -35,6 +41,27 @@ public class Case10viewModel extends ViewModel {
                     return;
                 }
                 mOfficialAccountsList.setValue(response.body().getData());
+            }
+
+            @Override
+            public void onFail(String message) {
+                Log.d("onFail","----------> ");
+            }
+        });
+    }
+
+    /**
+     *  ceshi一下
+     */
+    public void getHomeDataList(){
+        DemoPortal.getService(AppApiService.class, AppApi.BaseURL2).getHomeDate().enqueue(new ApiCallback<HomeDateBean>() {
+            @Override
+            public void onSuccessful(Call<HomeDateBean> call, Response<HomeDateBean> response) {
+                Log.d("onSuccessful","successHttp");
+                if(response == null || response.body() ==null){
+                    return;
+                }
+                mHomeDataList.setValue(response.body().getItemList());
             }
 
             @Override

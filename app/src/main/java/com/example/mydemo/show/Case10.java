@@ -52,7 +52,8 @@ public class Case10 extends AppCompatActivity {
         binding.rvHorRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
         //网络请求调用Api接口————>拿到数据。
-        viewModel.getPublicList();
+        viewModel.getPublicList();//Https
+        viewModel.getHomeDataList();//测试Http
 //        //方式一：回调事件(观察者模式)————>处理数据
 //        viewModel.getOfficialAccountsCallBack().observe(this, it -> {
 //            publiclist.addAll(it);

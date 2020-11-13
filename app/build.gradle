@@ -157,10 +157,12 @@ dependencies {
     implementation 'com.github.lihangleo2:ShadowLayout:3.1.1'
 
     //炫酷Logger
-    implementation 'com.orhanobut:logger:2.2.0'
+    implementation 'com.orhanobut:logger:2.1.1'
+    //okhttp网络日志拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
 
     //推特-点赞
     implementation 'com.github.jd-alexander:LikeButton:0.2.3'
-    //点赞
+    //Shine点赞
     implementation 'com.sackcentury:shinebutton:1.0.0'
 }

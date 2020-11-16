@@ -2,8 +2,8 @@ package com.example.mydemo.helper;
 
 /**
  * @data on 2020/11/13 5:49 PM
- * @auther
- * @describe
+ * @auther armStrong
+ * @describe ItemTouchHelper用法（RecyclerView拖拽、删除）
  */
 public interface IOperationData {
     /**

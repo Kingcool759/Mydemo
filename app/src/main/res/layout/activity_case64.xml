@@ -4,6 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".blog2.Case64">
+    tools:context=".blog2.Case64"
+    tools:ignore="MissingConstraints">
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ItemTouchHelper用法（RecyclerView拖拽、删除）"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:gravity="center"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler64"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

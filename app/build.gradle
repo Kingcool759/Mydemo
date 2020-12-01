@@ -165,4 +165,7 @@ dependencies {
     implementation 'com.github.jd-alexander:LikeButton:0.2.3'
     //Shine点赞
     implementation 'com.sackcentury:shinebutton:1.0.0'
+
+    //RecyclerView吸顶效果
+    implementation 'com.github.donkingliang:GroupedRecyclerViewAdapter:2.3.0'
 }

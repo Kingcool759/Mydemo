@@ -1,10 +1,12 @@
 package com.example.mydemo.show;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -16,13 +18,40 @@ import com.example.mydemo.arouter.ARouterPath;
 @Route(path = ARouterPath.case30)
 
 public class Case30 extends AppCompatActivity {
+    static final String STATE_SCORE = "playerScore";
+    static final String STATE_LEVEL = "playerLevel";
+    Integer mCurrentScore;
+    Integer mCurrentLevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case30);
+//        // 检查是否正在重新创建一个以前销毁的实例
+//        if (savedInstanceState != null) {
+//            // 从已保存状态恢复成员的值
+//            mCurrentScore = savedInstanceState.getInt(STATE_SCORE);
+//            mCurrentLevel = savedInstanceState.getInt(STATE_LEVEL);
+//        } else {
+//            // 可能初始化一个新实例的默认值的成员
+//        }
+    }
 
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
 
+        // 调用父类交给系统处理，这样系统能保存视图层次结构状态
+        super.onSaveInstanceState(savedInstanceState);
+//        // 保存用户自定义的状态
+//        savedInstanceState.putInt(STATE_SCORE, mCurrentScore);
+//        savedInstanceState.putInt(STATE_LEVEL, mCurrentLevel);
+        Log.d("savedInstanceState: ", "savedInstanceState");
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        Log.d("savedInstanceState: ", "onSaveInstanceState");
     }
 
     //重写该方法

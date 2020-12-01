@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             "63：Android开发中shape文件图形大全集",
             "64：RecyclerView的ItemTouchHelper：拖拽和删除",
             "65：EditText的搜索事件处理",
-            "00：~~~~~~~~~~~~~~~",
+            "00：RecyclerView的吸顶效果",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~"
@@ -359,6 +359,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 64:  //EditText搜索事件处理
                         ARouter.getInstance().build(ARouterPath.blog65).navigation();
+                        break;
+
+                    case 65:  //RecyclerView吸顶效果
+                        ARouter.getInstance().build(ARouterPath.blog66).navigation();
                         break;
 
                     default:

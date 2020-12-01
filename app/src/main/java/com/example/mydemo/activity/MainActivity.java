@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
             "63：Android开发中shape文件图形大全集",
             "64：RecyclerView的ItemTouchHelper：拖拽和删除",
             "65：EditText的搜索事件处理",
-            "00：RecyclerView的吸顶效果",
-            "00：~~~~~~~~~~~~~~~",
+            "66：RecyclerView的吸顶效果",
+            "67：Intent传递数据，单例Activity接收返回数据",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~"
     };//假数据
@@ -363,6 +363,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 65:  //RecyclerView吸顶效果
                         ARouter.getInstance().build(ARouterPath.blog66).navigation();
+                        break;
+
+                    case 66:  //Intent传递数据，单例Activity接收返回数据
+                        ARouter.getInstance().build(ARouterPath.blog67).navigation();
                         break;
 
                     default:

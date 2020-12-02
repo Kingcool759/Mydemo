@@ -5,7 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.mydemo.R;
@@ -81,6 +83,11 @@ public class MainActivity extends AppCompatActivity {
             "65：EditText的搜索事件处理",
             "66：RecyclerView的吸顶效果",
             "67：Intent传递数据，单例Activity接收返回数据",
+            "68：Intent+Bundle跳转传值（列表，对象序列化）",
+            "00：~~~~~~~~~~~~~~~",
+            "00：~~~~~~~~~~~~~~~",
+            "00：~~~~~~~~~~~~~~~",
+            "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~"
     };//假数据
@@ -367,6 +374,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 66:  //Intent传递数据，单例Activity接收返回数据
                         ARouter.getInstance().build(ARouterPath.blog67).navigation();
+                        break;
+
+                    case 67:  //Intent+Bundle跳转传值（列表，对象序列化）
+                        ARouter.getInstance().build(ARouterPath.blog68).navigation();
                         break;
 
                     default:

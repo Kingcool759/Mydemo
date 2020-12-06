@@ -40,17 +40,9 @@ public class Case46 extends AppCompatActivity {
     private Button btnTimePicker;
     private Button btnAreaPicker;
     //省、市、区-列表
-    private List<ProviceBean> options1Items = new ArrayList<>();
-    private List<List<ProviceBean.CityBean>> options2Items = new ArrayList<>();
+    private List<String> options1Items = new ArrayList<>();
+    private List<List<String>> options2Items = new ArrayList<>();
     private List<List<List<String>>> options3Items = new ArrayList<>();
-
-    private List<String> options4Items = new ArrayList<>();
-    private List<List<String>> options5Items = new ArrayList<>();
-    private List<List<List<String>>> options6Items = new ArrayList<>();
-    //模拟数据
-//    private ArrayList<String> options1Items = new ArrayList<>();// 省集合
-//    private ArrayList<ArrayList<String>> options2Items = new ArrayList<>();// 市集合
-//    private ArrayList<ArrayList<ArrayList<String>>> options3Items = new ArrayList<>();// 区集合
 
 
     @Override
@@ -109,10 +101,10 @@ public class Case46 extends AppCompatActivity {
         OptionsPickerView pvOptions = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
             @Override
             public void onOptionsSelect(int options1, int options2, int options3, View v) {
-//                String str = options1Items.get(options1) +
-//                        options2Items.get(options1).get(options2) +
-//                        options3Items.get(options1).get(options2).get(options3);
-//                ToastUtils.show(str);
+                String str = options1Items.get(options1) +
+                        options2Items.get(options1).get(options2) +
+                        options3Items.get(options1).get(options2).get(options3);
+                ToastUtils.show(str);
             }
         })
                 .setTitleText("城市选择")
@@ -121,7 +113,7 @@ public class Case46 extends AppCompatActivity {
                 .setContentTextSize(20)
                 .setOutSideCancelable(false)
                 .build();
-        pvOptions.setPicker(options4Items, options2Items, options3Items);
+        pvOptions.setPicker(options1Items, options2Items, options3Items);
         pvOptions.show();
     }
 
@@ -129,27 +121,16 @@ public class Case46 extends AppCompatActivity {
         String str = new GetJsonDataUtil().getJson(this, "province.json");
         List<ProviceBean> list = new Gson().fromJson(str, new TypeToken<List<ProviceBean>>() {
         }.getType());
-        options1Items.addAll(list);
-//        Logger.d(options1Items);
-        Logger.d(options1Items);
-        for (ProviceBean bean : options1Items) {
-            List<ProviceBean.CityBean> cityList = new ArrayList<>();
-            cityList.addAll(bean.getCity());
-            options4Items.add(bean.getName());
-            options2Items.add(cityList);
-        }
-        for (int i=0;i<options2Items.size();i++) {
-//            List<String> data3 = new ArrayList<>();
-//            data3.add(options2Items.get(i).get(i).getName());
-//            Log.d("initJsonData: ",""+data3);
-//            options5Items.add(data3);
-            List<List<String>> list2 = new ArrayList<>();
-            for (ProviceBean.CityBean data : options2Items.get(i)) {
-                List<String> list1 = new ArrayList();
-                list1.addAll(data.getArea());
-                list2.add(list1);
+        for (ProviceBean bean : list) {
+            options1Items.add(bean.getName());
+            List<String> city = new ArrayList<>();
+            List<List<String>> area = new ArrayList<>();
+            for (ProviceBean.CityBean cityBean : bean.getCity()) {
+                city.add(cityBean.getName());
+                area.add(cityBean.getArea());
             }
-            options3Items.add(list2);
+            options2Items.add(city);
+            options3Items.add(area);
         }
     }
 }

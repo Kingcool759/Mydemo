@@ -7,7 +7,7 @@ import android.os.Parcelable;
 /**
  * @data on 12/2/20 9:33 AM
  * @auther armStrong
- * @describe 电影实体类
+ * @describe 电影实体类——序列化
  */
 public class Movie implements Parcelable {
     private int id;

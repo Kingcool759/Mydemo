@@ -33,7 +33,6 @@ import java.util.Date;
 import java.util.List;
 
 //picker-View选择器
-//自己封装的api接口还不能用，被github官网给阻止访问了，还在解决中……
 @Route(path = ARouterPath.blog46)
 
 public class Case46 extends AppCompatActivity {
@@ -117,6 +116,9 @@ public class Case46 extends AppCompatActivity {
         pvOptions.show();
     }
 
+    /**
+     * 解析数据：本地地区json文件并填充数据
+     */
     private void initJsonData() {
         String str = new GetJsonDataUtil().getJson(this, "province.json");
         List<ProviceBean> list = new Gson().fromJson(str, new TypeToken<List<ProviceBean>>() {

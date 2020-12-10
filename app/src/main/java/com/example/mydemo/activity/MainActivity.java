@@ -84,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
             "66：RecyclerView的吸顶效果",
             "67：Intent传递数据，单例Activity接收返回数据",
             "68：Intent+Bundle跳转传值（列表，对象序列化）",
+            "69：RecyclerView实现购物车选择商品功能",
+            "70：自定义加载圆圈转动",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
@@ -378,6 +380,14 @@ public class MainActivity extends AppCompatActivity {
 
                     case 67:  //Intent+Bundle跳转传值（列表，对象序列化）
                         ARouter.getInstance().build(ARouterPath.blog68).navigation();
+                        break;
+
+                    case 68:  //RecyclerView实现购物车选择商品功能
+                        ARouter.getInstance().build(ARouterPath.blog69).navigation();
+                        break;
+
+                    case 69:  //RecyclerView实现购物车选择商品功能
+                        ARouter.getInstance().build(ARouterPath.blog70).navigation();
                         break;
 
                     default:

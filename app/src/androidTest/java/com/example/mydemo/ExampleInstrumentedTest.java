@@ -1,6 +1,7 @@
 package com.example.mydemo;
 
 import android.content.Context;
+import android.util.Log;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -22,5 +23,19 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.example.mydemo", appContext.getPackageName());
+    }
+
+    @Test
+    public void main() {
+        System.out.println(isUnique("leetcode"));
+    }
+
+    public boolean isUnique(String astr) {
+        for(int i=0;i<astr.length();i++){
+            if(astr.indexOf(astr.charAt(i)) != astr.lastIndexOf(astr.charAt(i))){
+                return false;
+            }
+        }
+        return true;
     }
 }

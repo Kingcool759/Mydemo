@@ -168,4 +168,12 @@ dependencies {
 
     //RecyclerView吸顶效果
     implementation 'com.github.donkingliang:GroupedRecyclerViewAdapter:2.3.0'
+
+    //  商品标签
+    implementation 'com.czp.tagView:AndroidTagView:1.0.0'
+
+    // 条形码扫描
+//    implementation 'cn.bingoogolapple:bga-qrcode-zbar:1.3.7'
+
+
 }

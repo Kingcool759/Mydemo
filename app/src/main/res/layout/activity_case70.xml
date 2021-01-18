@@ -4,13 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".blog2.Case70">
-    <com.example.mydemo.view.LoadingView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintTop_toTopOf="parent"
+    tools:context=".blog2.Case70"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/kepu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.czp.library.TagView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/imgView"
+        app:layout_constraintTop_toTopOf="@id/imgView"
+        app:position="topLeft"
+        app:shape="rect"
+        app:title="商品标签" />
 </androidx.constraintlayout.widget.ConstraintLayout>

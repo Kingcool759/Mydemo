@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             "67：Intent传递数据，单例Activity接收返回数据",
             "68：Intent+Bundle跳转传值（列表，对象序列化）",
             "69：RecyclerView实现购物车选择商品功能",
-            "70：自定义加载圆圈转动",
+            "70：TagView商品标签库",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",

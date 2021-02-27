@@ -46,6 +46,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(path: ':ocr_ui')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -175,5 +176,7 @@ dependencies {
     // 条形码扫描
 //    implementation 'cn.bingoogolapple:bga-qrcode-zbar:1.3.7'
 
-
+    //百度图片识别文字SDK
+    implementation files('libs/ocr-sdk.jar')
+//    implementation project(path: ':ocr_ui')
 }

@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             "69：RecyclerView实现购物车选择商品功能",
             "70：TagView商品标签库",
             "71：TabLayout+RecyclerView实现tab定位",
-            "00：~~~~~~~~~~~~~~~",
+            "72：接入：百度图片识别文字SDK",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
@@ -392,6 +392,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 70:  //TabLayout+RecyclerView实现tab定位
                         ARouter.getInstance().build(ARouterPath.blog71).navigation();
+                        break;
+
+                    case 71:  //接入：百度图片识别文字SDK
+                        ARouter.getInstance().build(ARouterPath.blog72).navigation();
                         break;
 
                     default:

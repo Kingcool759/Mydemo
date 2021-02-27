@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             "68：Intent+Bundle跳转传值（列表，对象序列化）",
             "69：RecyclerView实现购物车选择商品功能",
             "70：TagView商品标签库",
-            "00：~~~~~~~~~~~~~~~",
+            "71：TabLayout+RecyclerView实现tab定位",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~",
@@ -386,8 +386,12 @@ public class MainActivity extends AppCompatActivity {
                         ARouter.getInstance().build(ARouterPath.blog69).navigation();
                         break;
 
-                    case 69:  //RecyclerView实现购物车选择商品功能
+                    case 69:  //TagView商品标签库
                         ARouter.getInstance().build(ARouterPath.blog70).navigation();
+                        break;
+
+                    case 70:  //TabLayout+RecyclerView实现tab定位
+                        ARouter.getInstance().build(ARouterPath.blog71).navigation();
                         break;
 
                     default:

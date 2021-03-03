@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
             "70：TagView商品标签库",
             "71：TabLayout+RecyclerView实现tab定位",
             "72：接入：百度图片识别文字SDK",
-            "00：~~~~~~~~~~~~~~~",
-            "00：~~~~~~~~~~~~~~~",
+            "73：接入：zxing识别解码库",
+            "74：TextView复制内容到剪贴板",
             "00：~~~~~~~~~~~~~~~",
             "00：~~~~~~~~~~~~~~~"
     };//假数据
@@ -396,6 +396,14 @@ public class MainActivity extends AppCompatActivity {
 
                     case 71:  //接入：百度图片识别文字SDK
                         ARouter.getInstance().build(ARouterPath.blog72).navigation();
+                        break;
+
+                    case 72:  //接入：zxing识别解码库
+                        ARouter.getInstance().build(ARouterPath.blog73).navigation();
+                        break;
+
+                    case 73:  //TextView复制内容到剪贴板
+                        ARouter.getInstance().build(ARouterPath.blog74).navigation();
                         break;
 
                     default:

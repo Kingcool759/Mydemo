@@ -179,4 +179,7 @@ dependencies {
     //百度图片识别文字SDK
     implementation files('libs/ocr-sdk.jar')
 //    implementation project(path: ':ocr_ui')
+
+    //LeakCanary内存泄露分析工具使用
+    implementation 'com.squareup.leakcanary:leakcanary-android:2.4'
 }

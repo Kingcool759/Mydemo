@@ -90,7 +90,14 @@ public class MainActivity extends AppCompatActivity {
             "72：接入：百度图片识别文字SDK",
             "73：接入：zxing识别解码库",
             "74：TextView复制内容到剪贴板",
-            "00：~~~~~~~~~~~~~~~",
+            "75：内存泄露分析工具：LeakCanary库引入并使用",
+            "00：********",
+            "00：********",
+            "00：********",
+            "00：********",
+            "00：********",
+            "00：********",
+            "00：********",
             "00：~~~~~~~~~~~~~~~"
     };//假数据
 
@@ -406,6 +413,9 @@ public class MainActivity extends AppCompatActivity {
                         ARouter.getInstance().build(ARouterPath.blog74).navigation();
                         break;
 
+                    case 74:  //LeakCanary工具使用
+                        ARouter.getInstance().build(ARouterPath.blog75).navigation();
+                        break;
                     default:
                 }
             }

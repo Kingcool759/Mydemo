@@ -416,6 +416,7 @@ public class MainActivity extends AppCompatActivity {
                     case 74:  //LeakCanary工具使用
                         ARouter.getInstance().build(ARouterPath.blog75).navigation();
                         break;
+
                     default:
                 }
             }

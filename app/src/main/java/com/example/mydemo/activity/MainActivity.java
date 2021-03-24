@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             "73：接入：zxing识别解码库",
             "74：TextView复制内容到剪贴板",
             "75：内存泄露分析工具：LeakCanary库引入并使用",
-            "00：********",
+            "76：visibility调用onMesure、onLayout、onDraw方法探究",
             "00：********",
             "00：********",
             "00：********",
@@ -415,6 +415,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 74:  //LeakCanary工具使用
                         ARouter.getInstance().build(ARouterPath.blog75).navigation();
+                        break;
+
+                    case 75:  //visibility调用onMesure、onLayout、onDraw方法探究
+                        ARouter.getInstance().build(ARouterPath.blog76).navigation();
                         break;
 
                     default:

@@ -95,6 +95,7 @@ public class ARouterPath {
     public static final String blog73 = "/blog/blog73";
     public static final String blog74 = "/blog/blog74";
     public static final String blog75 = "/blog/blog75";
+    public static final String blog76 = "/blog/blog76";
 
     //第三页面
     public static final String algorithm1 = "/activity/algorithm1";

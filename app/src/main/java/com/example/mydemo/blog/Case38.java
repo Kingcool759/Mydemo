@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -37,6 +38,7 @@ public class Case38 extends AppCompatActivity {
     private void replaceFragment(Fragment fragment) {
         // 1.获取FragmentManager，在活动中可以直接通过调用getFragmentManager()方法得到
         fragmentManager = getSupportFragmentManager();
+//        fragmentManager = getFragmentManager();
         // 2.开启一个事务，通过调用beginTransaction()方法开启
         transaction = fragmentManager.beginTransaction();
         // 3.向容器内添加或替换碎片，一般使用replace()方法实现，需要传入容器的id和待添加的碎片实例
@@ -54,15 +56,9 @@ public class Case38 extends AppCompatActivity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i(TAG, "(Activity)onStop: ");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.i(TAG, "(Activity)onDestroy: ");
+    protected void onResume() {
+        super.onResume();
+        Log.i(TAG, "(Activity)onResume: ");
     }
 
     @Override
@@ -72,8 +68,16 @@ public class Case38 extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i(TAG, "(Activity)onResume: ");
+    protected void onStop() {
+        super.onStop();
+        Log.i(TAG, "(Activity)onStop: ");
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG, "(Activity)onDestroy: ");
+        fragment.onDestroy(); // 防止内存泄露
+    }
+
 }

@@ -92,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
             "74：TextView复制内容到剪贴板",
             "75：内存泄露分析工具：LeakCanary库引入并使用",
             "76：visibility调用onMesure、onLayout、onDraw方法探究",
-            "00：********",
-            "00：********",
+            "77：ANR问题锁定：trace文件",
+            "78：Binder手机马达震动",
             "00：********",
             "00：********",
             "00：********",
@@ -419,6 +419,14 @@ public class MainActivity extends AppCompatActivity {
 
                     case 75:  //visibility调用onMesure、onLayout、onDraw方法探究
                         ARouter.getInstance().build(ARouterPath.blog76).navigation();
+                        break;
+
+                    case 76:  //ANR问题定位
+                        ARouter.getInstance().build(ARouterPath.blog77).navigation();
+                        break;
+
+                    case 77:  //Binder手机马达震动
+                        ARouter.getInstance().build(ARouterPath.blog78).navigation();
                         break;
 
                     default:

@@ -34,7 +34,7 @@
             android:layout_width="108dp"
             android:layout_height="108dp"
             android:layout_marginTop="100dp"
-            android:src="@mipmap/icon"
+            android:src="@mipmap/kcbyzjw"
             app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
             app:layout_constraintStart_toEndOf="@id/leftGuideline"
             app:layout_constraintTop_toTopOf="parent" />

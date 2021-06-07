@@ -50,4 +50,21 @@ public class DateUtil {
         }
         return String.valueOf(date.getTime());
     }
+
+
+
+    //根据当前对比之前返回是否在设置区间内
+    public static boolean timecompare(String frontTime,long difSecond){
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd");
+        long diff;
+        try {
+            diff = sd.parse(getCurrentDate()).getTime() - sd.parse(frontTime).getTime();
+            if (diff < difSecond){
+                return true;
+            }
+        }catch (ParseException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

@@ -94,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
             "76：visibility调用onMesure、onLayout、onDraw方法探究",
             "77：ANR问题锁定：trace文件",
             "78：Binder手机马达震动",
-            "00：********",
-            "00：********",
+            "79：判断控件是否在屏幕中可见+是否在父布局中完全可见",
+            "80：Java中的双重检查锁（单例模式）",
             "00：********",
             "00：********",
             "00：~~~~~~~~~~~~~~~"
@@ -428,6 +428,13 @@ public class MainActivity extends AppCompatActivity {
                     case 77:  //Binder手机马达震动
                         ARouter.getInstance().build(ARouterPath.blog78).navigation();
                         break;
+
+                    case 78:  //
+                        ARouter.getInstance().build(ARouterPath.blog79).navigation();
+                        break;
+
+                    case 79: //Java中的双重检查锁
+                        ARouter.getInstance().build(ARouterPath.blog80).navigation();
 
                     default:
                 }

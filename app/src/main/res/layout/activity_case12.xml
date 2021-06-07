@@ -5,8 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".show.Case12">
-    <WebView
-        android:id="@+id/web_view"
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/webViewTitleBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/blue"
+        app:backButton="false"
+        app:leftColor="@color/white"
+        app:leftIcon="@mipmap/goback"
+        app:lineVisible="false"
+        app:rightColor="@color/white"
+        app:rightIcon="@drawable/heart_selector"
+        app:title="WebView"
+        app:titleColor="@color/white"
+        app:titleSize="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/webViewTitleBar"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

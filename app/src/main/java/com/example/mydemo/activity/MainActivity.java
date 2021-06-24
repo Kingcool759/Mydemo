@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             "06：LifeCycle使用（生命周期）", //5
             "07：RecyclerView使用（横纵分布）",  //6
             "08：ViewPager使用实现轮播图（基础版本-进阶版本-最终版本）",  //case7
-            "09：待完成：RxJava使用", //8
+            "09：RxJava使用", //8
             "10：Retrofit使用，Api接口调用实现（调用玩安卓网站api实战）", //case9
             "11：CollapsingToolbarLayout折叠布局",  //10
             "12：WebView使用（手机加载网页）", //11
@@ -60,14 +60,14 @@ public class MainActivity extends AppCompatActivity {
             "42：全面解析：java中的反射机制",
             "43：动画：MotionLayout用法解析",
             "44：算法：求X的平方根",
-            "45：待完成：app调起第三方微信登陆",
-            "46：待完成：PickerView库使用（日期联动+地区联动）",
+            "45：app调起微信",
+            "46：PickerView库使用（日期联动+地区联动）",
             "47：验证码倒计时功能实现",
-            "48：待完成：app调起支付宝",
+            "48：app调起支付宝",
             "49：滚动控件WheelView库使用",
             "50：卡片式布局CardView-MD风格使用",
             "51：悬浮按钮+可交互提示（FloatingActionButton+SnakerBar-MD使用）",
-            "52：待完成：探究Handler消息机制",
+            "52：探究Handler消息机制",
             "53：图片（圆形+圆角）库使用",
             "54：下拉刷新、下拉加载控件SmartRefreshLayout使用",
             "55：发布时间按规则转换'几分钟前/刚刚/具体时间'",
@@ -293,7 +293,7 @@ public class MainActivity extends AppCompatActivity {
                         ARouter.getInstance().build(ARouterPath.algorithm1).navigation();
                         break;
 
-                    case 44:  //调起第三方微信登陆
+                    case 44:  //app调起微信
                         ARouter.getInstance().build(ARouterPath.weChat1).navigation();
                         break;
 

@@ -96,10 +96,10 @@ public class MainActivity extends AppCompatActivity {
             "78：Binder手机马达震动",
             "79：判断控件是否在屏幕中可见+是否在父布局中完全可见",
             "80：Java中的双重检查锁（单例模式）",
-            "00：********",
+            "81：Handler避免内存泄露写法",
             "00：********",
             "00：~~~~~~~~~~~~~~~"
-    };//假数据
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -435,6 +435,9 @@ public class MainActivity extends AppCompatActivity {
 
                     case 79: //Java中的双重检查锁
                         ARouter.getInstance().build(ARouterPath.blog80).navigation();
+
+                    case 80: //Handler避免内存泄露写法
+                        ARouter.getInstance().build(ARouterPath.blog81).navigation();
 
                     default:
                 }
